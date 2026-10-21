@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t"><title id="t">DIY light-wave communication kit: a phone plays music into an LED transmitter, the music travels as flickering light to a solar-cell receiver, and a speaker plays it back</title><style>
+.ink{stroke:#2e2925;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ink1{stroke:#2e2925;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.inkf{fill:#2e2925}.mute{stroke:#c4b8ac;fill:none;stroke-width:1.4;stroke-linecap:round}
+.mutef{fill:#d9cec3}.soft{fill:#ebe1d6}.paper{fill:#fffdfb}.acc{stroke:#7a1414;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.accf{fill:#7a1414}.acc2f{fill:#a63c3c}.gold{stroke:#d39a2c;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.goldf{fill:#d39a2c}
+.teal{stroke:#2f6f86;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.tealf{fill:#2f6f86}.tealsoft{fill:#d3e4ea}
+.sagef{fill:#a9bf98}.sagesoft{fill:#e2ead8}.sage{stroke:#6f8a5e;fill:none;stroke-width:1.6;stroke-linecap:round}
+.dash{stroke-dasharray:6 6}.dots{stroke-dasharray:1 6}
+.lbl{font:700 10.5px Inter,system-ui,sans-serif;fill:#5a514a;letter-spacing:.06em}
+.chip{fill:#fffdfb;stroke:#d9cec3;stroke-width:1}
+.s-bg1{stop-color:#fbf7f2}.s-bg2{stop-color:#eee4d9}.s-gold{stop-color:#d39a2c}.s-acc{stop-color:#7a1414}.s-acc2{stop-color:#b04848}
+.s-teal{stop-color:#2f6f86}.s-teal2{stop-color:#8fc2d3}.s-moon1{stop-color:#f4efe9}.s-moon2{stop-color:#bdb2a7}
+.s-sky1{stop-color:#e7eff1}.s-sky2{stop-color:#f8f2ea}.s-sage1{stop-color:#c4d4b4}.s-sage2{stop-color:#93ab80}
+.s-soil1{stop-color:#c9ae92}.s-soil2{stop-color:#a88a6c}.s-metal1{stop-color:#8f2626}.s-metal2{stop-color:#5c0c0c}
+.s-wall1{stop-color:#f7f1ea}.s-wall2{stop-color:#ebe0d4}
+@media (prefers-color-scheme:dark){
+.ink,.ink1{stroke:#ece5de}.inkf{fill:#ece5de}.mute{stroke:#5d544c}.mutef{fill:#4a413a}.soft{fill:#342c27}.paper{fill:#2f2723}
+.acc{stroke:#e99a9a}.accf{fill:#e08b8b}.acc2f{fill:#b86464}.gold{stroke:#ecc062}.goldf{fill:#ecc062}.teal{stroke:#86c6da}.tealf{fill:#86c6da}.tealsoft{fill:#1f3b45}
+.sagef{fill:#4f6a46}.sagesoft{fill:#27331f}.sage{stroke:#86a476}.lbl{fill:#b3a99f}.chip{fill:#2f2723;stroke:#4a413a}
+.s-bg1{stop-color:#2a231f}.s-bg2{stop-color:#1c1714}.s-gold{stop-color:#ecc062}.s-acc{stop-color:#e08b8b}.s-acc2{stop-color:#c46e6e}
+.s-teal{stop-color:#3d8aa3}.s-teal2{stop-color:#1f4654}.s-moon1{stop-color:#6b625a}.s-moon2{stop-color:#3b342f}
+.s-sky1{stop-color:#1d2a30}.s-sky2{stop-color:#2a231f}.s-sage1{stop-color:#3e5537}.s-sage2{stop-color:#2b3c26}
+.s-soil1{stop-color:#5a4838}.s-soil2{stop-color:#3f3226}.s-metal1{stop-color:#d27b7b}.s-metal2{stop-color:#9e4a4a}
+.s-wall1{stop-color:#2f2723}.s-wall2{stop-color:#241e1a}}
+</style><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop class="s-bg1" offset="0"/><stop class="s-bg2" offset="1"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop class="s-sky1" offset="0"/><stop class="s-sky2" offset="1"/></linearGradient>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop class="s-wall1" offset="0"/><stop class="s-wall2" offset="1"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop class="s-metal1" offset="0"/><stop class="s-metal2" offset="1"/></linearGradient>
+<linearGradient id="sage" x1="0" y1="0" x2="0" y2="1"><stop class="s-sage1" offset="0"/><stop class="s-sage2" offset="1"/></linearGradient>
+<linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop class="s-soil1" offset="0"/><stop class="s-soil2" offset="1"/></linearGradient>
+<linearGradient id="beamG" x1="0" y1="0" x2="1" y2="0"><stop class="s-gold" offset="0" stop-opacity=".55"/><stop class="s-gold" offset="1" stop-opacity=".05"/></linearGradient>
+<linearGradient id="beamGv" x1="0" y1="0" x2="0" y2="1"><stop class="s-gold" offset="0" stop-opacity=".5"/><stop class="s-gold" offset="1" stop-opacity=".04"/></linearGradient>
+<linearGradient id="beamA" x1="0" y1="0" x2="1" y2="0"><stop class="s-acc2" offset="0" stop-opacity=".75"/><stop class="s-acc2" offset="1" stop-opacity=".18"/></linearGradient>
+<linearGradient id="beamT" x1="0" y1="0" x2="1" y2="0"><stop class="s-teal" offset="0" stop-opacity=".45"/><stop class="s-teal" offset="1" stop-opacity=".06"/></linearGradient>
+<radialGradient id="earth" cx=".35" cy=".3" r=".8"><stop class="s-teal2" offset="0"/><stop class="s-teal" offset="1"/></radialGradient>
+<radialGradient id="moon" cx=".35" cy=".3" r=".8"><stop class="s-moon1" offset="0"/><stop class="s-moon2" offset="1"/></radialGradient>
+<radialGradient id="glowG"><stop class="s-gold" offset="0" stop-opacity=".55"/><stop class="s-gold" offset="1" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowA"><stop class="s-acc2" offset="0" stop-opacity=".35"/><stop class="s-acc2" offset="1" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowT"><stop class="s-teal" offset="0" stop-opacity=".28"/><stop class="s-teal" offset="1" stop-opacity="0"/></radialGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#000" flood-opacity=".18"/></filter>
+<pattern id="dotgrid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" class="mutef"/></pattern>
+</defs><rect width="400" height="300" fill="url(#bg)"/><rect x="0" y="0" width="400" height="200" fill="url(#wall)"/><polygon class="soft" points="0,200 400,200 400,300 0,300"/><path class="ink1" d="M0 200 H400"/><g filter="url(#sh)"><rect class="paper" x="20" y="186" width="360" height="12" rx="3"/></g><g filter="url(#sh)"><rect class="inkf" x="36" y="128" width="34" height="58" rx="6"/></g><rect class="paper" x="40" y="134" width="26" height="44" rx="2"/><path class="accf" d="M48 162 v-14 l10 -3 v14"/><circle class="accf" cx="46" cy="162" r="3"/><circle class="accf" cx="56" cy="159" r="3"/><path class="ink1" d="M70 176 q20 8 32 -2"/><g filter="url(#sh)"><rect fill="url(#metal)" x="100" y="150" width="54" height="36" rx="5"/></g><rect class="goldf" x="108" y="158" width="10" height="8" rx="1"/><rect class="paper" x="124" y="160" width="20" height="4" rx="1" opacity=".7"/><circle fill="url(#glowG)" cx="160" cy="160" r="36"/><path class="paper" d="M154 152 h10 a5 5 0 0 1 0 16 h-10 z"/><circle class="goldf" cx="164" cy="160" r="5"/><polygon fill="url(#beamG)" points="168,154 270,136 270,184 168,166"/><path class="gold" stroke-width="1.6" opacity="0.90" d="M186 152 v16"/><path class="gold" stroke-width="1.6" opacity="0.72" d="M206 150 v20"/><path class="gold" stroke-width="1.6" opacity="0.54" d="M226 148 v24"/><path class="gold" stroke-width="1.6" opacity="0.36" d="M246 146 v28"/><g filter="url(#sh)"><rect class="tealf" x="270" y="132" width="34" height="54" rx="3"/></g><path class="paper" stroke="currentColor" d="M272 140 H302" stroke-width=".8" opacity=".5"/><path class="paper" stroke="currentColor" d="M272 152 H302" stroke-width=".8" opacity=".5"/><path class="paper" stroke="currentColor" d="M272 164 H302" stroke-width=".8" opacity=".5"/><path class="paper" stroke="currentColor" d="M272 176 H302" stroke-width=".8" opacity=".5"/><path class="ink1" d="M304 176 q12 6 22 0"/><g filter="url(#sh)"><rect class="inkf" x="326" y="140" width="38" height="46" rx="6"/></g><circle class="mutef" cx="345" cy="165" r="12"/><circle class="inkf" cx="345" cy="165" r="5"/><path class="acc" opacity="1.00" d="M370.4 152.3 A10 10 0 0 1 370.4 167.7"/><path class="acc" opacity="0.71" d="M376.2 145.4 A19 19 0 0 1 376.2 174.6"/><path class="acc" opacity="0.43" d="M382.0 138.6 A28 28 0 0 1 382.0 181.4"/><g filter="url(#sh)"><rect class="chip" x="27.0" y="102" width="52.0" height="20" rx="10"/></g><text class="lbl" x="53.0" y="115.6" text-anchor="middle">MUSIC</text><g filter="url(#sh)"><rect class="chip" x="68.0" y="206" width="124.0" height="20" rx="10"/></g><text class="lbl" x="130.0" y="219.6" text-anchor="middle">LED TRANSMITTER</text><g filter="url(#sh)"><rect class="chip" x="163.2" y="102" width="109.6" height="20" rx="10"/></g><text class="lbl" x="218.0" y="115.6" text-anchor="middle">DATA ON LIGHT</text><g filter="url(#sh)"><rect class="chip" x="251.6" y="206" width="116.8" height="20" rx="10"/></g><text class="lbl" x="310.0" y="219.6" text-anchor="middle">SOLAR RECEIVER</text><text class="lbl" x="200" y="270" text-anchor="middle" style="font-size:12px">200+ KITS · K-12 TO UNDERGRADUATE</text></svg>

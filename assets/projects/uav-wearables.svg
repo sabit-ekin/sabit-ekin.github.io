@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t"><title id="t">Drone-to-wearable links: a drone exchanges ultra-wideband pulses with wearable sensors on people below, and the team measures and models these channels</title><style>
+.ink{stroke:#2e2925;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ink1{stroke:#2e2925;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.inkf{fill:#2e2925}.mute{stroke:#c4b8ac;fill:none;stroke-width:1.4;stroke-linecap:round}
+.mutef{fill:#d9cec3}.soft{fill:#ebe1d6}.paper{fill:#fffdfb}.acc{stroke:#7a1414;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.accf{fill:#7a1414}.acc2f{fill:#a63c3c}.gold{stroke:#d39a2c;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.goldf{fill:#d39a2c}
+.teal{stroke:#2f6f86;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.tealf{fill:#2f6f86}.tealsoft{fill:#d3e4ea}
+.sagef{fill:#a9bf98}.sagesoft{fill:#e2ead8}.sage{stroke:#6f8a5e;fill:none;stroke-width:1.6;stroke-linecap:round}
+.dash{stroke-dasharray:6 6}.dots{stroke-dasharray:1 6}
+.lbl{font:700 10.5px Inter,system-ui,sans-serif;fill:#5a514a;letter-spacing:.06em}
+.chip{fill:#fffdfb;stroke:#d9cec3;stroke-width:1}
+.s-bg1{stop-color:#fbf7f2}.s-bg2{stop-color:#eee4d9}.s-gold{stop-color:#d39a2c}.s-acc{stop-color:#7a1414}.s-acc2{stop-color:#b04848}
+.s-teal{stop-color:#2f6f86}.s-teal2{stop-color:#8fc2d3}.s-moon1{stop-color:#f4efe9}.s-moon2{stop-color:#bdb2a7}
+.s-sky1{stop-color:#e7eff1}.s-sky2{stop-color:#f8f2ea}.s-sage1{stop-color:#c4d4b4}.s-sage2{stop-color:#93ab80}
+.s-soil1{stop-color:#c9ae92}.s-soil2{stop-color:#a88a6c}.s-metal1{stop-color:#8f2626}.s-metal2{stop-color:#5c0c0c}
+.s-wall1{stop-color:#f7f1ea}.s-wall2{stop-color:#ebe0d4}
+@media (prefers-color-scheme:dark){
+.ink,.ink1{stroke:#ece5de}.inkf{fill:#ece5de}.mute{stroke:#5d544c}.mutef{fill:#4a413a}.soft{fill:#342c27}.paper{fill:#2f2723}
+.acc{stroke:#e99a9a}.accf{fill:#e08b8b}.acc2f{fill:#b86464}.gold{stroke:#ecc062}.goldf{fill:#ecc062}.teal{stroke:#86c6da}.tealf{fill:#86c6da}.tealsoft{fill:#1f3b45}
+.sagef{fill:#4f6a46}.sagesoft{fill:#27331f}.sage{stroke:#86a476}.lbl{fill:#b3a99f}.chip{fill:#2f2723;stroke:#4a413a}
+.s-bg1{stop-color:#2a231f}.s-bg2{stop-color:#1c1714}.s-gold{stop-color:#ecc062}.s-acc{stop-color:#e08b8b}.s-acc2{stop-color:#c46e6e}
+.s-teal{stop-color:#3d8aa3}.s-teal2{stop-color:#1f4654}.s-moon1{stop-color:#6b625a}.s-moon2{stop-color:#3b342f}
+.s-sky1{stop-color:#1d2a30}.s-sky2{stop-color:#2a231f}.s-sage1{stop-color:#3e5537}.s-sage2{stop-color:#2b3c26}
+.s-soil1{stop-color:#5a4838}.s-soil2{stop-color:#3f3226}.s-metal1{stop-color:#d27b7b}.s-metal2{stop-color:#9e4a4a}
+.s-wall1{stop-color:#2f2723}.s-wall2{stop-color:#241e1a}}
+</style><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop class="s-bg1" offset="0"/><stop class="s-bg2" offset="1"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop class="s-sky1" offset="0"/><stop class="s-sky2" offset="1"/></linearGradient>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop class="s-wall1" offset="0"/><stop class="s-wall2" offset="1"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop class="s-metal1" offset="0"/><stop class="s-metal2" offset="1"/></linearGradient>
+<linearGradient id="sage" x1="0" y1="0" x2="0" y2="1"><stop class="s-sage1" offset="0"/><stop class="s-sage2" offset="1"/></linearGradient>
+<linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop class="s-soil1" offset="0"/><stop class="s-soil2" offset="1"/></linearGradient>
+<linearGradient id="beamG" x1="0" y1="0" x2="1" y2="0"><stop class="s-gold" offset="0" stop-opacity=".55"/><stop class="s-gold" offset="1" stop-opacity=".05"/></linearGradient>
+<linearGradient id="beamGv" x1="0" y1="0" x2="0" y2="1"><stop class="s-gold" offset="0" stop-opacity=".5"/><stop class="s-gold" offset="1" stop-opacity=".04"/></linearGradient>
+<linearGradient id="beamA" x1="0" y1="0" x2="1" y2="0"><stop class="s-acc2" offset="0" stop-opacity=".75"/><stop class="s-acc2" offset="1" stop-opacity=".18"/></linearGradient>
+<linearGradient id="beamT" x1="0" y1="0" x2="1" y2="0"><stop class="s-teal" offset="0" stop-opacity=".45"/><stop class="s-teal" offset="1" stop-opacity=".06"/></linearGradient>
+<radialGradient id="earth" cx=".35" cy=".3" r=".8"><stop class="s-teal2" offset="0"/><stop class="s-teal" offset="1"/></radialGradient>
+<radialGradient id="moon" cx=".35" cy=".3" r=".8"><stop class="s-moon1" offset="0"/><stop class="s-moon2" offset="1"/></radialGradient>
+<radialGradient id="glowG"><stop class="s-gold" offset="0" stop-opacity=".55"/><stop class="s-gold" offset="1" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowA"><stop class="s-acc2" offset="0" stop-opacity=".35"/><stop class="s-acc2" offset="1" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowT"><stop class="s-teal" offset="0" stop-opacity=".28"/><stop class="s-teal" offset="1" stop-opacity="0"/></radialGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#000" flood-opacity=".18"/></filter>
+<pattern id="dotgrid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" class="mutef"/></pattern>
+</defs><rect width="400" height="300" fill="url(#bg)"/><rect width="400" height="300" fill="url(#sky)"/><rect class="sagef" x="0" y="246" width="400" height="54" opacity=".75"/><path class="sage" d="M0 246 H400"/><g transform="translate(250 70)" filter="url(#sh)"><path class="ink" d="M-14 -2 L-38 -10 M14 -2 L38 -10"/><ellipse class="mutef" cx="-38" cy="-13" rx="16" ry="3"/><ellipse class="mutef" cx="38" cy="-13" rx="16" ry="3"/><rect fill="url(#metal)" x="-16" y="-9" width="32" height="16" rx="6"/><rect class="goldf" x="-5" y="7" width="10" height="5" rx="1"/></g><g transform="translate(230.0 101.3) rotate(-47)"><path class="acc" stroke-width="2" d="M-12 0 h7 l2 -8 l3 16 l3 -12 l2 4 h7"/></g><g transform="translate(214.0 118.7) rotate(-47)"><path class="acc" stroke-width="2" d="M-12 0 h7 l2 -8 l3 16 l3 -12 l2 4 h7"/></g><g transform="translate(198.0 136.0) rotate(-47)"><path class="acc" stroke-width="2" d="M-12 0 h7 l2 -8 l3 16 l3 -12 l2 4 h7"/></g><g transform="translate(182.0 153.3) rotate(-47)"><path class="acc" stroke-width="2" d="M-12 0 h7 l2 -8 l3 16 l3 -12 l2 4 h7"/></g><g transform="translate(166.0 170.7) rotate(-47)"><path class="acc" stroke-width="2" d="M-12 0 h7 l2 -8 l3 16 l3 -12 l2 4 h7"/></g><g filter="url(#sh)"><path fill="url(#metal)" d="M121.3 208.6 q0 -22 17 -24 q17 2 17 24 v10 h-34 z"/><rect class="inkf" x="126.8" y="218.5" width="9.9" height="27.500000000000004" rx="3"/><rect class="inkf" x="143.3" y="218.5" width="9.9" height="27.500000000000004" rx="3"/><circle fill="#e7c3a3" cx="140" cy="171.2" r="12.100000000000001"/><path class="inkf" d="M127.9 169.0 q2 -13 11 -12 q10 -1 11 12 q-6 -6 -11 -5 q-6 -1 -11 5 z"/></g><rect class="goldf" x="112" y="196" width="10" height="7" rx="2"/><circle fill="url(#glowG)" cx="117" cy="199" r="16"/><g filter="url(#sh)"><path fill="#2f6f86" d="M316.4 218.8 q0 -22 17 -24 q17 2 17 24 v10 h-34 z"/><rect class="inkf" x="320.4" y="226.0" width="7.2" height="20.0" rx="3"/><rect class="inkf" x="332.4" y="226.0" width="7.2" height="20.0" rx="3"/><circle fill="#e7c3a3" cx="330" cy="191.6" r="8.8"/><path class="inkf" d="M321.2 190.0 q2 -13 11 -12 q10 -1 11 12 q-6 -6 -11 -5 q-6 -1 -11 5 z"/></g><rect class="goldf" x="312" y="208" width="8" height="6" rx="2"/><path class="acc dash" stroke-width="1.6" d="M256 86 L318 206"/><g filter="url(#sh)"><rect class="chip" x="231.2" y="18" width="37.6" height="20" rx="10"/></g><text class="lbl" x="250.0" y="31.6" text-anchor="middle">UAV</text><g filter="url(#sh)"><rect class="chip" x="16.0" y="140" width="167.2" height="20" rx="10"/></g><text class="lbl" x="99.6" y="153.6" text-anchor="middle">ULTRA-WIDEBAND PULSES</text><g filter="url(#sh)"><rect class="chip" x="78.0" y="274" width="124.0" height="20" rx="10"/></g><text class="lbl" x="140.0" y="287.6" text-anchor="middle">WEARABLE SENSOR</text><g filter="url(#sh)"><rect class="chip" x="226.0" y="140" width="160.0" height="20" rx="10"/></g><text class="lbl" x="306.0" y="153.6" text-anchor="middle">CHANNEL MEASUREMENTS</text></svg>

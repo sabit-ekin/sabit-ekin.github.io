@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabit Ekin</title>
+<meta name="description" content="Sabit Ekin, Associate Professor at Texas A&M University. Wireless communications and sensing, AI/ML, and generative AI literacy. Courses and teaching materials.">
+<meta property="og:title" content="Sabit Ekin">
+<meta property="og:description" content="Wireless communications and sensing, AI/ML, and generative AI literacy at Texas A&M University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maroon: #500000;
+    --accent: #6d0f0f;
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --text: #1e1b18;
+    --muted: #625a53;
+    --line: #e6e1db;
+    --chip: #f4eeea;
+    --logo-plate: #ffffff;
+    --radius: 14px;
+    --serif: "EB Garamond", Georgia, serif;
+    --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --maroon: #e7a3a3;
+      --accent: #f0b9b9;
+      --bg: #151312;
+      --surface: #1e1b19;
+      --text: #ece7e2;
+      --muted: #a89f97;
+      --line: #322d29;
+      --chip: #2a2421;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 var(--sans);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--maroon); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 12px; background: var(--surface); padding: 8px 12px; z-index: 10; }
+
+  /* Navigation */
+  header.nav {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--maroon); text-decoration: none; letter-spacing: .02em; white-space: nowrap; }
+  .nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; overflow-x: auto; }
+  .nav ul a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; white-space: nowrap; }
+  .nav ul a:hover { color: var(--maroon); }
+
+  /* Hero */
+  .hero { padding: 72px 0 48px; display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: center; }
+  .portrait {
+    width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
+    background: var(--maroon); color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--serif); font-size: 4rem; font-weight: 500; letter-spacing: .04em;
+  }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 8px; color: var(--maroon); }
+  .fellow { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--muted); margin: 0 0 14px; }
+  .roles { list-style: none; padding: 0; margin: 0 0 20px; color: var(--text); }
+  .roles li { margin: 2px 0; }
+  .roles .inst { color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface); color: var(--text); text-decoration: none; font-size: .9rem; font-weight: 500;
+  }
+  .links a:hover { border-color: var(--maroon); color: var(--maroon); }
+  .links a.cv { background: var(--maroon); border-color: var(--maroon); color: var(--bg); }
+  .links a.cv:hover { background: var(--accent); color: var(--bg); }
+
+  /* Sections */
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 2rem; margin: 0 0 6px; color: var(--maroon); }
+  .lede { color: var(--muted); margin: 0 0 26px; max-width: 70ch; }
+  h3 { font-size: 1.05rem; margin: 0 0 6px; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+  .stat b { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--maroon); line-height: 1.1; }
+  .stat span { color: var(--muted); font-size: .9rem; }
+  .asof { color: var(--muted); font-size: .82rem; margin-top: 10px; }
+  .path { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .path li { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-left: 3px solid var(--maroon); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
+  .path li:not(:last-child)::after { content: "→"; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); color: var(--maroon); font-weight: 600; }
+  .path time { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--maroon); }
+  .path b { font-size: .9rem; font-weight: 600; }
+  .path span { color: var(--muted); font-size: .85rem; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .card p { margin: 0; color: var(--muted); }
+
+  /* Courses */
+  .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .course { display: flex; flex-direction: column; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .course .code { font-weight: 600; color: var(--maroon); letter-spacing: .03em; font-size: .85rem; }
+  .course h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; line-height: 1.25; }
+  .course p { margin: 0; color: var(--muted); font-size: .92rem; flex: 1; }
+  .tag { align-self: flex-start; font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+  .tag.soon { color: var(--maroon); }
+  .course a.go { font-weight: 600; text-decoration: none; }
+  .note { margin-top: 18px; font-size: .9rem; color: var(--muted); }
+  .courses.past { gap: 14px; }
+  .courses.past .course { padding: 18px; gap: 6px; }
+  .course h4 { font-family: var(--serif); font-weight: 500; font-size: 1.12rem; line-height: 1.25; margin: 0; }
+  .courses.past .course p { font-size: .88rem; }
+
+  /* Highlights */
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .timeline li:last-child { border-bottom: 0; }
+  .timeline time { font-weight: 600; color: var(--maroon); }
+
+  .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  address { font-style: normal; }
+
+
+  h3.sub { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--maroon); margin: 36px 0 14px; }
+  h3.sub2 { margin-top: 20px; }
+  .projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .project { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .pfig { margin: 0; aspect-ratio: 4 / 3; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .pfig img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .pbody { display: grid; gap: 4px; padding: 14px 16px 16px; align-content: start; }
+  .project b { font-weight: 600; }
+  .project span { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+  .project em { font-style: normal; font-size: .78rem; font-weight: 600; color: var(--maroon); letter-spacing: .02em; white-space: nowrap; }
+  .project:not(:has(.pfig)) .pbody { padding-top: 18px; }
+  .project b a { color: inherit; text-decoration-color: var(--maroon); }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .gallery figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  .gallery figcaption { padding: 10px 14px; font-size: .85rem; color: var(--muted); }
+  details.allprojects { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 4px 20px; }
+  details.allprojects summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 0; font-weight: 600; color: var(--maroon); }
+  details.allprojects summary small { color: var(--muted); font-weight: 500; }
+  details.allprojects h4 { margin: 14px 0 4px; font-family: var(--serif); font-weight: 500; font-size: 1.15rem; color: var(--maroon); }
+  ul.awards { list-style: none; margin: 0 0 12px; padding: 0; }
+  ul.awards li { display: grid; grid-template-columns: 1fr auto; gap: 2px 14px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  ul.awards li:last-child { border-bottom: 0; }
+  .aw-t { font-weight: 500; }
+  .aw-m { grid-column: 1; color: var(--muted); font-size: .86rem; }
+  .aw-r { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+  .aw-r.pi { color: var(--maroon); }
+  .sponsors { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+  .sponsors li { display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 2px; min-height: 76px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-align: center; }
+  .sponsors b { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--maroon); line-height: 1.15; }
+  .sponsors span { color: var(--muted); font-size: .78rem; }
+  .sponsors span:empty { display: none; }
+  .sponsors .logo { display: flex; align-items: center; justify-content: center; height: 86px; margin-bottom: 8px; padding: 6px 4px; align-self: stretch; background: var(--logo-plate); border-radius: 10px; }
+  .sponsors .logo img.lg { transform: scale(1.15); }
+  .sponsors .logo img { max-height: 74px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+  img.logo { display: block; height: 60px; width: auto; margin-bottom: 12px; background: #fff; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); }
+  .stack { display: grid; gap: 16px; }
+  .lede.one-line { max-width: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 640px) { .lede.one-line { white-space: normal; } }
+  ul.people.current { columns: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 28px; margin-bottom: 4px; }
+  ul.people.alumni { columns: 2; column-gap: 28px; }
+  ul.people.current li { display: flex; align-items: center; gap: 10px; padding: 0; }
+  .av { flex: none; width: 68px; height: 68px; border-radius: 50%; display: grid; place-items: center;
+        background: radial-gradient(circle at 30% 25%, hsl(var(--h) 90% 96%), hsl(var(--h) 70% 84%));
+        border: 2px solid hsl(var(--h) 55% 70%);
+        font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 2.35rem !important; line-height: 1;
+        transition: transform .2s ease; }
+  ul.people.current li { position: relative; border-radius: 10px; cursor: default; }
+  ul.people.current li::after {
+    content: attr(data-why); position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 4;
+    width: max-content; max-width: 240px; padding: 8px 12px; border-radius: 10px;
+    background: var(--text); color: var(--bg); font-size: .8rem; line-height: 1.4;
+    box-shadow: 0 6px 20px rgb(0 0 0 / .18);
+    opacity: 0; transform: translateY(4px); pointer-events: none; transition: opacity .15s ease, transform .15s ease;
+  }
+  ul.people.current li:hover::after, ul.people.current li:focus::after, ul.people.current li:focus-visible::after { opacity: 1; transform: none; }
+  ul.people.current li:focus .av { transform: scale(1.12) rotate(-6deg); }
+  ul.people.current li:hover .av { transform: scale(1.12) rotate(-6deg); }
+  @media (prefers-reduced-motion: reduce) { .av { transition: none; } ul.people.current li:hover .av { transform: none; } }
+  @media (prefers-color-scheme: dark) {
+    .av { background: radial-gradient(circle at 30% 25%, hsl(var(--h) 35% 34%), hsl(var(--h) 40% 20%)); border-color: hsl(var(--h) 40% 45%); }
+  }
+  .avnote { margin: -2px 0 14px !important; font-size: .88rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .who { color: var(--text) !important; font-size: 1rem !important; font-weight: 600; line-height: 1.3; }
+  .who small { display: block; margin-top: 1px; color: var(--muted); font-family: var(--serif); font-style: italic; font-weight: 400; font-size: .98rem; line-height: 1.25; }
+  ul.people { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 20px; }
+  ul.people li { break-inside: avoid; padding: 2px 0; }
+  ul.people li span { color: var(--muted); font-size: .85rem; }
+  ul.people.alumni li { padding: 8px 0; color: var(--text); font-size: 1rem; font-weight: 600; line-height: 1.3; }
+  ul.people.alumni li span { display: block; }
+  ul.people.alumni li span:not(.edu) { margin: 1px 0 4px; color: var(--muted); font-family: var(--serif); font-style: italic; font-weight: 400; font-size: .98rem; line-height: 1.25; }
+  .edu { display: block; color: var(--muted); font-weight: 400; font-size: .76rem; line-height: 1.4; }
+  .who .edu.now { margin-top: 6px; }
+  .who .edu:not(.now) { padding-left: 8px; border-left: 2px solid var(--line); }
+  .who .edu.now + .edu { margin-top: 3px; }
+  .edu.now { color: var(--maroon) !important; font-weight: 600; font-size: .7rem !important; letter-spacing: .06em; text-transform: uppercase; }
+  .edu.todo { font-style: italic; opacity: .8; }
+  ul.people li span.edu { font-size: .76rem; }
+  ul.people.alumni li span.edu { font-size: .78rem; font-weight: 400; padding-left: 8px; border-left: 2px solid var(--line); }
+  ul.people.alumni li > .edu:first-of-type { margin-top: 4px; }
+  ul.people.current li { align-items: flex-start; }
+  ul.people.current .av { margin-top: 2px; }
+  .card.join { margin-top: 16px; }
+  .card.join p + p, .card.bio p + p { margin-top: 10px; }
+  .card.bio p { color: var(--text); max-width: 75ch; }
+  blockquote.motto { margin: 0 0 10px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--text); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .85rem; }
+  footer p { margin: 4px 0; }
+
+  @media (max-width: 980px) { .projects { grid-template-columns: repeat(2, 1fr); } .gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 820px) {
+    .courses { grid-template-columns: 1fr; }
+    .courses.past, .path, ul.people.current { grid-template-columns: repeat(2, 1fr); }
+    .path li::after { display: none; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    .nav ul { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 32px; text-align: left; }
+    .portrait { width: 120px; height: 120px; font-size: 2.6rem; }
+    .grid2, .contact { grid-template-columns: 1fr; }
+    .projects, .gallery { grid-template-columns: 1fr; }
+    ul.people.alumni { columns: 1; }
+    .courses.past, .path, ul.people.current { grid-template-columns: 1fr; }
+    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Sabit Ekin</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#outreach">Outreach</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- Hero -->
+    <div class="hero" id="top">
+      <div class="portrait"><img src="assets/headshot.jpg" alt="Portrait of Sabit Ekin" width="180" height="180"></div>
+      <div>
+        <h1>Sabit Ekin</h1>
+        <p class="fellow">Charlotte and Walter Buchanan Faculty Fellow</p>
+        <ul class="roles">
+          <li><strong>Associate Professor</strong>, Engineering Technology and Industrial Distribution (ETID) <span class="inst">· Affiliated Faculty, Electrical and Computer Engineering</span></li>
+          <li><strong>Founding Director</strong>, Generative AI Literacy Initiative, Texas A&amp;M Institute of Data Science (TAMIDS)</li>
+          <li><strong>Director</strong>, Texas Wireless</li>
+          <li><strong>Research Coordination Fellow</strong>, Texas A&amp;M Institute of Data Science (TAMIDS)</li>
+          <li class="inst">Texas A&amp;M University, College Station, Texas</li>
+        </ul>
+        <div class="links">
+          <a class="cv" href="assets/Sabit_Ekin_CV.pdf">CV (PDF)</a>
+          <a href="https://scholar.google.com/citations?user=cgJM6k0AAAAJ">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/sabitekin/">LinkedIn</a>
+          <a href="https://engineering.tamu.edu/etid/profiles/ekin-sabit.html">Faculty page</a>
+          <a href="mailto:sabitekin@tamu.edu">sabitekin@tamu.edu</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- At a glance -->
+    <section aria-labelledby="glance-h">
+      <h2 id="glance-h">At a glance</h2>
+      <p class="lede">Wireless communications and sensing researcher and inventor with nearly 14 years of post-Ph.D. experience in industry and academia. My work turns AI-enabled wireless sensing into deployed products, startups, and patents, and I lead Texas A&amp;M’s campus-wide effort in generative AI literacy.</p>
+      <h3 class="sub">Career path</h3>
+      <ol class="path">
+        <li><time>2012</time><b>Ph.D., Electrical and Computer Engineering</b><span>Texas A&amp;M University</span></li>
+        <li><time>2013–2016</time><b>Senior Modem Systems Engineer</b><span>Qualcomm</span></li>
+        <li><time>2016–2022</time><b>Assistant/Associate Professor, ECE</b><span>Oklahoma State University</span></li>
+        <li><time>2023–present</time><b>Associate Professor, ETID</b><span>Texas A&amp;M University</span></li>
+      </ol>
+      <h3 class="sub">By the numbers</h3>
+      <div class="stats">
+        <div class="stat"><b>103</b><span>published articles, including 52 journals</span></div>
+        <div class="stat"><b>$10.9M</b><span>research funding across 30 grants, 16 as PI</span></div>
+        <div class="stat"><b>15</b><span>Ph.D. students mentored (6 graduates)</span></div>
+        <div class="stat"><b>2,130+</b><span>citations · h-index 19</span></div>
+        <div class="stat"><b>2023–2028</b><span>DOE Early Career Research Award</span></div>
+        <div class="stat"><b>29</b><span>invited talks and panels (including 5 panels)</span></div>
+        <div class="stat"><b>5</b><span>editorial roles (2 current IEEE associate editor)</span></div>
+        <div class="stat"><b>5</b><span>patent applications (2 issued U.S. patents)</span></div>
+      </div>
+      <p class="asof">Citation figures from Google Scholar, October 2026.</p>
+      <h3 class="sub">Short bio</h3>
+      <div class="card bio">
+        <p>Sabit Ekin is an Associate Professor of Engineering Technology and Industrial Distribution, an affiliated faculty member in Electrical and Computer Engineering, and the Charlotte and Walter Buchanan Faculty Fellow at Texas A&amp;M University. He directs Texas Wireless and is the founding director of the Generative AI Literacy Initiative at the Texas A&amp;M Institute of Data Science. His research spans wireless communications and sensing (mmWave, terahertz, optical, and satellite systems), non-contact health sensing, and the Internet of Things, with AI and machine learning throughout.</p>
+        <p>From 2013 to 2016 he was a Senior Modem Systems Engineer at Qualcomm, contributing to cellular modem chipsets used in devices from Apple, Samsung, Google, and others, and receiving eight Qualstar Hall of Fame Awards. He was on the Electrical and Computer Engineering faculty at Oklahoma State University from 2016 to 2022, where he founded OKSat, Oklahoma’s first CubeSat program. He received the DOE Early Career Research Program Award (2023–2028) and is an IEEE Senior Member. He holds a Ph.D. in Electrical and Computer Engineering from Texas A&amp;M University (2012), an M.Sc. in Electrical Engineering from New Mexico Tech (2008), and a B.Sc. in Electrical and Electronics Engineering from Eskisehir Osmangazi University (2006).</p>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" aria-labelledby="research-h">
+      <h2 id="research-h">Research</h2>
+      <p class="lede">My research focuses on wireless communications and sensing systems, leveraging AI/ML methods to develop intelligent and adaptive engineering solutions.</p>
+      <div class="grid2">
+        <div class="card"><h3>Wireless communications</h3><p>RF, mmWave, terahertz, optical, hybrid RF/optical, and satellite communication systems.</p></div>
+        <div class="card"><h3>Wireless sensing</h3><p>Non-contact optical sensing for gesture recognition and human–computer interaction; vital-signs monitoring of respiration, heart rate, and glucose.</p></div>
+        <div class="card"><h3>Internet of Things</h3><p>Livestock monitoring, soil monitoring, and related applications.</p></div>
+        <div class="card"><h3>AI / ML</h3><p>Supervised, unsupervised, and reinforcement learning; deep learning; large language models.</p></div>
+      </div>
+      <p class="note">Before academia, I was a Senior Modem Systems Engineer at Qualcomm (2013–2016), where my work shipped in cellular modems used in Apple, Samsung, Google, and other devices. Ph.D. in Electrical and Computer Engineering, Texas A&amp;M University (2012).</p>
+
+      <h3 class="sub">Selected projects</h3>
+      <div class="projects">
+        <div class="project"><figure class="pfig"><img src="assets/projects/formula3.svg" alt="FORMULA3: an AI controller predicts blockage and reconfigures a transmissive smart surface on a window and a metallic reflector array indoors so that an upper mid-band (FR3) link from an outdoor base station reaches a user while another person walks through the room" loading="lazy"></figure><div class="pbody"><b><a href="https://vines-formula3.github.io/">FORMULA3</a></b><span>Self-adapting 6G networks in the 7–24 GHz FR3 band that combine AI, sensing, smart surfaces, and reflector arrays to predict blockage and keep links reliable indoors and outdoor-to-indoor.</span><em>NSF &amp; Research Council of Finland · VINES · 2026–2029</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/prime-spectrum.svg" alt="Spectrum reallocation: line-of-sight satellite links move from congested sub-10 GHz spectrum to Ku and Ka bands, with AI rain-fade prediction, freeing the lower bands for mobile and broadband coverage in cities" loading="lazy"></figure><div class="pbody"><b>Prime Spectrum, Better Use</b><span>Moving line-of-sight links, such as satellite earth stations and fixed microwave, from congested sub-10 GHz spectrum to Ku/Ka bands, with rain-fade-aware AI, to free prime spectrum for mobile and broadband.</span><em>NSF · with George Mason &amp; NYU</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/commawarenet.svg" alt="Hybrid terahertz and visible-light network in a smart room: a ceiling luminaire lights a desk user while its terahertz beam is redirected by a smart surface to a second user" loading="lazy"></figure><div class="pbody"><b>CommAwareNet</b><span>Energy-efficient, high-data-rate hybrid THz/visible-light architecture with intelligent surfaces for smart facilities.</span><em>DOE Early Career Award</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/substation.svg" alt="Gunshot detection for energy substation protection: acoustic sensors on a pole detect a gunshot near a fenced substation and alert grid operators" loading="lazy"></figure><div class="pbody"><b>Substation protection</b><span>Gunshot detection with acoustic sensing and AI to protect energy substations from physical attacks.</span><em>DOE NETL · 2025–2027</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/offshore.svg" alt="Offshore lifting safety: on an offshore platform, a millimeter-wave radar inspects the crane wire and hook, a small robot inspects the structure, and a digital twin predicts problems" loading="lazy"></figure><div class="pbody"><b>Offshore lifting safety</b><span>Predictive monitoring of offshore lifting equipment with mmWave radar non-destructive testing, an inspection robot, and a digital twin.</span><em>DOE / TEES OESI · 2025–2026</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/rail.svg" alt="Intelligent rail track transitions: optical fiber sensors along the rail measure strain where a bridge meets the embankment as a train passes, and a monitor flags the weak spot" loading="lazy"></figure><div class="pbody"><b>Intelligent track transitions</b><span>Optical fiber sensors that monitor rail track transitions, such as bridge-to-embankment zones, where track degrades fastest.</span><em>U.S. DOT FRA · 2023–2025</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/testbed-6g.svg" alt="Versatile 6G experimental platform: a rack of software-defined radios drives two antenna arrays that communicate with each other and sense a target at the same time, monitored from a laptop" loading="lazy"></figure><div class="pbody"><b>6G experimental platform</b><span>A versatile testbed for 6G-and-beyond communication and sensing research with software-defined radios and antenna arrays.</span><em>NASA · 2022–2024</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/spidernet.svg" alt="Demand-driven elastic network over a city: base stations near users are switched on and linked in a web, while idle ones sleep to save energy" loading="lazy"></figure><div class="pbody"><b>SpiderNET</b><span>A spectrally and energy-efficient, demand-driven elastic architecture for future 5G-and-beyond networks.</span><em>NSF</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/lunarcom.svg" alt="Hybrid lunar communication: a ground station on Earth reaches a lunar gateway and a rover on the Moon through both a wide radio link and a narrow optical laser link" loading="lazy"></figure><div class="pbody"><b>LunarCom</b><span>Hybrid RF/optical communication between Earth stations and lunar explorers for NASA missions.</span><em>NASA</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/lightwave-sensing.svg" alt="Non-contact light-wave sensing: a ceiling lamp lights a seated person, a photodetector on the desk captures light reflected from the chest, and the signal reveals breathing and heartbeat" loading="lazy"></figure><div class="pbody"><b>Light-wave sensing</b><span>Non-contact monitoring of heart rate, respiration, and glucose, and gesture recognition, using reflected light.</span><em>NSF · U.S. Patent 11,796,466</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/vildar.svg" alt="Visible-light detection and ranging: an approaching car’s headlights reach a roadside photodetector, and the rising received power over time gives the car’s speed" loading="lazy"></figure><div class="pbody"><b>ViLDAR</b><span>Visible-light detection and ranging: vehicle speed estimation from headlamps.</span><em>U.S. DOT · U.S. Patent 10,768,194</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/v2x.svg" alt="Hybrid visible-light and radio vehicle links: a following car talks to the car ahead through headlight and taillight light, while a roadside unit provides a radio backup link to both" loading="lazy"></figure><div class="pbody"><b>Hybrid visible-light/RF V2X</b><span>Vehicle-to-vehicle links over headlights and taillights, backed up by radio (DSRC) for reliable connected driving.</span><em>OSU Research</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/uav-wearables.svg" alt="Drone-to-wearable links: a drone exchanges ultra-wideband pulses with wearable sensors on people below, and the team measures and models these channels" loading="lazy"></figure><div class="pbody"><b>UAV-to-wearable links</b><span>Ultra-wideband channel measurements and models for links between drones and wearable sensors.</span><em>OSU Research · Wiley book chapter</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/faa-ils.svg" alt="FAA instrument landing system measurements: a drone carrying a software-defined radio flies the approach path and measures the localizer signal from the antenna array at the end of the runway" loading="lazy"></figure><div class="pbody"><b>Airborne NAVAID measurements</b><span>Drone-borne software-defined radios for instrument landing system (ILS) Zone 3 measurements and lightweight NAVAID inspection.</span><em>U.S. DOT FAA Center of Excellence</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/cubesat-cr.svg" alt="Cognitive radio for small satellites: three CubeSats share a network and sense the spectrum, using free channels to reach a ground station on Earth" loading="lazy"></figure><div class="pbody"><b>Cognitive radio for CubeSats</b><span>Spectrum- and power-efficient cognitive radio for small-satellite networks, linked to OKSat, Oklahoma’s first CubeSat program.</span><em>NASA Oklahoma Space Grant</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/mmwave-thz.svg" alt="Millimeter-wave and terahertz channels: a drone sends a narrow beam to a ground phased array while rain attenuates the link and a building and the ground create reflected multipath" loading="lazy"></figure><div class="pbody"><b>mmWave &amp; THz channels</b><span>UAV channel emulation, THz dispersion analysis and compensation, and reflective surfaces for 6G.</span><em>NSF · AFOSR · QNRF</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/rural-iot.svg" alt="Rural Internet of Things: tagged cattle and an underground soil sensor on a farm send data over long-range LoRa radio to a gateway tower on the hill" loading="lazy"></figure><div class="pbody"><b>Rural IoT</b><span>TV white space and LoRaWAN connectivity, LoRaWAN localization, livestock monitoring, and UAV-assisted underground soil sensing.</span><em>USGS · NSF I-Corps · industry</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/projects/radar-bp.svg" alt="Non-invasive blood-pressure sensing: a millimeter-wave radar on a desk steers beams to a seated person’s wrist and neck at the same time and recovers the arterial pulse waveform" loading="lazy"></figure><div class="pbody"><b>mmWave radar health sensing</b><span>Non-invasive multi-target blood-pressure monitoring with passive-beamforming FMCW radar.</span><em>PCT application WO 2025/221680</em></div></div>
+      </div>
+
+      <details class="allprojects">
+        <summary><span>All funded projects</span><small>30 awards · $10.9M total · 16 as PI</small></summary>
+        <h4>Texas A&amp;M University</h4>
+        <ul class="awards">
+          <li><span class="aw-t">FORMULA3: Framework for Optimal Resource Management Using Generalizable AI in FR3 Dynamic Programmable Wireless Environments</span><span class="aw-m">NSF &amp; Research Council of Finland (VINES) · 2026–2029</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">CommAwareNet: Towards Communication-Aware Smart Facilities: An Energy-efficient, High-data-rate and Reliable Hybrid RF/Optical Communication Architecture</span><span class="aw-m">DOE Early Career Research Program · 2023–2028</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Pioneering the Next Spectrum Frontier: Transitioning Line-of-Sight Systems from Sub-10 GHz to Higher Bands</span><span class="aw-m">NSF EAGER · 2025–2027</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Gunshot Detection Based Energy Substation Protection System</span><span class="aw-m">DOE NETL · 2025–2027</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Enhancing Safety of Offshore Lifting Equipment: Predictive Monitoring with mmWave Radar NDT, Robot and Digital Twin Modelling</span><span class="aw-m">DOE / TEES Ocean Energy Safety Institute · 2025–2026</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">AI for Industrial Distribution (AI4ID) Consortium membership project</span><span class="aw-m">AI4ID Consortium · 2025–2026</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Generative AI Literacy Center with NVIDIA Deep Learning Institute (GPU compute grant)</span><span class="aw-m">NVIDIA · 2025</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Generative AI Literacy Center (NextGenAI Consortium)</span><span class="aw-m">OpenAI · 2024–2026</span><span class="aw-r">Co-PI</span></li>
+        </ul>
+        <h4>Transferred to Texas A&amp;M from Oklahoma State</h4>
+        <ul class="awards">
+          <li><span class="aw-t">SpiderNET: A Spectrally and Energy Efficient Data-Aided Demand-Driven Elastic Architecture for Future Networks</span><span class="aw-m">NSF ECCS (SpecEES) · 2019–2025</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Non-contact Monitoring of Respiration and Heart Rates Through Light-wave Sensing</span><span class="aw-m">NSF CNS Core · 2020–2024</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">A Low-cost and Non-contact Respiration Monitoring Method for COVID-19 Screening and Prognosis</span><span class="aw-m">NSF I-Corps · 2021–2025</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">LunarCom: Hybrid RF/optical lunar communication architecture</span><span class="aw-m">NASA · 2020–2023</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">mmWave-based Future Dense Networks with UAV Backhauling: Channel Characterization, Performance Optimization, and AI-driven Enhancement</span><span class="aw-m">Qatar National Research Fund · 2021–2024</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Revitalizing Rural: Equipping Rural Communities with Technology Literacy for Seizing Productivity</span><span class="aw-m">NSF Smart &amp; Connected Communities · 2021–2023</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Acquisition of a Wideband Continuous-Wave Characterization Platform</span><span class="aw-m">NSF MRI · 2020–2023</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">FAA COE ILS Zone 3 Measurements</span><span class="aw-m">DOT FAA · 2022–2026</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Intelligent Track Transitions using Optical Fiber Sensors</span><span class="aw-m">DOT FRA · 2023–2025</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Versatile Experimental Platform for 6G and Beyond Communications and Sensing Innovations</span><span class="aw-m">NASA · 2022–2024</span><span class="aw-r">Co-PI</span></li>
+        </ul>
+        <h4>Oklahoma State University</h4>
+        <ul class="awards">
+          <li><span class="aw-t">TV white space and IoT connectivity for rural broadband</span><span class="aw-m">OSU VPR Tier 1 · 2019–2021</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Soil monitoring through UAV-assisted IoT wireless underground sensors</span><span class="aw-m">DOI USGS · 2020–2022</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">ViLDAR: Visible-light detection and ranging for vehicle speed estimation</span><span class="aw-m">DOT UTC Tran-SET · 2018–2019</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Low-power wide-range IoT livestock monitoring</span><span class="aw-m">Axeonis LLC (donation) · 2018–2019</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Low-maintenance livestock monitoring via environment-powered IoT</span><span class="aw-m">OSU President’s Cup · 2017</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">Livestock monitoring customer discovery</span><span class="aw-m">NSF I-Corps Site · 2017–2018</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">NASA EPSCoR project</span><span class="aw-m">NASA EPSCoR · 2017–2018</span><span class="aw-r pi">PI</span></li>
+          <li><span class="aw-t">DARPA project</span><span class="aw-m">DOD DARPA · 2022–2023</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Defense University Research Instrumentation Program award</span><span class="aw-m">DOD AFOSR DURIP · 2020–2021</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Project for the Air Force Research Laboratory</span><span class="aw-m">Jump Aero Inc. (AFRL) · 2020–2021</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">Systems Engineering Research Center project</span><span class="aw-m">DOD SERC · 2019–2020</span><span class="aw-r">Co-PI</span></li>
+          <li><span class="aw-t">U.S. Special Operations Command project</span><span class="aw-m">DOD USSOCOM · 2018–2019</span><span class="aw-r">Co-PI</span></li>
+        </ul>
+      </details>
+      <h3 class="sub">Sponsors</h3>
+      <ul class="sponsors">
+        <li><span class="logo"><img class="lg" src="assets/sponsors/nsf.svg" alt="" loading="lazy"></span><b>NSF</b><span>CNS, ECCS, MRI, IIP, EAGER, I-Corps</span></li>
+        <li><span class="logo"><img src="assets/sponsors/doe.webp" alt="" loading="lazy"></span><b>DOE</b><span>Early Career, NETL, OESI</span></li>
+        <li><span class="logo"><img src="assets/sponsors/nasa.svg" alt="" loading="lazy"></span><b>NASA</b><span>including EPSCoR</span></li>
+        <li><span class="logo"><img src="assets/sponsors/dod.webp" alt="" loading="lazy"></span><b>DoD</b><span>DARPA, AFOSR, USSOCOM, SERC</span></li>
+        <li><span class="logo"><img src="assets/sponsors/dot.svg" alt="" loading="lazy"></span><b>U.S. DOT</b><span>FRA, FAA, Tran-SET</span></li>
+        <li><span class="logo"><img src="assets/sponsors/usgs.svg" alt="" loading="lazy"></span><b>USGS</b><span>U.S. Department of the Interior</span></li>
+        <li><span class="logo"><img src="assets/sponsors/rcf.svg" alt="" loading="lazy"></span><b>Research Council of Finland</b><span>with NSF (VINES)</span></li>
+        <li><span class="logo"><img src="assets/sponsors/qrdi.svg" alt="" loading="lazy"></span><b>QNRF</b><span>Qatar National Research Fund (now QRDI Council)</span></li>
+        <li><span class="logo"><img src="assets/sponsors/openai.svg" alt="" loading="lazy"></span><b>OpenAI</b><span>NextGenAI consortium</span></li>
+        <li><span class="logo"><img src="assets/sponsors/nvidia.svg" alt="" loading="lazy"></span><b>NVIDIA</b><span>GPU hours</span></li>
+        <li><span class="logo"><img src="assets/sponsors/ai4id.webp" alt="" loading="lazy"></span><b>AI4ID Consortium</b><span></span></li>
+        <li><span class="logo"><img src="assets/sponsors/jumpaero.webp" alt="" loading="lazy"></span><b>Industry</b><span>Jump Aero (for AFRL), Axeonis</span></li>
+      </ul>
+      <p class="note">More: <a href="https://scholar.google.com/citations?user=cgJM6k0AAAAJ">publications on Google Scholar</a></p>
+    </section>
+
+    <!-- Team -->
+    <section id="team" aria-labelledby="team-h">
+      <h2 id="team-h">Texas Wireless team</h2>
+      <p class="lede one-line">Current: 9 Ph.D. · 4 M.Sc./MSET &nbsp;|&nbsp; Alumni: 6 Ph.D. · 9 M.Sc./MSET</p>
+      <div class="stack">
+        <div class="card">
+          <h3>Current Ph.D. students</h3>
+          <p class="avnote">Every student has a wireless “spirit animal.” Hover over or tap an avatar to see why.</p>
+          <ul class="people current">
+            <li tabindex="0" data-why="Homing pigeon: the original airborne network, carrying messages across the sky. Research: non-terrestrial networks."><span class="av" style="--h:205" aria-hidden="true">🕊️</span><span class="who">Abdullateef Almohamad <small>Wireless above the clouds</small><span class="edu now">Ph.D., Fall 2022 – present</span><span class="edu">M.Sc., Qatar University, 2021</span><span class="edu">B.Sc., Higher Institute for Applied Sciences and Technology, Syria, 2015</span><span class="sr-only"> (avatar: Homing pigeon: the original airborne network, carrying messages across the sky. Research: non-terrestrial networks.)</span></span></li>
+            <li tabindex="0" data-why="Bat: the same calls both sense the world (echolocation) and talk to other bats. Research: integrated sensing and communication (ISAC)."><span class="av" style="--h:285" aria-hidden="true">🦇</span><span class="who">Oguz Bedir <small>Radios that see while they talk</small><span class="edu now">Ph.D., Fall 2023 – present</span><span class="edu">B.Sc., Computer Eng., Istanbul Medipol University, 2022</span><span class="edu">B.Sc., Electrical &amp; Electronics Eng., Istanbul Medipol University, 2021</span><span class="sr-only"> (avatar: Bat: the same calls both sense the world (echolocation. Research: integrated sensing and communication (ISAC).) and talk to other bats)</span></span></li>
+            <li tabindex="0" data-why="Dolphin: sends out pulses and reads the echoes, nature’s radar under water. Research: radar."><span class="av" style="--h:195" aria-hidden="true">🐬</span><span class="who">Sumin Kim <small>Seeing with echoes · co-chair</small><span class="edu now">Ph.D., Fall 2025 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Dolphin: sends out pulses and reads the echoes, nature’s radar under water. Research: radar.)</span></span></li>
+            <li tabindex="0" data-why="Cat: a built-in reflector behind the eye redirects light right where it is needed. Research: smart reflecting surfaces."><span class="av" style="--h:35" aria-hidden="true">🐱</span><span class="who">Hieu Le <small>Teaching walls to steer signals</small><span class="edu now">Ph.D., Spring 2023 – present</span><span class="edu">M.Sc., New Mexico Tech, 2021</span><span class="edu">B.Sc., Vietnam National University – Ho Chi Minh City, 2018</span><span class="sr-only"> (avatar: Cat: a built-in reflector behind the eye redirects light right where it is needed. Research: smart reflecting surfaces.)</span></span></li>
+            <li tabindex="0" data-why="Fox: thought to use Earth’s magnetic field when it pounces"><span class="av" style="--h:18" aria-hidden="true">🦊</span><span class="who">Rayan Mashat <small>co-chair</small><span class="edu now">Ph.D., Fall 2026 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Fox: thought to use Earth’s magnetic field when it pounces)</span></span></li>
+            <li tabindex="0" data-why="Octopus: the smartest invertebrate, with a brain in every arm. Research: AI-enabled wireless."><span class="av" style="--h:330" aria-hidden="true">🐙</span><span class="who">Milad Saadat <small>Networks that learn on their own</small><span class="edu now">Ph.D., Spring 2026 – present</span><span class="edu">M.Sc., Texas A&amp;M University, 2025</span><span class="edu">B.Sc., Sharif University of Technology, 2022</span><span class="sr-only"> (avatar: Octopus: the smartest invertebrate, with a brain in every arm. Research: AI-enabled wireless.)</span></span></li>
+            <li tabindex="0" data-why="Bee: energy-efficient multi-hop routing, one flower at a time. Research: energy-efficient networking."><span class="av" style="--h:48" aria-hidden="true">🐝</span><span class="who">Nurullah Sevim <small>More bits, fewer joules · Hagler Graduate Student Fellow</small><span class="edu now">Ph.D., Fall 2023 – present</span><span class="edu">M.Sc., Bilkent University, 2023</span><span class="edu">B.Sc., Bilkent University, 2021</span><span class="sr-only"> (avatar: Bee: energy-efficient multi-hop routing, one flower at a time. Research: energy-efficient networking.)</span></span></li>
+            <li tabindex="0" data-why="Ant: born with a pair of finely tuned antennae. Research: antenna design."><span class="av" style="--h:0" aria-hidden="true">🐜</span><span class="who">Amir Tag <small>Sculpting metal into ears for the airwaves</small><span class="edu now">Ph.D., Fall 2023 – present</span><span class="edu">M.Sc., Sorbonne Université, 2023</span><span class="edu">B.Sc., Sorbonne Université, 2021</span><span class="sr-only"> (avatar: Ant: born with a pair of finely tuned antennae. Research: antenna design.)</span></span></li>
+            <li tabindex="0" data-why="Whale: toothed whales map their surroundings with echolocation clicks, radar of the deep. Research: radar."><span class="av" style="--h:210" aria-hidden="true">🐋</span><span class="who">Daniel Yu <small>Mapping the world in reflections · co-chair</small><span class="edu now">Ph.D., Fall 2026 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Whale: toothed whales map their surroundings with echolocation clicks, radar of the deep. Research: radar.)</span></span></li>
+          </ul>
+          <h3 class="sub2">Current M.Sc. / MSET students</h3>
+          <ul class="people current">
+            <li tabindex="0" data-why="Parrot: the natural repeater"><span class="av" style="--h:140" aria-hidden="true">🦜</span><span class="who">Sean Coggins<span class="edu now">M.S., Fall 2026 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Parrot: the natural repeater)</span></span></li>
+            <li tabindex="0" data-why="Eagle: sees the whole landscape from far above, like a satellite. Research: satellite communication."><span class="av" style="--h:28" aria-hidden="true">🦅</span><span class="who">Muhammet Kulaber <small>Connectivity from orbit</small><span class="edu now">M.S., Fall 2025 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Eagle: sees the whole landscape from far above, like a satellite. Research: satellite communication.)</span></span></li>
+            <li tabindex="0" data-why="Butterfly: monarchs navigate thousands of miles with a sun compass"><span class="av" style="--h:300" aria-hidden="true">🦋</span><span class="who">Mamta Zawar<span class="edu now">M.S., Fall 2025 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Butterfly: monarchs navigate thousands of miles with a sun compass)</span></span></li>
+            <li tabindex="0" data-why="Sea turtle: navigates by sensing magnetic fields"><span class="av" style="--h:160" aria-hidden="true">🐢</span><span class="who">Tiantian Zhu<span class="edu now">M.S., Fall 2025 – present</span><span class="edu todo">Education to be added</span><span class="sr-only"> (avatar: Sea turtle: navigates by sensing magnetic fields)</span></span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Ph.D. alumni</h3>
+          <ul class="people alumni">
+            <li>Khaled Nakhleh <span>Applied Scientist, Amazon</span><span class="edu">Ph.D., Texas A&amp;M University, 2026</span><span class="edu">M.Sc., Texas A&amp;M University, 2020</span><span class="edu">B.Sc., Texas A&amp;M University at Qatar, 2017</span></li>
+            <li>Mostafa Ibrahim <span>Senior Wireless Communication Systems Engineer, PhasorLab</span><span class="edu">Ph.D., Oklahoma State University, 2023</span><span class="edu">M.Sc., Istanbul Medipol University, 2017</span><span class="edu">B.Sc., Ain Shams University, 2010</span></li>
+            <li>Zobaer Islam <span>Research Instructor, UT Southwestern</span><span class="edu">Ph.D., Oklahoma State University, 2023</span><span class="edu">B.Sc., Bangladesh University of Engineering and Technology, 2012</span></li>
+            <li>Karl Strecker <span>Postdoctoral Fellow, Oklahoma State University</span><span class="edu">Ph.D., Oklahoma State University, 2023</span><span class="edu">M.Sc., Oklahoma State University, 2020</span><span class="edu">B.Sc., Oklahoma State University, 2018</span></li>
+            <li>Hisham Abuella <span>Senior Modem Systems Engineer, Apple</span><span class="edu">Ph.D., Oklahoma State University, 2021</span><span class="edu">M.Sc., Istanbul Şehir University, 2016</span><span class="edu">B.Sc., Ain Shams University, 2013</span></li>
+            <li>Amit Kachroo <span>Applied Scientist, Amazon</span><span class="edu">Ph.D., Oklahoma State University, 2021</span><span class="edu">M.Sc., Istanbul Şehir University, 2017</span><span class="edu">B.Sc., National Institute of Technology Srinagar, 2009</span></li>
+          </ul>
+          <h3 class="sub2">M.Sc. / MSET alumni</h3>
+          <ul class="people alumni">
+            <li>Grant Gannon <span class="edu">MSET, Texas A&amp;M University, 2026</span><span class="edu">B.Sc., Texas A&amp;M University, 2023</span></li>
+            <li>Nazanin Golshanara <span class="edu">MSET, Texas A&amp;M University, 2026</span></li>
+            <li>Bryce C. Hinze <span class="edu">MSET, Texas A&amp;M University, 2025</span></li>
+            <li>Eden Schlink <span class="edu">MSET, Texas A&amp;M University, 2026</span></li>
+            <li>Li Yu <span class="edu">M.Sc., Oklahoma State University, 2019</span><span class="edu">M.Sc., Beijing Institute of Technology, 2016</span><span class="edu">B.Sc., Harbin Engineering University, 2013</span></li>
+            <li>Hussein Kwasme <span class="edu">M.Sc., Oklahoma State University, 2019</span><span class="edu">B.Sc., University of Mosul, 2013</span></li>
+            <li>Mohammad Al Mestiraihi <span class="edu">M.Sc., Oklahoma State University, 2019</span><span class="edu">M.Sc., Jordan University of Science and Technology, 2011</span><span class="edu">B.Sc., Yarmouk University, 2008</span></li>
+            <li>Surbhi Vishwakarma <span class="edu">M.Sc., Oklahoma State University, 2018</span><span class="edu">B.Sc., Vellore Institute of Technology, 2016</span></li>
+            <li>Adithya Popuri <span class="edu">M.Sc., Oklahoma State University, 2018</span><span class="edu">B.Sc., Gandhi Institute of Technology and Management, 2016</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card join" id="openings">
+        <h3>Openings: prospective students and visiting scholars</h3>
+        <p>Thank you for your interest in Texas Wireless. It is a privilege to work with such talented and dedicated people, and the team is diverse, dynamic, and collaborative.</p>
+        <p>If you are an enthusiastic student or visiting scholar who would like to work with us, please email me at <a href="mailto:sabitekin@tamu.edu">sabitekin@tamu.edu</a>. Because of the volume of email, I may not be able to reply to every inquiry. A lack of reply is not a reflection of the merit of your inquiry or application; team capacity and available funding also affect whether we can respond.</p>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" aria-labelledby="courses-h">
+      <h2 id="courses-h">Courses</h2>
+      <p class="lede">Course materials with interactive simulations, worked examples, and up-to-date content. Each course has its own site.</p>
+      <div class="courses">
+        <article class="course">
+          <span class="code">ENTC 689</span>
+          <h3>From Machine Learning to Modern AI: Fundamentals, Tools, and Applications</h3>
+          <p>Graduate course. Builds on ENTC 689: Generative AI, the first GenAI course at Texas A&amp;M (Spring 2025, 2026).</p>
+          <span class="tag soon">Spring 2027</span>
+          <a class="go" href="entc689/">Course site →</a>
+        </article>
+        <article class="course">
+          <span class="code">ESET 455</span>
+          <h3>Wireless Transmission Systems</h3>
+          <p>Undergraduate course with newly developed labs. Taught every fall and spring since 2023.</p>
+          <span class="tag">Course site coming soon</span>
+        </article>
+        <article class="course">
+          <span class="code">ESET 489</span>
+          <h3>Artificial Intelligence: Introduction and Applications</h3>
+          <p>New undergraduate course with a full curriculum design.</p>
+          <span class="tag soon">First offering Fall 2027</span>
+        </article>
+      </div>
+      <p class="note">Course sites are password-protected. Enrolled students can find the password in Canvas.</p>
+      <h3 class="sub">Other courses taught</h3>
+      <div class="courses past">
+        <article class="course">
+          <span class="code">ENGR 689</span>
+          <h4>AI/ML Fundamentals, Tools, and Applications</h4>
+          <p>College of Engineering Sprint Course: a one-week, 15-hour course developed and launched new. Texas A&amp;M.</p>
+          <span class="tag">Fall 2026</span>
+        </article>
+        <article class="course">
+          <span class="code">ENTC 689</span>
+          <h4>Generative AI: Introduction and Applications</h4>
+          <p>The first GenAI course at Texas A&amp;M; developed and launched new, with a full curriculum design.</p>
+          <span class="tag">Spring 2025, 2026</span>
+        </article>
+        <article class="course">
+          <span class="code">Hullabaloo U</span>
+          <h4>AI Course Modules</h4>
+          <p>AI modules for Texas A&amp;M’s university-wide first-year course, developed with the Center for Teaching Excellence.</p>
+          <span class="tag">2026</span>
+        </article>
+        <article class="course">
+          <span class="code">LANL</span>
+          <h4>PE Exam Preparation: Communications Topics</h4>
+          <p>Developed and taught the communications topics for Los Alamos National Laboratory staff and engineers.</p>
+          <span class="tag">2023</span>
+        </article>
+        <article class="course">
+          <span class="code">ECEN 5573</span>
+          <h4>Wireless Communications</h4>
+          <p>Graduate course with a full curriculum design. Oklahoma State.</p>
+          <span class="tag">2017–2022</span>
+        </article>
+        <article class="course">
+          <span class="code">ECEN 4533</span>
+          <h4>Data Communications</h4>
+          <p>Full curriculum design with newly developed labs. Oklahoma State.</p>
+          <span class="tag">2016–2021</span>
+        </article>
+        <article class="course">
+          <span class="code">ECEN/MAE 5513</span>
+          <h4>Stochastic Systems</h4>
+          <p>Graduate course with a full curriculum design. Oklahoma State.</p>
+          <span class="tag">2018–2019</span>
+        </article>
+        <article class="course">
+          <span class="code">ECEN 3513</span>
+          <h4>Signals Analysis</h4>
+          <p>Undergraduate course. Oklahoma State.</p>
+          <span class="tag">2020–2021</span>
+        </article>
+        <article class="course">
+          <span class="code">ECEN 4523</span>
+          <h4>Communication Theory</h4>
+          <p>Undergraduate course. Oklahoma State.</p>
+          <span class="tag">2020</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" aria-labelledby="leadership-h">
+      <h2 id="leadership-h">Leadership &amp; innovation</h2>
+      <p class="lede">Building programs that put new technology into the hands of students, faculty, and industry.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3><a href="https://genai.tamids.tamu.edu">Generative AI Literacy Initiative</a></h3>
+          <p>Founding Director (2024–present). Texas A&amp;M is part of OpenAI’s $50M NextGenAI consortium of 15 institutions. The initiative runs the Generative AI Consultancy Hub, the GAIRE research-for-education grants, and the GenAI Foundations Workshop series.</p>
+        </div>
+        <div class="card">
+          <img class="logo" src="assets/texas-wireless-logo.png" alt="Texas Wireless logo" width="160" height="96">
+          <h3>Texas Wireless</h3>
+          <p>Director (2023–present). Research on wireless communications and sensing, in collaboration with partners including NYU (Prof. Theodore S. Rappaport).</p>
+        </div>
+        <div class="card">
+          <h3>Patents &amp; startups</h3>
+          <p>2 issued U.S. patents and 3 published applications. Co-founder of Waylolo (NSF I-Corps award) and Aura Prism; founder of <a href="https://grantpanel.ai">GrantPanel.AI</a>.</p>
+        </div>
+        <div class="card">
+          <img class="logo" src="assets/oksat-logo.png" alt="OKSat CubeSat logo" width="160" height="104">
+          <h3>OKSat</h3>
+          <p>Founding Director (2018–2022) of Oklahoma’s first CubeSat program, at Oklahoma State University.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outreach -->
+    <section id="outreach" aria-labelledby="outreach-h">
+      <h2 id="outreach-h">Outreach</h2>
+      <p class="lede">Hands-on wireless technology for K-12 students, rural communities, and undergraduates.</p>
+      <div class="projects four">
+        <div class="project"><figure class="pfig"><img src="assets/outreach/outreach-diy.svg" alt="DIY light-wave communication kit: a phone plays music into an LED transmitter, the music travels as flickering light to a solar-cell receiver, and a speaker plays it back" loading="lazy"></figure><div class="pbody"><b>DIY Light-Wave Communication Kit</b><span>Since 2017, I have designed and distributed 200+ do-it-yourself visible-light communication kits to K-12 students at schools and a children’s museum, and to undergraduates at Oklahoma State and Texas A&amp;M.</span><em>2017–present</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/outreach/outreach-pete.svg" alt="PETE-Kits rural outreach: a connected technology kit with sensors and a tablet links to a rural schoolhouse next to farmland, bringing hands-on technology to K-12 students" loading="lazy"></figure><div class="pbody"><b>PETE-Kits rural outreach</b><span>Productivity Enhancing Technology Experience Kits brought hands-on technology to K-12 schools in rural Oklahoma counties to promote rural entrepreneurship.</span><em>NSF Smart and Connected Communities · 2021–2023</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/outreach/outreach-research.svg" alt="Student research programs: two undergraduate researchers at a lab bench with an oscilloscope, a software-defined radio with an antenna, and a laptop plotting results" loading="lazy"></figure><div class="pbody"><b>Student research programs</b><span>Research mentor for OK-LSAMP (Oklahoma Louis Stokes Alliance for Minority Participation), NSF REU scholars, and undergraduate research scholars.</span><em>OK-LSAMP · NSF REU</em></div></div>
+        <div class="project"><figure class="pfig"><img src="assets/outreach/outreach-museum.svg" alt="Schools and museums: a light-wave communication demo set up in front of a museum building, with young visitors watching a light beam carry a signal to a receiver" loading="lazy"></figure><div class="pbody"><b>Schools and museums</b><span>National Lab Day for high-school students (2017–2019), Summer Bridge and Discovery Days, elementary-school visits, and the Oklahoma WONDERtorium children’s museum.</span><em>K-12 · families</em></div></div>
+      </div>
+      <h3 class="sub">Outreach</h3>
+      <div class="gallery">
+        <figure><img src="assets/outreach/photos/diy-kit-parts.jpg" alt="DIY kit: visible-light transmitter and receiver boards" loading="lazy" width="800" height="600"><figcaption>The DIY light-wave kit: transmitter and receiver</figcaption></figure>
+        <figure><img src="assets/outreach/photos/diy-kit-demo.jpg" alt="A phone streaming music through an LED transmitter to the DIY receiver" loading="lazy" width="800" height="600"><figcaption>Music streamed over light</figcaption></figure>
+        <figure><img src="assets/outreach/photos/summer-bridge-workshop.jpg" alt="Students building light-wave communication circuits at a Summer Bridge workshop" loading="lazy" width="800" height="600"><figcaption>Summer Bridge workshop</figcaption></figure>
+        <figure><img src="assets/outreach/photos/summer-bridge-group.jpg" alt="Group photo of Summer Bridge and Discovery Days participants in the lab" loading="lazy" width="800" height="600"><figcaption>Summer Bridge &amp; Discovery Days</figcaption></figure>
+        <figure><img src="assets/outreach/photos/lab-day-2019.jpg" alt="High-school students trying wireless demos at National Lab Day 2019" loading="lazy" width="800" height="600"><figcaption>National Lab Day 2019</figcaption></figure>
+        <figure><img src="assets/outreach/photos/lab-day-2018-group.jpg" alt="High-school students and lab members at National Lab Day 2018" loading="lazy" width="800" height="600"><figcaption>National Lab Day 2018</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" aria-labelledby="highlights-h">
+      <h2 id="highlights-h">Recent highlights</h2>
+      <ul class="timeline">
+        <li><time datetime="2026">2026</time><span>Named Charlotte and Walter Buchanan Faculty Fellow, ETID, Texas A&amp;M.</span></li>
+        <li><time datetime="2026">2026</time><span>New NSF &amp; Research Council of Finland award as PI (2026–2029).</span></li>
+        <li><time datetime="2026">2026</time><span>Launched ENGR 689, a one-week College of Engineering Sprint Course on AI/ML.</span></li>
+        <li><time datetime="2026">2026</time><span>Invited featured article, <em>Journal of Engineering Technology</em>: “Artificial Intelligence in Engineering Technology: Opportunities, Challenges, and Future Outlook.”</span></li>
+        <li><time datetime="2025">2025</time><span>ETID Faculty Teaching, Research and Service Award.</span></li>
+        <li><time datetime="2025">2025</time><span>Top 5 most popular papers in reinforcement learning, <em>IEEE Open Journal of the Communications Society</em>.</span></li>
+        <li><time datetime="2025">2025</time><span>Texas A&amp;M joins OpenAI’s NextGenAI consortium, featured in <a href="https://www.forbes.com/sites/michaeltnietzel/2025/03/05/openai-will-invest-50-million-in-a-new-university-research-consortium/">Forbes</a> and <a href="https://www.insidehighered.com/news/quick-takes/2025/03/05/openai-invests-50m-higher-ed-research">Inside Higher Ed</a>.</span></li>
+        <li><time datetime="2023">2023</time><span>U.S. Department of Energy Early Career Research Program Award (2023–2028).</span></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <div class="contact">
+        <div class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:sabitekin@tamu.edu">sabitekin@tamu.edu</a></p>
+        </div>
+        <div class="card">
+          <h3>Office</h3>
+          <address>Fermier Hall, 3367 TAMU<br>466 Ross St, College Station, TX 77843</address>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <blockquote class="motto">“Treat others the way you want to be treated.” — The Golden Rule</blockquote>
+    <p>© 2026 Sabit Ekin · Last updated October 2026</p>
+    <p>Personal academic page. Views are my own.</p>
+  </div>
+</footer>
+</body>
+</html>
