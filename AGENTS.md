@@ -49,12 +49,16 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   wavefront ticks, pill-shaped labels; maroon hardware, gold signals/light, teal Earth/water,
   sage land. Check every figure in light and dark mode after changes.
   Each SVG has a <title>; use the same text as the <img> alt.
-- 3D-render project figures (all projects except `uav-wearables` and `v2x`, which are still drawn
-  by `project_figures.py` until they get renders): Higgsfield soft 3D isometric renders saved as
+- 3D-render project figures (all projects): Higgsfield soft 3D isometric renders saved as
   `tools/renders/<name>.webp` (1200×900, ~40 KB), wrapped by `tools/render_figures.py` into
   `assets/projects/<name>.svg` with the same label pills drawn on top (no AI-drawn text). Run
   `python3 tools/render_figures.py assets/projects`; `project_figures.py` skips any figure that has
   a render. Labels are positioned by hand per image; check them after any change.
+- Locally rendered 3D scenes: `tools/scenes/index.html` builds scenes with three.js in the same
+  clay style (used for `uav-wearables`, `v2x`, and the four research-area images). Run
+  `python3 tools/scenes/server.py 8817`, open `http://127.0.0.1:8817/?s=<scene>&save=1`; the PNG lands in
+  `tools/scenes/out/`. Convert with `cwebp` to `tools/renders/<name>.webp` (project figures, 1200×900)
+  or `assets/research/<name>.webp` (research cards, 800×600).
 - Outreach: illustrations in `assets/outreach/` (same script; it writes them to
   `assets/projects/`, then move `outreach-*.svg` to `assets/outreach/`). Real photos in
   `assets/outreach/photos/`, 800×600 JPEG, < 100 KB each. Avoid close-up photos of young children.

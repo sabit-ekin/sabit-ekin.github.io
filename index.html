@@ -108,6 +108,10 @@
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
   .card p { margin: 0; color: var(--muted); }
+  .card.area { display: grid; grid-template-columns: minmax(150px, 42%) 1fr; padding: 0; overflow: hidden; }
+  .card.area .afig { margin: 0; min-height: 160px; overflow: hidden; border-right: 1px solid var(--line); background: #f3ece4; }
+  .card.area .afig img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.22); }
+  .card.area .abody { padding: 18px 20px; align-self: center; }
 
   /* Courses */
   .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -239,6 +243,8 @@
     .hero { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 32px; text-align: left; }
     .portrait { width: 120px; height: 120px; font-size: 2.6rem; }
     .grid2, .contact { grid-template-columns: 1fr; }
+    .card.area { grid-template-columns: 1fr; }
+    .card.area .afig { border-right: 0; border-bottom: 1px solid var(--line); aspect-ratio: 4 / 3; min-height: 0; }
     .projects, .gallery { grid-template-columns: 1fr; }
     ul.people.alumni { columns: 1; }
     .courses.past, .path, ul.people.current { grid-template-columns: 1fr; }
@@ -327,10 +333,10 @@
       <h2 id="research-h">Research</h2>
       <p class="lede">My research focuses on wireless communications and sensing systems, leveraging AI/ML methods to develop intelligent and adaptive engineering solutions.</p>
       <div class="grid2">
-        <div class="card"><h3>Wireless communications</h3><p>RF, mmWave, terahertz, optical, hybrid RF/optical, and satellite communication systems.</p></div>
-        <div class="card"><h3>Wireless sensing</h3><p>Non-contact optical sensing for gesture recognition and human–computer interaction; vital-signs monitoring of respiration, heart rate, and glucose.</p></div>
-        <div class="card"><h3>Internet of Things</h3><p>Livestock monitoring, soil monitoring, and related applications.</p></div>
-        <div class="card"><h3>AI / ML</h3><p>Supervised, unsupervised, and reinforcement learning; deep learning; large language models.</p></div>
+        <div class="card area"><figure class="afig"><img src="assets/research/comms.webp" alt="A satellite ground station dish links to a satellite over a wide radio beam and a narrow optical laser, while a cell tower sends millimeter-wave beams to nearby buildings" width="800" height="600" loading="lazy"></figure><div class="abody"><h3>Wireless communications</h3><p>RF, mmWave, terahertz, optical, hybrid RF/optical, and satellite communication systems.</p></div></div>
+        <div class="card area"><figure class="afig"><img src="assets/research/sensing.webp" alt="A ceiling lamp lights a person seated in an armchair; light reflected from the chest reaches a photodetector on a side table, and a screen shows the vital-sign waveform" width="800" height="600" loading="lazy"></figure><div class="abody"><h3>Wireless sensing</h3><p>Non-contact optical sensing for gesture recognition and human–computer interaction; vital-signs monitoring of respiration, heart rate, and glucose.</p></div></div>
+        <div class="card area"><figure class="afig"><img src="assets/research/iot.webp" alt="A farm with tagged cattle and an underground soil sensor sending data along radio links to a gateway tower on a hill" width="800" height="600" loading="lazy"></figure><div class="abody"><h3>Internet of Things</h3><p>Livestock monitoring, soil monitoring, and related applications.</p></div></div>
+        <div class="card area"><figure class="afig"><img src="assets/research/ai.webp" alt="A neural network on an AI chip drives an antenna array that shapes a radio beam toward a user" width="800" height="600" loading="lazy"></figure><div class="abody"><h3>AI / ML</h3><p>Supervised, unsupervised, and reinforcement learning; deep learning; large language models.</p></div></div>
       </div>
       <p class="note">Before academia, I was a Senior Modem Systems Engineer at Qualcomm (2013–2016), where my work shipped in cellular modems used in Apple, Samsung, Google, and other devices. Ph.D. in Electrical and Computer Engineering, Texas A&amp;M University (2012).</p>
 

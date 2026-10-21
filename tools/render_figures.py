@@ -87,3 +87,10 @@ figure('rural-iot', 'Rural Internet of Things: tagged cattle and an underground 
 
 figure('radar-bp', 'Non-invasive blood-pressure sensing: a millimeter-wave radar on a desk steers beams to a seated person’s wrist and neck at the same time and recovers the arterial pulse waveform',
        [(310, 228, 'mmWave RADAR', 'middle'), (150, 200, 'WRIST', 'middle'), (200, 20, 'NECK', 'middle')])
+
+# Rendered locally with three.js (tools/scenes/), not Higgsfield.
+figure('uav-wearables', 'Drone-to-wearable links: a drone exchanges ultra-wideband pulses with wearable sensors on people below, and the team measures and models these channels',
+       [(200, 44, 'UAV', 'middle'), (310, 128, 'ULTRA-WIDEBAND PULSES', 'middle'), (16, 128, 'WEARABLE SENSOR'), (392, 236, 'CHANNEL MEASUREMENTS', 'end')])
+
+figure('v2x', 'Hybrid visible-light and radio vehicle links: a following car talks to the car ahead through headlight and taillight light, while a roadside unit provides a radio backup link to both',
+       [(240, 30, 'RF (DSRC) BACKUP', 'middle'), (100, 195, 'HEADLIGHTS', 'middle'), (250, 222, 'TAILLIGHTS', 'middle'), (200, 282, 'VISIBLE-LIGHT V2V', 'middle')])
