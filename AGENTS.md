@@ -32,6 +32,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 
 ## Common edits
 - Add a course: copy an `<article class="course">` block in `#courses`; link to `<course>/`.
+- Publications: `#publications` lists ~10 selected journal papers, copied from the CV's
+  `publications.tex` (authors, title, venue, details, DOI; never invent a DOI). Keep the lede counts in
+  sync with the CV, and point to the CV PDF and Google Scholar for the full list.
 - Add news: add an `<li>` at the top of `.timeline`; keep at most ~8 items.
 - CV: `assets/Sabit_Ekin_CV.pdf`, linked from the "CV (PDF)" button in the hero. To update it,
   overwrite that file with the latest Overleaf PDF (keep the name), then check that the
