@@ -139,10 +139,10 @@
   .project { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
   .pfig { margin: 0; aspect-ratio: 4 / 3; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
   .pfig img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .pbody { display: grid; gap: 4px; padding: 14px 16px 16px; align-content: start; }
+  .pbody { display: grid; gap: 4px; padding: 14px 16px 16px; align-content: start; min-width: 0; }
   .project b { font-weight: 600; }
   .project span { color: var(--muted); font-size: .9rem; line-height: 1.5; }
-  .project em { font-style: normal; font-size: .78rem; font-weight: 600; color: var(--maroon); letter-spacing: .02em; white-space: nowrap; }
+  .project em { font-style: normal; font-size: .78rem; font-weight: 600; color: var(--maroon); letter-spacing: .02em; overflow-wrap: anywhere; }
   .project:not(:has(.pfig)) .pbody { padding-top: 18px; }
   .project b a { color: inherit; text-decoration-color: var(--maroon); }
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
