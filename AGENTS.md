@@ -11,7 +11,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 ## Source of truth
 - Facts (titles, numbers, awards, courses) come from Sabit Ekin's CV. When updating, ask for the
   latest CV rather than guessing. Never invent awards, numbers, dates, or links.
-- The old Google Site (sabitekin.com) is being retired; do not link to it. Its content may be
+- The old Google Site is retired: sabitekin.com and www.sabitekin.com now permanently redirect
+  (301, paths dropped) to https://sabit-ekin.github.io via Squarespace Domains forwarding
+  (domain registered through Aug 2027). Do not link to sabitekin.com. Its content may be
   reused here, but it is outdated: use it only for content the CV lacks
   (project descriptions, outreach details); whenever the two disagree, the CV wins.
 - Citation numbers must carry an "as of" month (see `.asof`).
