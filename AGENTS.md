@@ -58,7 +58,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   clay style (used for `uav-wearables`, `v2x`, and the four research-area icons). Run
   `python3 tools/scenes/server.py 8817`, open `http://127.0.0.1:8817/?s=<scene>&save=1`; the PNG lands in
   `tools/scenes/out/`. Convert with `cwebp` to `tools/renders/<name>.webp` (project figures, 1200×900)
-  or `assets/research/<name>.webp` (research-card icons: `?s=icon-<name>`, transparent background,
+  or `assets/research/icon-<name>.webp` (research-card icons: `?s=icon-<name>`, transparent background,
   trimmed to the object and saved at 256×256; shown at 88 px). Keep icons to a single object, not scenes.
 - Outreach: illustrations in `assets/outreach/` (same script; it writes them to
   `assets/projects/`, then move `outreach-*.svg` to `assets/outreach/`). Real photos in
