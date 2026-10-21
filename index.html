@@ -66,6 +66,7 @@
   .nav .wrap > nav { min-width: 0; }
   @media (max-width: 1040px) { .nav ul { gap: 14px; } .nav ul a { font-size: .86rem; } }
   @media (max-width: 860px) { .nav ul { gap: 8px; } .nav ul a { font-size: .8rem; } }
+  @media (max-width: 900px) { .nav ul .nav-opt { display: none; } }
   .nav ul a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; white-space: nowrap; }
   .nav ul a:hover { color: var(--maroon); }
 
@@ -147,6 +148,11 @@
   .pub-v { color: var(--muted); font-size: .88rem; }
   .pub-v i { color: var(--maroon); font-style: italic; }
   .pub-hl { justify-self: start; margin-top: 3px; font-size: .76rem; font-weight: 600; padding: 2px 10px; border-radius: 999px; background: var(--chip); color: var(--maroon); }
+  .honors { align-items: start; }
+  .honors .timeline li { grid-template-columns: 82px 1fr; font-size: .92rem; }
+  .honors .timeline time { font-size: .85rem; }
+  .honors .timeline span { color: var(--muted); }
+  .honors .timeline b { color: var(--text); font-weight: 600; }
   /* Highlights */
   .timeline { list-style: none; margin: 0; padding: 0; }
   .timeline li { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
@@ -282,11 +288,12 @@
       <ul>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#honors">Honors</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#courses">Courses</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#outreach">Outreach</a></li>
-        <li><a href="#highlights">Highlights</a></li>
+        <li class="nav-opt"><a href="#highlights">Highlights</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -473,6 +480,38 @@
         <li><span class="pub-t"><a href="https://doi.org/10.1109/TSP.2012.2203126">Random Subcarrier Allocation in OFDM-Based Cognitive Radio Networks</a></span><span class="pub-a"><b>S. Ekin</b>, M. Abdallah, K. A. Qaraqe, and E. Serpedin</span><span class="pub-v"><i>IEEE Transactions on Signal Processing</i>, vol. 60, no. 9, pp. 4758–4774, Sept. 2012</span></li>
       </ol>
       <p class="note">Supervised student co-authors: Ph.D.<sup>*</sup>, M.Sc./MSET<sup>**</sup>, B.Sc.<sup>***</sup></p>
+    </section>
+
+    <!-- Honors & recognition -->
+    <section id="honors" aria-labelledby="honors-h">
+      <h2 id="honors-h">Honors &amp; recognition</h2>
+      <div class="grid2 honors">
+        <div class="card">
+          <h3>Honors and awards</h3>
+          <ul class="timeline">
+            <li><time>2023–2028</time><span><b>U.S. Department of Energy Early Career Research Program Award</b>: one of 56 university faculty selected nationwide in 2022 (under 1% acceptance), and the only DOE Early Career awardee in the Texas A&amp;M College of Engineering</span></li>
+            <li><time>2026</time><span>Charlotte and Walter Buchanan Faculty Fellow, ETID, Texas A&amp;M University</span></li>
+            <li><time>2025</time><span>ETID Faculty Teaching, Research and Service Award, Texas A&amp;M University</span></li>
+            <li><time>2022</time><span>PSO/Albrecht Naeter Endowed Professor of ECE, Oklahoma State University</span></li>
+            <li><time>2021–2022</time><span>Jack H. Graham Endowed Fellow of Engineering, Oklahoma State University</span></li>
+            <li><time>2021</time><span>Senior Member, IEEE</span></li>
+            <li><time>2019</time><span>Best Paper Award, 25th Asia-Pacific Conference on Communications (APCC)</span></li>
+            <li><time>2017</time><span>Best Paper Award, International Telecommunications Conference (ITELCON)</span></li>
+            <li><time>2017</time><span>President’s Cup, First Place Award, Oklahoma State University</span></li>
+            <li><time>2014–2016</time><span>Qualstar Hall of Fame Award (eight times), Qualcomm</span></li>
+            <li><time>2006</time><span>Graduated No. 1 in the Department of Electrical and Electronics Engineering, Eskisehir Osmangazi University</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>In the news</h3>
+          <ul class="timeline">
+            <li><time>2025</time><span><b>CXOTech Magazine</b>: <a href="https://cxotechmagazine.com/generative-ai-literacy-the-core-skill-that-will-define-tech-leadership/">“Generative AI Literacy: The Core Skill That Will Define Tech Leadership”</a> (authored article)</span></li>
+            <li><time>2025</time><span><b>Marketing Brew</b>: <a href="https://www.marketingbrew.com/stories/2025/09/12/gen-ai-companies-colleges-student-outreach">“On campuses, GenAI companies brand themselves as academic friends, not foes”</a> (quoted)</span></li>
+            <li><time>2025</time><span><b>Texas A&amp;M joins OpenAI’s NextGenAI consortium</b>, covered by <a href="https://openai.com/index/introducing-nextgenai/">OpenAI</a>, <a href="https://www.forbes.com/sites/michaeltnietzel/2025/03/05/openai-will-invest-50-million-in-a-new-university-research-consortium/">Forbes</a>, <a href="https://www.insidehighered.com/news/quick-takes/2025/03/05/openai-invests-50m-higher-ed-research">Inside Higher Ed</a>, <a href="https://www.hpcwire.com/bigdatawire/this-just-in/openai-commits-50m-to-ai-research-and-education-through-nextgenai-initiative/">HPCwire</a>, <a href="https://in.investing.com/news/company-news/openai-launches-nextgenai-consortium-commits-50m-to-advance-ai-research-93CH-4701807">Investing.com</a>, <a href="https://iblnews.org/story/openai-provides-50m-in-compute-api-access-tools-and-research-funds-to-fifteen-universities">IBL News</a>, <a href="https://aimagazine.com/articles/openai-launches-nextgenai-to-transform-education-with-ai">AI Magazine</a> (UK), and <a href="https://www.actuia.com/en/news/nextgenai-openai-invests-50-million-to-accelerate-academic-research/">ActuIA</a> (France)</span></li>
+            <li><time>2025</time><span><b>Generative AI Literacy Initiative</b>, featured and quoted in <a href="https://www.eurekalert.org/news-releases/1089973">EurekAlert!</a> (AAAS), <a href="https://www.semiconductor-digest.com/new-partnership-explores-frontiers-of-ai-in-higher-education/">Semiconductor Digest</a>, and <a href="https://theaiinsider.tech/2025/07/05/texas-am-joins-with-openai-to-accelerate-generative-ai-literacy-in-higher-ed/">The AI Insider</a></span></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Team -->
