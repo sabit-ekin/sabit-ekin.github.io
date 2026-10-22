@@ -63,6 +63,8 @@
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--maroon); text-decoration: none; letter-spacing: .02em; white-space: nowrap; }
   .brand img { display: block; width: 30px; height: 30px; border-radius: 7px; flex: none; }
+  .brand picture { display: block; line-height: 0; }
+  .brand img.brand-name { width: auto; height: 34px; border-radius: 0; }
   .nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; overflow-x: auto; min-width: 0; scrollbar-width: none; }
   .nav .wrap > nav { min-width: 0; }
   @media (max-width: 1040px) { .nav ul { gap: 14px; } .nav ul a { font-size: .86rem; } }
@@ -308,7 +310,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="30" height="30">Sabit Ekin</a>
+    <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="30" height="30"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-name-dark.svg"><img class="brand-name" src="assets/brand/signature-name-light.svg" alt="Sabit Ekin" width="130" height="34"></picture></a>
     <nav aria-label="Sections">
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
       <ul id="nav-list">
