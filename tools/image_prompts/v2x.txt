@@ -1,0 +1,5 @@
+Create a new image in exactly the same visual style as the attached reference: a soft 3D isometric clay render with matte materials, rounded forms, soft global illumination, a warm off-white background, deep maroon hardware, warm gold glowing signal beams, and muted teal and sage accents.
+
+Scene: a two-lane road on an isometric diorama base with sage-green verges. A teal car follows a maroon car in the same lane. Gold light beams from the teal car's headlights reach the maroon car's taillights, and soft red light returns from the maroon car's taillights toward the teal car (visible-light vehicle-to-vehicle communication). A roadside unit on a pole beside the road sends teal radio waves down to both cars as a backup link. A couple of small rounded trees at the edges.
+
+Landscape composition with the whole diorama in frame and some empty margin around it. No text, no letters, no numbers, no labels, no logos, no watermarks.
