@@ -57,13 +57,18 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   `assets/projects/<name>.svg` with the same label pills drawn on top (no AI-drawn text). Run
   `python3 tools/render_figures.py assets/projects`; `project_figures.py` skips any figure that has
   a render. Labels are positioned by hand per image; check them after any change.
+- New figures and icons: prefer `tools/gen_openai_image.py` (OpenAI image API; key in ~/.config/openai/key,
+  never committed) with an existing render as the style reference.
 - Locally rendered 3D scenes: `tools/scenes/index.html` builds scenes with three.js in the same
   clay style (used for `uav-wearables`, `v2x`, and the four research-area icons). Run
   `python3 tools/scenes/server.py 8817`, open `http://127.0.0.1:8817/?s=<scene>&save=1`; the PNG lands in
   `tools/scenes/out/`. Convert with `cwebp` to `tools/renders/<name>.webp` (project figures, 1200×900)
   or `assets/research/icon-<name>.webp` (research-card icons: `?s=icon-<name>`, transparent background,
   trimmed to the object and saved at 256×256; shown at 88 px). Keep icons to a single object, not scenes.
-- Outreach: illustrations in `assets/outreach/` (same script; it writes them to
+- Outreach: labeled 3D renders in `assets/outreach/` (GPT Image 2.5 via `tools/gen_openai_image.py`, prompts in
+  `tools/image_prompts/`, renders in `tools/renders/outreach-*.webp`, built with
+  `python3 tools/render_figures.py assets/outreach outreach-diy outreach-pete outreach-research outreach-museum`).
+  Older notes: illustrations in `assets/outreach/` (same script; it writes them to
   `assets/projects/`, then move `outreach-*.svg` to `assets/outreach/`). Real photos in
   `assets/outreach/photos/`, 800×600 JPEG, < 100 KB each. Avoid close-up photos of young children.
 - Students: each current student gets a wireless "spirit animal" avatar (`.av`: an emoji, a hue

@@ -1,0 +1,5 @@
+Create a new image in exactly the same visual style as the first attached reference: a soft 3D isometric clay render with matte materials, rounded forms, soft global illumination, a warm off-white background, deep maroon hardware, warm gold glowing signal beams and light, and muted teal and sage accents.
+
+Scene: undergraduate student research in a university lab: two students at a lab bench with an oscilloscope showing a waveform, a small maroon software-defined radio with an antenna emitting gold radio waves, and a laptop plotting results.
+
+Landscape composition with the whole scene in frame and some empty margin around it. No text, no letters, no numbers, no labels, no logos, no watermarks.

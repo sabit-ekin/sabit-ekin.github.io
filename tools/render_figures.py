@@ -94,3 +94,17 @@ figure('uav-wearables', 'Drone-to-wearable links: a drone exchanges ultra-wideba
 
 figure('v2x', 'Hybrid visible-light and radio vehicle links: a following car talks to the car ahead through headlight and taillight light, while a roadside unit provides a radio backup link to both',
        [(176, 30, 'RF (DSRC) BACKUP'), (180, 228, 'HEADLIGHTS', 'middle'), (300, 180, 'TAILLIGHTS', 'middle'), (230, 268, 'VISIBLE-LIGHT V2V', 'middle')])
+
+# Outreach scenes: GPT Image 2.5 renders (tools/gen_openai_image.py); written to assets/outreach/.
+figure('outreach-diy', 'DIY light-wave communication kit: a phone plays music into an LED transmitter, the music travels as flickering light to a solar-cell receiver, and a speaker plays it back',
+       [(60, 190, 'MUSIC', 'middle'), (135, 62, 'LED TRANSMITTER', 'middle'), (193, 137, 'DATA ON LIGHT', 'middle'), (268, 62, 'SOLAR RECEIVER', 'middle'), (200, 284, '200+ KITS · K-12 TO UNDERGRADUATE', 'middle')])
+
+figure('outreach-pete', 'PETE-Kits rural outreach: a connected technology kit with sensors and a tablet links to a rural schoolhouse next to farmland, bringing hands-on technology to K-12 students',
+       [(250, 18, 'RURAL K-12 SCHOOLS'), (160, 272, 'TECH EXPERIENCE KIT', 'middle'), (396, 230, 'RURAL ENTREPRENEURSHIP', 'end')])
+
+figure('outreach-research', 'Student research programs: two undergraduate researchers at a lab bench with an oscilloscope, a software-defined radio with an antenna, and a laptop plotting results',
+       [(60, 245, 'OK-LSAMP', 'middle'), (392, 230, 'NSF REU', 'end'), (200, 284, 'UNDERGRAD SCHOLARS', 'middle')])
+
+figure('outreach-museum', 'Schools and museums: a light-wave communication demo set up in front of a museum building, with young visitors watching a light beam carry a signal to a receiver',
+       [(90, 40, 'HANDS-ON SCIENCE', 'middle'), (95, 280, 'NATIONAL LAB DAY', 'middle'), (396, 280, 'CHILDREN’S MUSEUM', 'end')])
+

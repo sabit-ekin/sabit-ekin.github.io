@@ -35,6 +35,7 @@ def main():
     ap.add_argument('--size', default='1536x1024')
     ap.add_argument('--quality', default='high')
     ap.add_argument('--n', type=int, default=1)
+    ap.add_argument('--background', default=None, help='e.g. transparent (for icons)')
     a = ap.parse_args()
     client = OpenAI(api_key=api_key())
     if a.list_models:
@@ -44,12 +45,13 @@ def main():
     prompt = Path(a.prompt_file).read_text().strip()
     out = Path(__file__).resolve().parent / 'scenes' / 'out'
     out.mkdir(parents=True, exist_ok=True)
+    extra = {'background': a.background} if a.background else {}
     refs = [open(r, 'rb') for r in a.ref]
     try:
         if refs:
-            r = client.images.edit(model=a.model, image=refs, prompt=prompt, size=a.size, quality=a.quality, n=a.n)
+            r = client.images.edit(model=a.model, image=refs, prompt=prompt, size=a.size, quality=a.quality, n=a.n, **extra)
         else:
-            r = client.images.generate(model=a.model, prompt=prompt, size=a.size, quality=a.quality, n=a.n)
+            r = client.images.generate(model=a.model, prompt=prompt, size=a.size, quality=a.quality, n=a.n, **extra)
     finally:
         for f in refs:
             f.close()

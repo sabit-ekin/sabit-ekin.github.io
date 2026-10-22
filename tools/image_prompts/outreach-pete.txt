@@ -1,0 +1,5 @@
+Create a new image in exactly the same visual style as the first attached reference: a soft 3D isometric clay render with matte materials, rounded forms, soft global illumination, a warm off-white background, deep maroon hardware, warm gold glowing signal beams and light, and muted teal and sage accents.
+
+Scene: rural technology outreach: a small red-roofed rural schoolhouse on green rolling farmland with a barn and a silo, and in the foreground a connected technology kit (a tablet and small sensor modules in an open case) sending gold radio waves toward the school. A few K-12 students stand near the kit exploring it.
+
+Landscape composition with the whole scene in frame and some empty margin around it. No text, no letters, no numbers, no labels, no logos, no watermarks.

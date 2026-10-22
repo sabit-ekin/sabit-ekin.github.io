@@ -1,0 +1,3 @@
+Create a single 3D icon in exactly the same visual style as the first attached reference image: soft 3D clay render, matte materials, rounded forms, soft lighting, deep maroon, warm gold, muted teal and sage. Show only one centered object with a soft contact shadow, on a fully transparent background, no scene, no ground plane, no frame. Use the second attached image only as a guide for which object to draw. No text, no letters, no numbers, no logos.
+
+Object: a satellite ground-station dish on a short pedestal, sending three curved gold radio waves from its feed.
