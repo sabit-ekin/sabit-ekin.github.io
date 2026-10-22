@@ -30,6 +30,10 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Links must have descriptive text; keep visible focus styles.
 - Check the page at phone width (375 px): no horizontal scrolling.
 
+## Local-only files
+- `tools/` (figure scripts, prompts, renders) is kept on this computer and is not published;
+  it is listed in `.gitignore`. Never commit it or any API key.
+
 ## Common edits
 - Add a course: copy an `<article class="course">` block in `#courses`; link to `<course>/`.
 - Publications: `#publications` lists ~10 selected journal papers, copied from the CV's

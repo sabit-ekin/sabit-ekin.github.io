@@ -1,5 +1,0 @@
-Create a new image in exactly the same visual style as the first attached reference: a soft 3D isometric clay render with matte materials, rounded forms, soft global illumination, a warm off-white background, deep maroon hardware, warm gold glowing signal beams and light, and muted teal and sage accents.
-
-Scene: a hands-on science demo in front of a classical museum building with columns and a maroon pediment: a small maroon light transmitter sends a glowing gold light beam that carries a signal to a teal receiver, while a few young visitors and a parent watch with interest.
-
-Landscape composition with the whole scene in frame and some empty margin around it. No text, no letters, no numbers, no labels, no logos, no watermarks.
