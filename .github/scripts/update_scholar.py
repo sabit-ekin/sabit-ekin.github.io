@@ -1,7 +1,7 @@
 """Update the citation count and h-index on index.html from the Google Scholar profile.
 
-Run weekly by .github/workflows/scholar.yml (or by hand: python3 .github/scripts/update_scholar.py).
-Writes nothing if Scholar cannot be read or the numbers look wrong; exits 1 so the run shows as failed.
+Run weekly on Sabit's Mac by tools/scholar_weekly.sh (launchd), or by hand: python3 .github/scripts/update_scholar.py
+Writes nothing if Scholar cannot be read or the numbers look wrong (exits 1).
 """
 import datetime, re, sys, urllib.request
 

@@ -17,9 +17,11 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   reused here, but it is outdated: use it only for content the CV lacks
   (project descriptions, outreach details); whenever the two disagree, the CV wins.
 - Citation numbers must carry an "as of" month (see `.asof`).
-- The "By the numbers" citation count and h-index update weekly from Google Scholar via
-  `.github/workflows/scholar.yml` (script: `.github/scripts/update_scholar.py`; it also bumps the
-  `.asof` month and the footer). Pull before editing so you don't overwrite its commits.
+- The "By the numbers" citation count and h-index update weekly from Google Scholar (Mondays 9 a.m.)
+  by a launchd job on Sabit's Mac (`~/Library/LaunchAgents/com.sabitekin.scholar-update.plist` runs
+  `tools/scholar_weekly.sh`, which runs `.github/scripts/update_scholar.py` and pushes; log in
+  `~/Library/Logs/scholar-update.log`). Scholar blocks GitHub Actions, so it can't run there.
+  The script also bumps the `.asof` month and the footer. Pull before editing.
 - Update the "Last updated" line in the footer whenever content changes.
 
 ## Style
