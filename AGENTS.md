@@ -52,6 +52,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Sponsors: tiles in `.sponsors` (Research section), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
+- Header logo is animated: `assets/brand/signature-c3-{light,dark}-anim.svg` (wave draws in, arcs pulse,
+  sparkles twinkle, book closes/opens; off under prefers-reduced-motion), built from the still C3 SVGs by
+  `python3 tools/make_logo_anim.py`. Rerun it whenever the C3 logos are rebuilt.
 - Texas Wireless logo: `assets/texas-wireless-logo.svg` (Zilla Slab "TE★AS", gold star as the X, outlined text),
   built by `python3 tools/make_tw_logo.py`; light/dark SVG and PNG exports in `tools/logo/final/texas-wireless/`.
   Keep it clearly distinct from Texas A&M marks (no ATM-style block T or bevels).
