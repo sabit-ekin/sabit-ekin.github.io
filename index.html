@@ -132,6 +132,8 @@
   .course { display: flex; flex-direction: column; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
   .course .code { font-weight: 600; color: var(--maroon); letter-spacing: .03em; font-size: .85rem; }
   .course h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; line-height: 1.25; }
+  .course .school { display: flex; align-items: center; gap: 8px; margin-top: -2px; font-weight: 600; font-size: .85rem; letter-spacing: .02em; color: var(--text); }
+  .course .school::before { content: ""; width: 18px; height: 2px; border-radius: 2px; background: var(--maroon); flex: none; }
   .course p { margin: 0; color: var(--muted); font-size: .92rem; flex: 1; }
   .tag { align-self: flex-start; font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--muted); }
   .tag.soon { color: var(--maroon); }
@@ -310,7 +312,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark.svg"><img class="brand-name" src="assets/brand/signature-c3-light.svg" alt="Sabit Ekin, Wireless, AI, Education" width="157" height="58"></picture></a>
+    <a class="brand" href="#top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark.svg?v=2"><img class="brand-name" src="assets/brand/signature-c3-light.svg?v=2" alt="Sabit Ekin, Wireless, AI, Education" width="157" height="58"></picture></a>
     <nav aria-label="Sections">
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
       <ul id="nav-list">
@@ -647,6 +649,7 @@
         <article class="course">
           <span class="code">ENTC 689</span>
           <h3>From Machine Learning to Modern AI: Fundamentals, Tools, and Applications</h3>
+          <span class="school">Texas A&amp;M University</span>
           <p>Graduate course. Builds on ENTC 689: Generative AI, the first GenAI course at Texas A&amp;M (Spring 2025, 2026).</p>
           <span class="tag soon">Spring 2027</span>
           <span class="tag">Course site coming soon</span>
@@ -654,12 +657,14 @@
         <article class="course">
           <span class="code">ESET 455</span>
           <h3>Wireless Transmission Systems</h3>
+          <span class="school">Texas A&amp;M University</span>
           <p>Undergraduate course with newly developed labs. Taught every fall and spring since 2023.</p>
           <span class="tag">Course site coming soon</span>
         </article>
         <article class="course">
           <span class="code">ESET 489</span>
           <h3>Artificial Intelligence: Introduction and Applications</h3>
+          <span class="school">Texas A&amp;M University</span>
           <p>New undergraduate course with a full curriculum design.</p>
           <span class="tag soon">First offering Fall 2027</span>
         </article>
@@ -670,55 +675,64 @@
         <article class="course">
           <span class="code">ENGR 689</span>
           <h4>AI/ML Fundamentals, Tools, and Applications</h4>
-          <p>College of Engineering Sprint Course: a one-week, 15-hour course developed and launched new. Texas A&amp;M.</p>
+          <span class="school">Texas A&amp;M University</span>
+          <p>College of Engineering Sprint Course: a one-week, 15-hour course developed and launched new.</p>
           <span class="tag">Fall 2026</span>
         </article>
         <article class="course">
           <span class="code">ENTC 689</span>
           <h4>Generative AI: Introduction and Applications</h4>
+          <span class="school">Texas A&amp;M University</span>
           <p>The first GenAI course at Texas A&amp;M; developed and launched new, with a full curriculum design.</p>
           <span class="tag">Spring 2025, 2026</span>
         </article>
         <article class="course">
           <span class="code">Hullabaloo U</span>
           <h4>AI Course Modules</h4>
+          <span class="school">Texas A&amp;M University</span>
           <p>AI modules for Texas A&amp;M’s university-wide first-year course, developed with the Center for Teaching Excellence.</p>
           <span class="tag">2026</span>
         </article>
         <article class="course">
           <span class="code">LANL</span>
           <h4>PE Exam Preparation: Communications Topics</h4>
+          <span class="school">Texas A&amp;M University</span>
           <p>Developed and taught the communications topics for Los Alamos National Laboratory staff and engineers.</p>
           <span class="tag">2023</span>
         </article>
         <article class="course">
           <span class="code">ECEN 5573</span>
           <h4>Wireless Communications</h4>
-          <p>Graduate course with a full curriculum design. Oklahoma State.</p>
+          <span class="school">Oklahoma State University</span>
+          <p>Graduate course with a full curriculum design.</p>
           <span class="tag">2017–2022</span>
         </article>
         <article class="course">
           <span class="code">ECEN 4533</span>
           <h4>Data Communications</h4>
-          <p>Full curriculum design with newly developed labs. Oklahoma State.</p>
+          <span class="school">Oklahoma State University</span>
+          <p>Full curriculum design with newly developed labs.</p>
           <span class="tag">2016–2021</span>
         </article>
         <article class="course">
           <span class="code">ECEN/MAE 5513</span>
           <h4>Stochastic Systems</h4>
-          <p>Graduate course with a full curriculum design. Oklahoma State.</p>
+          <span class="school">Oklahoma State University</span>
+          <p>Graduate course with a full curriculum design.</p>
           <span class="tag">2018–2019</span>
         </article>
         <article class="course">
           <span class="code">ECEN 3513</span>
           <h4>Signals Analysis</h4>
-          <p>Undergraduate course. Oklahoma State.</p>
+          <span class="school">Oklahoma State University</span>
+          <p>Undergraduate course.</p>
           <span class="tag">2020–2021</span>
         </article>
         <article class="course">
           <span class="code">ECEN 4523</span>
           <h4>Communication Theory</h4>
-          <p>Undergraduate course. Oklahoma State.</p>
+          <span class="school">Oklahoma State University</span>
+          <p>Undergraduate course.</p>
           <span class="tag">2020</span>
         </article>
       </div>
@@ -770,10 +784,10 @@
 <footer>
   <div class="wrap">
     <picture class="sig">
-      <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark.svg">
-      <source media="(max-width: 640px)" srcset="assets/brand/signature-c3-light.svg">
-      <source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c1-dark.svg">
-      <img src="assets/brand/signature-c1-light.svg" alt="Sabit Ekin, Wireless, AI, Education" width="320" height="66" loading="lazy">
+      <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark.svg?v=2">
+      <source media="(max-width: 640px)" srcset="assets/brand/signature-c3-light.svg?v=2">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c1-dark.svg?v=2">
+      <img src="assets/brand/signature-c1-light.svg?v=2" alt="Sabit Ekin, Wireless, AI, Education" width="320" height="66" loading="lazy">
     </picture>
     <blockquote class="motto">“Treat others the way you want to be treated.” — The Golden Rule</blockquote>
     <p>© 2026 Sabit Ekin · Last updated October 2026</p>
