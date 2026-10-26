@@ -83,7 +83,7 @@
   .search output { font-size: .85rem; color: var(--muted); }
 
   section { padding: 36px 0 12px; }
-  section[hidden] { display: none; }
+  [hidden] { display: none !important; }  /* search hides entries; beats display: grid on li */
   h2 { font-family: var(--serif); font-weight: 500; font-size: 1.9rem; margin: 0 0 4px; color: var(--maroon); }
   .sec-note { margin-bottom: 6px; }
   h3.year { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--muted); margin: 22px 0 2px; }
@@ -485,6 +485,7 @@
       none.hidden = shown > 0;
     }
     q.addEventListener('input', run);
+    q.addEventListener('search', run);
   })();
 </script>
 </body>
