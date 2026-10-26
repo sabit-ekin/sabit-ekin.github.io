@@ -52,7 +52,10 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   it builds the PDF with TinyTeX, updates the computed numbers on the page (articles, funding, students,
   patents, talks, editorial roles, team counts), and lists the changed CV sections and the site sections
   they feed; carry those over by hand, then `--mark-synced`. Last-synced copy: `tools/cv-sync/` (local).
-  The CV header links to this site; keep it that way.
+  The CV header links to this site; keep it that way. CV edits can also be made directly in that Dropbox
+  folder from Claude Code (Overleaf picks them up); then sync the site in the same session.
+  A weekly scheduled task in the Claude app (`cv-website-sync`, Mondays 10 a.m.) runs `cv_sync.py --publish`
+  and drafts the text changes for approval.
 - Sponsors: tiles in `.sponsors` (Research section), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
