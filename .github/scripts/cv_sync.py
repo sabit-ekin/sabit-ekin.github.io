@@ -11,7 +11,8 @@ The Overleaf project syncs to Dropbox (Apps/Overleaf/Sabit_Ekin_CV). This script
 Then run with --mark-synced to record the current CV as synced.
 
   python3 .github/scripts/cv_sync.py                 # build, update numbers, report changes
-  python3 .github/scripts/cv_sync.py --mark-synced   # after the site is updated
+  python3 .github/scripts/cv_sync.py --publish       # same, then commit and push the PDF and numbers
+  python3 .github/scripts/cv_sync.py --mark-synced   # after the rest of the site is updated
 
 The last-synced copy of the CV sources is kept in tools/cv-sync/synced/ (local only, not published).
 Google Scholar figures are left to update_scholar.py.
@@ -21,6 +22,7 @@ import argparse, datetime, difflib, hashlib, os, re, shutil, subprocess, sys, te
 SRC = os.path.expanduser('~/Library/CloudStorage/Dropbox/Apps/Overleaf/Sabit_Ekin_CV')
 FILES = ['main.tex', 'publications.tex', 'funding.tex', 'patents.tex', 'metrics.tex', 'cvstyle.sty']
 SNAP = 'tools/cv-sync/synced'
+PDF_STATE = 'tools/cv-sync/pdf-source.sha'   # sources the published PDF was built from
 PAGE = 'index.html'
 PDF = 'assets/Sabit_Ekin_CV.pdf'
 TEX_PATH = os.path.expanduser('~/Library/TinyTeX/bin/universal-darwin')
@@ -162,6 +164,7 @@ def main():
     ap.add_argument('--src', default=SRC, help='Overleaf project folder (default: Dropbox sync folder)')
     ap.add_argument('--mark-synced', action='store_true', help='record the current CV sources as synced')
     ap.add_argument('--force-pdf', action='store_true', help='copy the PDF even if the sources did not change')
+    ap.add_argument('--publish', action='store_true', help='commit and push the PDF and numbers (only if neither had uncommitted edits)')
     a = ap.parse_args()
     if not os.path.exists(os.path.join(a.src, 'main.tex')):
         sys.exit(f'main.tex not found in {a.src}')
@@ -174,15 +177,24 @@ def main():
         print(f'Marked as synced ({digest(SNAP)[:12]}).')
         return
 
+    if a.publish:
+        if git('status', '--porcelain', PAGE, PDF):
+            sys.exit(f'{PAGE} or {PDF} has uncommitted edits; publish those first. Nothing changed.')
+        git('pull', '--rebase', '--autostash', '--quiet', 'origin', 'main')
+
+    src_hash = digest(a.src)
     with tempfile.TemporaryDirectory() as out:
         counts = build(a.src, out)
         t = typed(open(os.path.join(a.src, 'main.tex'), errors='replace').read())
-        new_src = not os.path.isdir(SNAP) or digest(SNAP) != digest(a.src)
+        old = open(PDF_STATE).read().strip() if os.path.exists(PDF_STATE) else ''
+        new_src = old != src_hash
         if new_src or a.force_pdf:
             shutil.copy(os.path.join(out, 'main.pdf'), PDF)
+            os.makedirs(os.path.dirname(PDF_STATE), exist_ok=True)
+            open(PDF_STATE, 'w').write(src_hash + '\n')
             print(f'CV PDF updated: {PDF}')
         else:
-            print('CV sources unchanged since the last sync; PDF left as is.')
+            print('CV sources unchanged since the PDF was last built; PDF left as is.')
 
     page = open(PAGE, encoding='utf-8').read()
     new, missing = update_numbers(page, counts, t)
@@ -196,7 +208,20 @@ def main():
             print(f'WARNING: could not read the {what} number from main.tex (\\glnum wording changed?); check it by hand.')
     for m in missing:
         print(f'WARNING: could not find this stat on the page (markup changed?): {re.sub("<[^>]+>", " ", m).strip()}')
+    if a.publish and git('status', '--porcelain', PAGE, PDF):
+        git('add', PAGE, PDF)
+        git('-c', 'user.name=Sabit Ekin', '-c', 'user.email=sabitekin@tamu.edu', 'commit', '--quiet',
+            '-m', 'CV: update the PDF and numbers from Overleaf')
+        git('push', '--quiet', 'origin', 'main')
+        print('Published (pushed to main).')
     report(a.src)
+
+
+def git(*args):
+    r = subprocess.run(['git', *args], capture_output=True, text=True)
+    if r.returncode:
+        sys.exit(f'git {args[0]} failed: {r.stderr.strip()}')
+    return r.stdout.strip()
 
 
 if __name__ == '__main__':
