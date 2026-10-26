@@ -14,10 +14,9 @@ import datetime, html, os, re, sys
 SRC = 'cv'
 OUT = 'publications.html'
 
-# Page order (published work first) and the short labels used in the page's jump links.
-ORDER = ['J', 'C', 'B', 'P', 'PR', 'N', 'O', 'JR', 'CR', 'JP']
+# Sections appear in the CV's order; these are the short labels used in the page's jump links.
 SHORT = {'J': 'Journals', 'C': 'Conferences', 'B': 'Books', 'P': 'Patents', 'PR': 'Preprints',
-         'N': 'Other papers', 'O': 'Theses & other', 'JR': 'Journals under review',
+         'N': 'Other papers', 'O': 'Theses &amp; other', 'JR': 'Journals under review',
          'CR': 'Conferences under review', 'JP': 'In preparation'}
 REVERSE = {'J', 'C', 'B', 'P', 'N', 'O'}  # these count down in the CV (newest = highest number)
 
@@ -182,9 +181,8 @@ def entry(it):
 
 
 def render(sections, counts):
-    secs = sorted(sections, key=lambda s: ORDER.index(s['prefix']) if s['prefix'] in ORDER else len(ORDER))
     nav, body = [], []
-    for s in secs:
+    for s in sections:
         sid = s['prefix'].lower()
         n = sum(len(g['items']) for g in s['groups'])
         nav.append(f'<li><a href="#{sid}">{SHORT.get(s["prefix"], s["title"])} <span>{n}</span></a></li>')
