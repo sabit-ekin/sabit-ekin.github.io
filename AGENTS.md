@@ -46,9 +46,13 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   `publications.tex` (authors, title, venue, details, DOI; never invent a DOI). Keep the lede counts in
   sync with the CV, and point to the CV PDF and Google Scholar for the full list.
 - Add news: add an `<li>` at the top of `.timeline`; keep at most ~8 items.
-- CV: `assets/Sabit_Ekin_CV.pdf`, linked from the "CV (PDF)" button in the hero. To update it,
-  overwrite that file with the latest Overleaf PDF (keep the name), then check that the
-  "At a glance" numbers on the page still match its first page.
+- CV: `assets/Sabit_Ekin_CV.pdf`, linked from the "CV (PDF)" button in the hero. The Overleaf project
+  syncs to `~/Library/CloudStorage/Dropbox/Apps/Overleaf/Sabit_Ekin_CV` (main document `main.tex`).
+  After a CV edit, run `/sync-cv` (`.claude/skills/sync-cv/`, local, not in the repo) or `python3 .github/scripts/cv_sync.py`:
+  it builds the PDF with TinyTeX, updates the computed numbers on the page (articles, funding, students,
+  patents, talks, editorial roles, team counts), and lists the changed CV sections and the site sections
+  they feed; carry those over by hand, then `--mark-synced`. Last-synced copy: `tools/cv-sync/` (local).
+  The CV header links to this site; keep it that way.
 - Sponsors: tiles in `.sponsors` (Research section), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
