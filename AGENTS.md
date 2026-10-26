@@ -9,8 +9,8 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   (e.g. `entc689/`). They are linked from the "Courses" section; do not create course folders here.
 
 ## Source of truth
-- Facts (titles, numbers, awards, courses) come from Sabit Ekin's CV. When updating, ask for the
-  latest CV rather than guessing. Never invent awards, numbers, dates, or links.
+- Facts (titles, numbers, awards, courses) come from Sabit Ekin's CV, whose LaTeX sources are in `cv/`
+  (see "CV" below). Read them rather than guessing. Never invent awards, numbers, dates, or links.
 - The old Google Site is retired: sabitekin.com and www.sabitekin.com now permanently redirect
   (301, paths dropped) to https://sabit-ekin.github.io via Squarespace Domains forwarding
   (domain registered through Aug 2027). Do not link to sabitekin.com. Its content may be
@@ -46,16 +46,15 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   `publications.tex` (authors, title, venue, details, DOI; never invent a DOI). Keep the lede counts in
   sync with the CV, and point to the CV PDF and Google Scholar for the full list.
 - Add news: add an `<li>` at the top of `.timeline`; keep at most ~8 items.
-- CV: `assets/Sabit_Ekin_CV.pdf`, linked from the "CV (PDF)" button in the hero. The Overleaf project
-  syncs to `~/Library/CloudStorage/Dropbox/Apps/Overleaf/Sabit_Ekin_CV` (main document `main.tex`).
-  After a CV edit, run `/sync-cv` (`.claude/skills/sync-cv/`, local, not in the repo) or `python3 .github/scripts/cv_sync.py`:
-  it builds the PDF with TinyTeX, updates the computed numbers on the page (articles, funding, students,
-  patents, talks, editorial roles, team counts), and lists the changed CV sections and the site sections
-  they feed; carry those over by hand, then `--mark-synced`. Last-synced copy: `tools/cv-sync/` (local).
-  The CV header links to this site; keep it that way. CV edits can also be made directly in that Dropbox
-  folder from Claude Code (Overleaf picks them up); then sync the site in the same session.
-  A weekly scheduled task in the Claude app (`cv-website-sync`, Mondays 10 a.m.) runs `cv_sync.py --publish`
-  and drafts the text changes for approval.
+- CV: the LaTeX sources are in `cv/` (main document `cv/main.tex`; layout in `cvstyle.sty`; papers in
+  `publications.tex`; grants in `funding.tex`; how-to in `cv/README.txt`). `cv/` is its own private repo
+  (`sabit-ekin/cv`), ignored by this site's repo: commit and push CV edits there, never here. It is no longer
+  linked to Overleaf. `cv_tees.tex`, `main_nai.tex`, `main-old.tex` are nomination/old variants.
+  When the CV changes, update the site in the same session (`/cv` skill, `.claude/skills/cv/`, local):
+  `python3 .github/scripts/build_cv.py` builds the PDF into `assets/Sabit_Ekin_CV.pdf` (linked from the hero's
+  "CV (PDF)" button) and updates the CV-computed numbers on the page (articles, funding, students, patents,
+  talks, editorial roles, team counts); carry new papers, honors, students, grants, and titles over by hand,
+  only where the site already shows that kind of item. The CV header links to this site; keep it that way.
 - Sponsors: tiles in `.sponsors` (Research section), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
