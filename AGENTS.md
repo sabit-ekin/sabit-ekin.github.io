@@ -44,7 +44,11 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Add a course: copy an `<article class="course">` block in `#courses`; link to `<course>/`.
 - Publications: `#publications` lists ~10 selected journal papers, copied from the CV's
   `publications.tex` (authors, title, venue, details, DOI; never invent a DOI). Keep the lede counts in
-  sync with the CV, and point to the CV PDF and Google Scholar for the full list.
+  sync with the CV, and link to the full list (`publications.html`), the CV PDF, and Google Scholar.
+- Full publication list: `publications.html` is generated from `cv/publications.tex` (+ `patents.tex`) by
+  `python3 .github/scripts/build_pubs.py` (also run by `build_cv.py`); numbering matches the CV (J52 … J1).
+  Never edit it by hand: change the CV and rerun. Impact factors and acceptance rates (`\metric`) are left out.
+  It stops on LaTeX it cannot convert; add the macro to `tex()` in the script.
 - Add news: add an `<li>` at the top of `.timeline`; keep at most ~8 items.
 - CV: the LaTeX sources are in `cv/` (main document `cv/main.tex`; layout in `cvstyle.sty`; papers in
   `publications.tex`; grants in `funding.tex`; how-to in `cv/README.txt`). `cv/` is its own private repo

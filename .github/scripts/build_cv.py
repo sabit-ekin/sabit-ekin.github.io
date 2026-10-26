@@ -3,13 +3,17 @@
 The CV sources live in cv/ (their own private repo, sabit-ekin/cv; not part of this site's repo).
 This script builds cv/main.tex with latexmk (TinyTeX), copies the PDF to assets/Sabit_Ekin_CV.pdf, and
 updates the numbers on index.html that the CV computes (articles, funding, students, patents, talks,
-editorial roles, team counts). Text on the site (papers, honors, students, news) is updated by hand.
+editorial roles, team counts), and regenerates publications.html (the full list) with build_pubs.py.
+Other text on the site (selected papers, honors, students, news) is updated by hand.
 
   python3 .github/scripts/build_cv.py
 
 Google Scholar figures are left to update_scholar.py.
 """
 import datetime, os, re, shutil, subprocess, sys, tempfile
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import build_pubs
 
 SRC = 'cv'
 PAGE = 'index.html'
@@ -90,6 +94,7 @@ def main():
     new = re.sub(r'Last updated [A-Z][a-z]+ \d{4}', 'Last updated ' + datetime.date.today().strftime('%B %Y'), new)
     if new != page:
         open(PAGE, 'w', encoding='utf-8').write(new)
+    build_pubs.main({k[3:]: v for k, v in counts.items() if k.startswith('pub')})
     for k, what in (('talks', 'invited talks'), ('editorial', 'editorial roles')):
         if k not in t:
             print(f'WARNING: could not read the {what} number from main.tex (\\glnum wording changed?); check it by hand.')
