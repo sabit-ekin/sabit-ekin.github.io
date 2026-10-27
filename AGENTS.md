@@ -103,6 +103,8 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Students: each current student gets a wireless "spirit animal" avatar (`.av`: an emoji, a hue
   `--h`, and a `title` explaining the wireless link); alumni are text only. Do not
   copy photos from LinkedIn or other sites; only use photos a student has provided.
+- Names: Mostafa Ibrahim (Ph.D. alum and postdoc) also appears as Mostafa Abdelhadi; always use
+  "Mostafa Ibrahim" / "M. Ibrahim" in the CV and on the site.
 
 ## Preview
     python3 -m http.server 8000   # then open http://localhost:8000
