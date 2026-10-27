@@ -237,6 +237,7 @@ PAGE = '''<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try {{ var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; }} catch (e) {{}}</script>
 <title>Publications · Sabit Ekin</title>
 <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png?v=4" sizes="32x32" type="image/png">
@@ -263,8 +264,9 @@ PAGE = '''<!doctype html>
     --serif: "EB Garamond", Georgia, serif;
     --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   }}
+  /* Dark: follows the system unless the theme picker forces light or dark */
   @media (prefers-color-scheme: dark) {{
-    :root {{
+    :root:not([data-theme="light"]) {{
       --maroon: #e7a3a3;
       --accent: #f0b9b9;
       --bg: #151312;
@@ -275,6 +277,19 @@ PAGE = '''<!doctype html>
       --chip: #2a2421;
     }}
   }}
+  :root[data-theme="dark"] {{
+    --maroon: #e7a3a3;
+    --accent: #f0b9b9;
+    --bg: #151312;
+    --surface: #1e1b19;
+    --text: #ece7e2;
+    --muted: #a89f97;
+    --line: #322d29;
+    --chip: #2a2421;
+  }}
+  :root {{ color-scheme: light dark; }}
+  :root[data-theme="light"] {{ color-scheme: light; }}
+  :root[data-theme="dark"] {{ color-scheme: dark; }}
   * {{ box-sizing: border-box; }}
   html {{ scroll-behavior: smooth; scroll-padding-top: 92px; }}
   body {{ margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 var(--sans); }}
@@ -294,8 +309,23 @@ PAGE = '''<!doctype html>
   .brand {{ display: inline-flex; align-items: center; text-decoration: none; }}
   .brand picture {{ display: block; line-height: 0; }}
   .brand img {{ display: block; width: auto; height: 58px; }}
-  .back {{ font-size: .92rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; }}
+  .back {{ margin-left: auto; font-size: .92rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; }}
   .back:hover {{ color: var(--maroon); }}
+
+  /* Theme picker (assets/theme.js) */
+  .theme {{ position: relative; flex: none; }}
+  .theme-btn {{ display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); cursor: pointer; }}
+  .theme-btn:hover, .theme-btn[aria-expanded="true"] {{ color: var(--maroon); border-color: var(--maroon); }}
+  .theme svg {{ width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }}
+  .theme-btn svg {{ display: none; }}
+  .theme-btn:not([data-current]) .i-system, .theme-btn[data-current="system"] .i-system,
+  .theme-btn[data-current="light"] .i-light, .theme-btn[data-current="dark"] .i-dark {{ display: block; }}
+  .theme-menu {{ position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 150px; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.14); }}
+  .theme-menu[hidden] {{ display: none; }}
+  .theme-menu button {{ display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--text); font: 500 .9rem var(--sans); text-align: left; cursor: pointer; }}
+  .theme-menu button:hover, .theme-menu button:focus-visible {{ background: var(--chip); }}
+  .theme-menu button[aria-checked="true"] {{ color: var(--maroon); font-weight: 600; }}
+  .theme-menu button[aria-checked="true"]::after {{ content: "✓"; margin-left: auto; }}
 
   .intro {{ padding: 56px 0 8px; }}
   h1 {{ font-family: var(--serif); font-weight: 500; font-size: clamp(2.4rem, 6vw, 3.2rem); line-height: 1.05; margin: 0 0 12px; color: var(--maroon); }}
@@ -355,8 +385,17 @@ PAGE = '''<!doctype html>
   <div class="wrap">
     <a class="brand" href="./"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark-anim.svg"><img src="assets/brand/signature-c3-light-anim.svg" alt="Sabit Ekin, home page" width="157" height="58"></picture></a>
     <a class="back" href="./#publications">← Back to home page</a>
+    <div class="theme">
+      <button class="theme-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="theme-menu" aria-label="Color theme" title="Color theme"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="i-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></button>
+      <div class="theme-menu" id="theme-menu" role="menu" aria-label="Color theme" hidden>
+        <button type="button" role="menuitemradio" aria-checked="false" data-set="light"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Light</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-set="dark"><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Dark</button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-set="system"><svg class="i-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>System</button>
+      </div>
+    </div>
   </div>
 </header>
+<script src="assets/theme.js?v=1"></script>
 
 <main id="main">
   <div class="wrap">
