@@ -114,6 +114,8 @@
     background: var(--maroon); color: var(--bg);
     display: grid; place-items: center;
     font-family: var(--serif); font-size: 4rem; font-weight: 500; letter-spacing: .04em;
+    /* frame: a thin accent ring with a gap of page background */
+    box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--maroon);
   }
   .portrait img { width: 100%; height: 100%; object-fit: cover; }
   h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 8px; color: var(--maroon); }
