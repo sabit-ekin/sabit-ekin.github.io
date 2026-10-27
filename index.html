@@ -89,6 +89,12 @@
   @media (max-width: 900px) { .nav ul .nav-opt { display: none; } }
   .nav ul a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; white-space: nowrap; }
   .nav ul a:hover { color: var(--maroon); }
+  /* current section (scroll-spy below): maroon with a short underline; the ul's padding keeps the underline
+     inside its scroll box */
+  .nav ul { padding: 8px 0; }
+  .nav ul a { position: relative; transition: color .2s; }
+  .nav ul a.active { color: var(--maroon); }
+  .nav ul a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 2px; border-radius: 2px; background: var(--maroon); }
   .menu-btn { display: none; align-items: center; gap: 8px; font: 600 .9rem var(--sans); color: var(--maroon); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
   .menu-btn::before { content: ""; width: 14px; height: 10px; background: linear-gradient(currentColor 0 0) 0 0/100% 2px no-repeat, linear-gradient(currentColor 0 0) 0 50%/100% 2px no-repeat, linear-gradient(currentColor 0 0) 0 100%/100% 2px no-repeat; }
   header.nav.open .menu-btn::before { background: linear-gradient(45deg, transparent 44%, currentColor 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, currentColor 44% 56%, transparent 56%); height: 14px; }
@@ -335,6 +341,8 @@
     header.nav.open ul .nav-opt { display: block; }
     header.nav.open ul a { display: block; padding: 12px 14px; font-size: 1rem; border-radius: 10px; }
     header.nav.open ul a:hover, header.nav.open ul a:focus-visible { background: var(--chip); }
+    header.nav.open ul a.active { background: var(--chip); }
+    header.nav.open ul a.active::after { display: none; }
   }
   @media (max-width: 640px) {
     .wrap { padding: 0 16px; }
@@ -850,6 +858,25 @@
     function set(open) { h.classList.toggle('open', open); b.setAttribute('aria-expanded', open); b.textContent = open ? 'Close' : 'Menu'; }
     b.addEventListener('click', function () { set(!h.classList.contains('open')); });
     h.querySelectorAll('#nav-list a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+    // Scroll-spy: mark the link of the section under the header (the last one whose top has passed it;
+    // the last section once the page is scrolled to the bottom)
+    var links = Array.prototype.slice.call(h.querySelectorAll('#nav-list a[href^="#"]')), cur = null, queued = false;
+    var secs = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function spy() {
+      queued = false;
+      var line = h.offsetHeight + 24, on = -1;
+      secs.forEach(function (sec, i) { if (sec && sec.getBoundingClientRect().top <= line) on = i; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) on = secs.length - 1;
+      var a = on < 0 ? null : links[on];
+      if (a === cur) return;
+      if (cur) { cur.classList.remove('active'); cur.removeAttribute('aria-current'); }
+      if (a) { a.classList.add('active'); a.setAttribute('aria-current', 'location'); }
+      cur = a;
+    }
+    function queue() { if (!queued) { queued = true; requestAnimationFrame(spy); } }
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    spy();
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && h.classList.contains('open')) { set(false); b.focus(); } });
   })();
 </script>
