@@ -311,23 +311,21 @@ PAGE = '''<!doctype html>
   .brand img {{ display: block; width: auto; height: 58px; }}
   .back {{ margin-left: auto; font-size: .92rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; }}
   .back:hover {{ color: var(--maroon); }}
+  .back-short {{ display: none; }}
 
-  /* Theme picker (assets/theme.js) */
+  /* Light/dark switch (assets/theme.js); its look comes from the theme alone, so it is right before the script runs */
   .theme {{ position: relative; flex: none; }}
-  .theme-btn {{ display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); cursor: pointer; }}
-  .theme-btn:hover, .theme-btn[aria-expanded="true"] {{ color: var(--maroon); border-color: var(--maroon); }}
-  .theme svg {{ width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }}
-  .theme-btn svg {{ display: none; }}
-  .theme-btn:not([data-current]) .i-system, .theme-btn[data-current="system"] .i-system,
-  .theme-btn[data-current="light"] .i-light, .theme-btn[data-current="dark"] .i-dark {{ display: block; }}
-  /* wide screens: the button sits in the window's top-right corner, outside the 1040 px content column */
-  @media (min-width: 1160px) {{ .theme {{ position: absolute; right: 24px; top: 50%; transform: translateY(-50%); }} }}
-  .theme-menu {{ position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 150px; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.14); }}
-  .theme-menu[hidden] {{ display: none; }}
-  .theme-menu button {{ display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--text); font: 500 .9rem var(--sans); text-align: left; cursor: pointer; }}
-  .theme-menu button:hover, .theme-menu button:focus-visible {{ background: var(--chip); }}
-  .theme-menu button[aria-checked="true"] {{ color: var(--maroon); font-weight: 600; }}
-  .theme-menu button[aria-checked="true"]::after {{ content: "✓"; margin-left: auto; }}
+  .theme-toggle {{ position: relative; display: block; width: 56px; height: 30px; padding: 0; border-radius: 999px; border: 1px solid var(--line); background: var(--chip); color: var(--muted); cursor: pointer; }}
+  .theme-toggle:hover {{ border-color: var(--maroon); }}
+  .theme svg {{ display: block; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }}
+  .tt-ic {{ position: absolute; inset: 0 8px; display: flex; align-items: center; justify-content: space-between; opacity: .7; }}
+  .tt-knob {{ position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); color: var(--maroon); box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .2s ease; }}
+  .tt-knob .i-dark {{ display: none; }}
+  @media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) .tt-knob {{ transform: translateX(26px); }} :root:not([data-theme="light"]) .tt-knob .i-light {{ display: none; }} :root:not([data-theme="light"]) .tt-knob .i-dark {{ display: block; }} }}
+  :root[data-theme="dark"] .tt-knob {{ transform: translateX(26px); }} :root[data-theme="dark"] .tt-knob .i-light {{ display: none; }} :root[data-theme="dark"] .tt-knob .i-dark {{ display: block; }}
+  @media (prefers-reduced-motion: reduce) {{ .tt-knob {{ transition: none; }} }}
+  /* wide screens: the switch sits in the window's top-right corner, outside the 1040 px content column */
+  @media (min-width: 1200px) {{ .theme {{ position: absolute; right: 24px; top: 50%; transform: translateY(-50%); }} }}
 
   .intro {{ padding: 56px 0 8px; }}
   h1 {{ font-family: var(--serif); font-weight: 500; font-size: clamp(2.4rem, 6vw, 3.2rem); line-height: 1.05; margin: 0 0 12px; color: var(--maroon); }}
@@ -373,6 +371,8 @@ PAGE = '''<!doctype html>
   @media (max-width: 640px) {{
     .wrap {{ padding: 0 16px; }}
     .brand img {{ height: 48px; }}
+    .back-long {{ display: none; }}
+    .back-short {{ display: inline; }}
     .nav .wrap {{ height: 64px; }}
     html {{ scroll-padding-top: 76px; }}
     .intro {{ padding-top: 36px; }}
@@ -386,18 +386,11 @@ PAGE = '''<!doctype html>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="./"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-c3-dark-anim.svg"><img src="assets/brand/signature-c3-light-anim.svg" alt="Sabit Ekin, home page" width="157" height="58"></picture></a>
-    <a class="back" href="./#publications">← Back to home page</a>
-    <div class="theme">
-      <button class="theme-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="theme-menu" aria-label="Color theme" title="Color theme"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="i-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></button>
-      <div class="theme-menu" id="theme-menu" role="menu" aria-label="Color theme" hidden>
-        <button type="button" role="menuitemradio" aria-checked="false" data-set="light"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Light</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-set="dark"><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Dark</button>
-        <button type="button" role="menuitemradio" aria-checked="false" data-set="system"><svg class="i-system" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>System</button>
-      </div>
-    </div>
+    <a class="back" href="./#publications">← <span class="back-long">Back to home page</span><span class="back-short">Home</span></a>
+    <div class="theme"><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch light or dark mode"><span class="tt-ic"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span><span class="tt-knob"><svg class="i-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span></button></div>
   </div>
 </header>
-<script src="assets/theme.js?v=1"></script>
+<script src="assets/theme.js?v=2"></script>
 
 <main id="main">
   <div class="wrap">

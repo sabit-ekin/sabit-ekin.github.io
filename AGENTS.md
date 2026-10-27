@@ -28,11 +28,13 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 ## Style
 - Keep the existing design tokens in `:root` (maroon accent, EB Garamond headings, Inter body)
   and the dark-mode block. Add new colors as tokens, not hard-coded values.
-- Theme picker (header, top right; Light / Dark / System): `assets/theme.js` sets `data-theme` on `<html>`
-  (saved in localStorage; an inline script in `<head>` applies it before paint). Every dark-mode rule needs two
+- Light/dark switch (header, top right; window corner from 1200 px): the page follows the system until the
+  visitor picks the other mode (its tooltip marks the system's mode "(system)"; picking it goes back to following
+  the system). `assets/theme.js` sets `data-theme` on `<html>` (saved in localStorage; an inline script in
+  `<head>` applies it before paint). Every dark-mode rule needs two
   forms: `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) ... }` and
   `:root[data-theme="dark"] ...`. Logo `<picture>` sources are switched by the script; SVG figures in `<img>`
-  follow the page's `color-scheme`. publications.html gets the same picker from `build_pubs.py`.
+  follow the page's `color-scheme`. publications.html gets the same switch from `build_pubs.py`.
 - Do not use Texas A&M logos or official branding; this is a personal page.
 - Keep text concise; this is a landing page, not the CV.
 
