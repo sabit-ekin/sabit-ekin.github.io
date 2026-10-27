@@ -101,6 +101,8 @@
   .theme-btn svg { display: none; }
   .theme-btn:not([data-current]) .i-system, .theme-btn[data-current="system"] .i-system,
   .theme-btn[data-current="light"] .i-light, .theme-btn[data-current="dark"] .i-dark { display: block; }
+  /* wide screens: the button sits in the window's top-right corner, outside the 1040 px content column */
+  @media (min-width: 1160px) { .theme { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); } }
   .theme-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 150px; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,.14); }
   .theme-menu[hidden] { display: none; }
   .theme-menu button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--text); font: 500 .9rem var(--sans); text-align: left; cursor: pointer; }
