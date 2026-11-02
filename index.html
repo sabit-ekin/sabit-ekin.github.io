@@ -132,10 +132,10 @@
   .roles { list-style: none; padding: 0; margin: 0 0 20px; color: var(--text); }
   .roles li { margin: 2px 0; }
   .roles .inst { color: var(--muted); }
-  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; }  /* sized so all five fit one line at full width */
   .links a {
     display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line);
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
     background: var(--surface); color: var(--text); text-decoration: none; font-size: .9rem; font-weight: 500;
   }
   .links svg {
@@ -143,8 +143,6 @@
     fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
   }
   .links a:hover { border-color: var(--maroon); color: var(--maroon); }
-  .links a.cv { background: var(--maroon); border-color: var(--maroon); color: var(--bg); }
-  .links a.cv:hover { background: var(--accent); color: var(--bg); }
 
   /* Sections */
   section { padding: 44px 0; }
@@ -419,7 +417,7 @@
           <li class="inst"><a href="https://www.tamu.edu/">Texas A&amp;M University</a>, College Station, Texas</li>
         </ul>
         <div class="links">
-          <a class="cv" href="assets/Sabit_Ekin_CV.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8"/></svg>CV (PDF)</a>
+          <a href="assets/Sabit_Ekin_CV.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8"/></svg>CV (PDF)</a>
           <a href="https://scholar.google.com/citations?user=cgJM6k0AAAAJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Google Scholar</a>
           <a href="https://www.linkedin.com/in/sabitekin/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>LinkedIn</a>
           <a href="https://engineering.tamu.edu/etid/profiles/ekin-sabit.html"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 22h18M6 18v-7m4 7v-7m4 7v-7m4 7v-7"/><path d="M12 2l8 5H4z"/></svg>Faculty page</a>
