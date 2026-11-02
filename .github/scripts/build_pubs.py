@@ -343,7 +343,8 @@ PAGE = '''<!doctype html>
   .lede {{ color: var(--muted); margin: 0 0 14px; max-width: 72ch; }}
   .note {{ font-size: .9rem; color: var(--muted); margin: 0; }}
   .links {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }}
-  .links a {{ display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-size: .9rem; font-weight: 500; }}
+  .links a {{ display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-size: .9rem; font-weight: 500; }}
+  .links svg {{ width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }}
   .links a:hover {{ border-color: var(--maroon); color: var(--maroon); }}
 
   .tools {{ padding: 14px 0 12px; border-bottom: 1px solid var(--line); margin-top: 28px; }}
@@ -431,8 +432,8 @@ PAGE = '''<!doctype html>
       <p class="lede">{arts} peer-reviewed articles ({j} journal and {c} conference papers), {b} books and book chapters, and {p} patents, patent applications, and invention disclosures. This list matches my CV; newest first, numbered as in the CV.</p>
       <p class="note">Supervised student co-authors: Ph.D.<sup>*</sup>, M.Sc./MSET<sup>**</sup>, B.Sc.<sup>***</sup>. Titles link to the paper (DOI) where one is available.</p>
       <div class="links">
-        <a href="assets/Sabit_Ekin_CV.pdf">CV (PDF)</a>
-        <a href="https://scholar.google.com/citations?user=cgJM6k0AAAAJ">Google Scholar</a>
+        <a href="assets/Sabit_Ekin_CV.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8"/></svg>CV (PDF)</a>
+        <a href="https://scholar.google.com/citations?user=cgJM6k0AAAAJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Google Scholar</a>
       </div>
     </div>
 
