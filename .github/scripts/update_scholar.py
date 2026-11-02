@@ -26,7 +26,9 @@ def main():
     cites, h = nums[0], nums[2]
 
     page = open(PAGE, encoding='utf-8').read()
-    stat = re.search(r'<div class="stat"><b>([\d,]+)\+</b><span>citations · h-index (\d+)</span></div>', page)
+    # the card also names the source and month: <small><a href="…">Google Scholar</a>, November&nbsp;2026</small>
+    stat = re.search(r'<div class="stat"><b>([\d,]+)\+</b><span>citations · h-index (\d+)</span>'
+                     r'<small>(<a href="[^"]+">Google Scholar</a>), [A-Z][a-z]+&nbsp;\d{4}</small></div>', page)
     if not stat:
         sys.exit('Citation stat not found in index.html; nothing changed.')
     old_cites = int(stat.group(1).replace(',', ''))
@@ -35,9 +37,8 @@ def main():
 
     shown = f'{cites // 10 * 10:,}'          # rounded down to the nearest 10, shown with "+"
     month = datetime.date.today().strftime('%B %Y')
-    new = (page.replace(stat.group(0), f'<div class="stat"><b>{shown}+</b><span>citations · h-index {h}</span></div>')
-               .replace(re.search(r'<p class="asof">Citation figures from Google Scholar, [A-Z][a-z]+ \d{4}\.</p>', page).group(0),
-                        f'<p class="asof">Citation figures from Google Scholar, {month}.</p>'))
+    new = page.replace(stat.group(0), f'<div class="stat"><b>{shown}+</b><span>citations · h-index {h}</span>'
+                                      f'<small>{stat.group(3)}, {month.replace(" ", "&nbsp;")}</small></div>')
     if new == page:
         print(f'No change ({shown}+ citations, h-index {h}).')
         return

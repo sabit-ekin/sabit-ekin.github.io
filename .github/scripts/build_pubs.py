@@ -180,23 +180,34 @@ def entry(it):
             f'<span class="pub-v">{v}</span>{h}</li>')
 
 
+def count(n):
+    """Entry count shown after a section or year heading (read as ", 8 entries")."""
+    return (f'<span class="n"><span class="sr-only">, </span>{n}'
+            f'<span class="sr-only"> {"entry" if n == 1 else "entries"}</span></span>')
+
+
 def render(sections, counts):
     nav, body = [], []
     for s in sections:
         sid = s['prefix'].lower()
         n = sum(len(g['items']) for g in s['groups'])
         nav.append(f'<li><a href="#{sid}">{SHORT.get(s["prefix"], s["title"])} <span>{n}</span></a></li>')
+        # sections and years collapse: the script gives each heading a button for its .sec-body / year list
         parts = [f'    <section id="{sid}" aria-labelledby="{sid}-h">',
-                 f'      <h2 id="{sid}-h">{s["title"]}</h2>']
+                 f'      <h2 id="{sid}-h">{s["title"]}{count(n)}</h2>',
+                 f'      <div class="sec-body" id="{sid}-body">']
         if s['note']:
             parts.append(f'      <p class="note sec-note">{s["note"]}</p>')
         for g in s['groups']:
+            items = ['        ' + entry(it) for it in g['items']]
             if g['year']:
-                parts.append(f'      <h3 class="year">{g["year"]}</h3>')
-            parts.append('      <ol class="pubs">')
-            parts += ['        ' + entry(it) for it in g['items']]
-            parts.append('      </ol>')
-        parts.append('    </section>')
+                yid = sid + '-' + re.sub(r'\W+', '', g['year'])
+                parts += [f'      <div class="yr" data-year="{html.escape(g["year"])}">',
+                          f'      <h3 class="year">{g["year"]}{count(len(g["items"]))}</h3>',
+                          f'      <ol class="pubs" id="{yid}">', *items, '      </ol>', '      </div>']
+            else:
+                parts += ['      <ol class="pubs">', *items, '      </ol>']
+        parts += ['      </div>', '    </section>']
         body.append('\n'.join(parts))
     arts = counts.get('J', 0) + counts.get('C', 0)
     month = datetime.date.today().strftime('%B %Y')
@@ -346,11 +357,32 @@ PAGE = '''<!doctype html>
   .search input:focus-visible {{ outline: 3px solid var(--maroon); outline-offset: 1px; }}
   .search output {{ font-size: .85rem; color: var(--muted); }}
 
+  .fold {{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }}
+  .fold button {{ font: 500 .82rem var(--sans); color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer; }}
+  .fold button:hover {{ border-color: var(--maroon); color: var(--maroon); }}
+  .fold button:focus-visible {{ outline: 3px solid var(--maroon); outline-offset: 1px; }}
+
   section {{ padding: 36px 0 12px; }}
-  [hidden] {{ display: none !important; }}  /* search hides entries; beats display: grid on li */
-  h2 {{ font-family: var(--serif); font-weight: 500; font-size: 1.9rem; margin: 0 0 4px; color: var(--maroon); }}
+  /* search hides entries (beats display: grid on li); a collapsed section or year is hidden="until-found",
+     which find-in-page can still open */
+  [hidden]:not([hidden="until-found"]) {{ display: none !important; }}
+  .sr-only {{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }}
+  h2 {{ font-family: var(--serif); font-weight: 500; font-size: 1.9rem; line-height: 1.2; margin: 0 0 4px; color: var(--maroon); }}
   .sec-note {{ margin-bottom: 6px; }}
   h3.year {{ font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--muted); margin: 22px 0 2px; }}
+  .n {{ margin-left: 10px; padding: 2px 9px; border-radius: 999px; background: var(--chip); color: var(--muted); font: 600 .76rem var(--sans); vertical-align: middle; }}
+  .tog {{ all: unset; display: inline-block; cursor: pointer; border-radius: 8px; }}  /* long titles wrap; the count follows the last word */
+  .tog:hover {{ color: var(--maroon); }}
+  .tog:focus-visible {{ outline: 3px solid var(--maroon); outline-offset: 3px; }}
+  .tog svg {{ width: .6em; height: .6em; vertical-align: .05em; margin-right: 10px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }}
+  .tog[aria-expanded="false"] svg {{ transform: rotate(-90deg); }}
+  section:has(> h2 > .tog[aria-expanded="false"]) {{ padding: 10px 0 0; }}  /* collapsed sections stack tightly */
+  .yr:has(> h3 > .tog[aria-expanded="false"]) h3.year {{ margin: 10px 0 0; }}
+  @media (prefers-reduced-motion: reduce) {{ .tog svg {{ transition: none; }} }}
+  @media print {{
+    [hidden="until-found"] {{ display: block !important; content-visibility: visible !important; }}
+    .tog svg, .fold {{ display: none; }}
+  }}
   ol.pubs {{ list-style: none; margin: 0; padding: 0; }}
   ol.pubs li {{ position: relative; display: grid; gap: 3px; padding: 13px 0 13px 58px; border-bottom: 1px dashed var(--line); }}
   ol.pubs li:last-child {{ border-bottom: 0; }}
@@ -430,22 +462,59 @@ PAGE = '''<!doctype html>
   </div>
 </footer>
 <script>
+  // Collapsible sections and years: each heading gets a disclosure button (heading order stays intact).
+  // Collapsing sets hidden="until-found" on the body, so find-in-page still opens it (beforematch).
+  (function () {{
+    var groups = [];
+    function fold(h, body) {{
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'tog'; b.setAttribute('aria-expanded', 'true'); b.setAttribute('aria-controls', body.id);
+      b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+      while (h.firstChild) b.appendChild(h.firstChild);
+      h.appendChild(b);
+      var g = {{ set: function (open) {{
+        b.setAttribute('aria-expanded', open);
+        if (open) body.removeAttribute('hidden'); else body.setAttribute('hidden', 'until-found');
+      }} }};
+      b.addEventListener('click', function () {{ g.set(b.getAttribute('aria-expanded') !== 'true'); }});
+      body.addEventListener('beforematch', function () {{ b.setAttribute('aria-expanded', 'true'); }});
+      groups.push(g);
+      return g;
+    }}
+    document.querySelectorAll('main section').forEach(function (s) {{
+      s.fold = fold(s.querySelector('h2'), s.querySelector('.sec-body'));
+      s.querySelectorAll('.yr').forEach(function (y) {{ y.fold = fold(y.querySelector('h3'), y.querySelector('ol')); }});
+    }});
+    var bar = document.createElement('div');
+    bar.className = 'fold';
+    [['Expand all', true], ['Collapse all', false]].forEach(function (x) {{
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = x[0];
+      b.addEventListener('click', function () {{ groups.forEach(function (g) {{ g.set(x[1]); }}); }});
+      bar.appendChild(b);
+    }});
+    document.querySelector('.tools').appendChild(bar);
+    // a section reached from the chips or a link (publications.html#j) opens
+    function reveal() {{ var s = location.hash && document.getElementById(location.hash.slice(1)); if (s && s.fold) s.fold.set(true); }}
+    document.querySelectorAll('.tools nav a').forEach(function (a) {{
+      a.addEventListener('click', function () {{ var s = document.getElementById(a.hash.slice(1)); if (s && s.fold) s.fold.set(true); }});
+    }});
+    window.addEventListener('hashchange', reveal);
+    reveal();
+  }})();
   (function () {{
     var q = document.getElementById('q'), out = document.getElementById('q-count'), none = document.getElementById('none');
     var items = Array.prototype.slice.call(document.querySelectorAll('ol.pubs li'));
-    var text = items.map(function (li) {{ return (li.dataset.n + ' ' + li.textContent + ' ' + (li.closest('ol').previousElementSibling || {{}}).textContent).toLowerCase(); }});
+    var text = items.map(function (li) {{ var y = li.closest('.yr'); return (li.dataset.n + ' ' + li.textContent + ' ' + (y ? y.dataset.year : '')).toLowerCase(); }});
     function run() {{
       var words = q.value.toLowerCase().split(/\\s+/).filter(Boolean), shown = 0;
       items.forEach(function (li, i) {{
         var ok = words.every(function (w) {{ return text[i].indexOf(w) >= 0; }});
         li.hidden = !ok; if (ok) shown++;
       }});
-      document.querySelectorAll('main ol.pubs').forEach(function (ol) {{
-        var any = ol.querySelector('li:not([hidden])');
-        ol.hidden = !any;
-        var h = ol.previousElementSibling; if (h && h.classList.contains('year')) h.hidden = !any;
-      }});
-      document.querySelectorAll('main section').forEach(function (s) {{ s.hidden = !s.querySelector('ol:not([hidden])'); }});
+      document.querySelectorAll('main .yr, main section').forEach(function (g) {{ g.hidden = !g.querySelector('li:not([hidden])'); }});
+      // a search opens the sections and years that hold matches
+      if (words.length) document.querySelectorAll('main .yr:not([hidden]), main section:not([hidden])').forEach(function (g) {{ if (g.fold) g.fold.set(true); }});
       out.textContent = words.length ? shown + (shown === 1 ? ' match' : ' matches') : '';
       none.hidden = shown > 0;
     }}
