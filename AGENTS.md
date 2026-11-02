@@ -17,12 +17,15 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   reused here, but it is outdated: use it only for content the CV lacks
   (project descriptions, outreach details); whenever the two disagree, the CV wins.
 - Citation numbers must carry an "as of" month (the citations card ends with "Google Scholar, <month year>").
-- The "By the numbers" citation count and h-index update weekly from Google Scholar (Mondays 9 a.m.)
+- The Google Scholar figures update weekly (Mondays 9 a.m.), on the site and in the CV in the same run,
   by a launchd job on Sabit's Mac: `~/Library/LaunchAgents/com.sabitekin.scholar-update.plist` runs
-  `~/Library/Application Support/scholar-update/scholar_weekly.sh`, which uses its own clone there
-  (macOS blocks background jobs from Dropbox), runs `.github/scripts/update_scholar.py`, and pushes.
+  `~/Library/Application Support/scholar-update/scholar_weekly.sh`, which uses its own clones there
+  (`repo/`, and the CV in `repo/cv/`; macOS blocks background jobs from Dropbox). It runs
+  `.github/scripts/update_scholar.py` (the site's citations card and the `\gs…` macros at the top of
+  `cv/main.tex`), rebuilds the CV PDF with `build_cv.py` when the CV changed, and pushes both repos.
+  If the CV fails to build, the site still updates and the CV is retried the next week.
   Log: `~/Library/Logs/scholar-update.log`. Scholar blocks GitHub Actions, so it can't run there.
-  The script also bumps the card's month and the footer. Pull before editing.
+  The script also bumps the card's month and the footer. Pull both (site and `cv/`) before editing.
 - Update the "Last updated" line in the footer whenever content changes.
 
 ## Style
