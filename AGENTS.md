@@ -72,7 +72,8 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   it is listed in `.gitignore`. Never commit it or any API key.
 
 ## Common edits
-- Add a course: copy an `<article class="course">` block in `teaching.html`; link to `<course>/`.
+- Add a course: copy an `<article class="course">` block in `teaching.html`; link to `<course>/`. Each course has its
+  own line icon (inline SVG in the `.ic` chip next to the course code, same style as the Explore cards); give a new course its own.
 - Publications: the home page shows no papers (its Explore card links the full list); old `/#publications` links
   forward to `publications.html`.
 - Full publication list: `publications.html` is generated from `cv/publications.tex` (+ `patents.tex`) by
