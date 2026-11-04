@@ -14,9 +14,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Section pages use `<body class="subpage">`: the section title is the page's h1 and the headings below it are one
   level up (h2, h3) from what they were on the old single page; `site.css` gives them the same look.
 - Page banners: every section page and publications.html load `assets/banner.js`, which draws a faint animated
-  line drawing on a `--band` strip behind the title and intro, one per page (research: sweeping antenna beams;
-  publications: a network of papers with citations; leadership: trees that grow and blossom in gold; team: mentor hubs
-  with orbiting students; teaching: signals on graph paper; outreach: ripples reaching houses and schools). It picks
+  line drawing on a `--band` strip behind the title and intro, one per page (research: beams from a cell tower and a Wi-Fi access point, a QAM constellation, and a neural network side by side, taking turns on narrow screens;
+  publications: pages being typeset, each finished page getting a gold star; leadership: trees that grow and blossom in gold; team: a row of
+  candles, the flame passed from the mentor's outward; teaching: an open book right of the intro, its pages turning, with a wave, a neuron, a chat bubble and an antenna rising from it; outreach: ripples reaching houses and schools). It picks
   the drawing from the file name, keeps a soft clear patch around every line of the title, intro and buttons (so the
   text stays readable), reads colors from the tokens (light/dark), pauses off screen, and shows one still
   frame under prefers-reduced-motion. Bump its `?v=` in every page (and in `build_pubs.py`) when you change it.
