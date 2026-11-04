@@ -560,7 +560,7 @@ PAGE = '''<!doctype html>
     q.addEventListener('search', run);
   }})();
 </script>
-<script src="assets/banner.js?v=1"></script>
+<script src="assets/banner.js?v=2"></script>
 </body>
 </html>
 '''

@@ -15,9 +15,10 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   level up (h2, h3) from what they were on the old single page; `site.css` gives them the same look.
 - Page banners: every section page and publications.html load `assets/banner.js`, which draws a faint animated
   line drawing on a `--band` strip behind the title and intro, one per page (research: sweeping antenna beams;
-  publications: a network of papers with citations; leadership: gold stars and constellations; team: mentor hubs
+  publications: a network of papers with citations; leadership: trees that grow and blossom in gold; team: mentor hubs
   with orbiting students; teaching: signals on graph paper; outreach: ripples reaching houses and schools). It picks
-  the drawing from the file name, reads colors from the tokens (light/dark), pauses off screen, and shows one still
+  the drawing from the file name, keeps a soft clear patch around every line of the title, intro and buttons (so the
+  text stays readable), reads colors from the tokens (light/dark), pauses off screen, and shows one still
   frame under prefers-reduced-motion. Bump its `?v=` in every page (and in `build_pubs.py`) when you change it.
 - Explore cards on the home page each have a line icon (inline SVG in a `.ic` chip).
 - Old links to sections of the single page (e.g. `/#team`, `/#honors`) forward to the new pages (inline script

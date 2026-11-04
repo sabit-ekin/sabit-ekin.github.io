@@ -1,12 +1,12 @@
 // Page banner: a faint animated line drawing behind the title and intro of each section page, about that page:
 //   research     antennas sweep tapered beams with wavefront ticks; targets light up as a beam passes
 //   publications a network of papers; citations run along it as dashed paths
-//   leadership   gold stars twinkle; constellations draw in and fade
+//   leadership   trees grow up from the bottom edge and blossom in gold
 //   team         mentor hubs with students orbiting them; signals pass between them
 //   teaching     signals on graph paper: carrier, message, and the modulated wave
 //   outreach     ripples spread from a few sources; houses and schools light up as a ripple reaches them
 // The canvas is decorative (aria-hidden): a strip in the band color across the top of <main>, down to just
-// below the intro, with a thin line at its edge. Colors come from the page's tokens, so it follows light/dark mode. It pauses off screen and in hidden
+// below the intro, with a thin line at its edge. The title, intro and buttons stay clear (see mask()). Colors come from the page's tokens, so it follows light/dark mode. It pauses off screen and in hidden
 // tabs, and shows one still frame under prefers-reduced-motion.
 (function () {
 function start() {
@@ -21,7 +21,7 @@ function start() {
   main.style.position = 'relative';
   if (wrap) { wrap.style.position = 'relative'; wrap.style.zIndex = '1'; }
   main.insertBefore(cv, main.firstChild);
-  var ctx = cv.getContext('2d');
+  var ctx = cv.getContext('2d'), mk = document.createElement('canvas');   // mk: the text mask, see mask()
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var W = 0, H = 0, dpr = 1, scene = null, C = {}, visible = true, raf = 0, t0 = performance.now();
 
@@ -41,29 +41,59 @@ function start() {
     var h = Math.round(intro.getBoundingClientRect().bottom - top + (intro === h1.parentElement ? 30 : 40));
     var w = main.clientWidth;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    if (w === W && h === H) return;
-    W = w; H = h;
-    cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + 'px';
-    scene = DRAW[motif].init(W, H, rng(7));
+    if (w !== W || h !== H) {
+      W = w; H = h;
+      cv.width = mk.width = W * dpr; cv.height = mk.height = H * dpr; cv.style.height = H + 'px';
+      scene = DRAW[motif].init(W, H, rng(7));
+    }
+    mask();
     frame();
+  }
+  // Keep the text readable: a soft patch of the band color over every line of the title and intro (and the
+  // buttons), drawn on top of the drawing, so it only shows in the open space around the text.
+  function mask() {
+    var box = main.getBoundingClientRect(), rects = [], range = document.createRange();
+    var els = h1.parentElement.matches('.intro') ? [].slice.call(h1.parentElement.children)
+      : [h1].concat(h1.nextElementSibling && h1.nextElementSibling.matches('.lede') ? [h1.nextElementSibling] : []);
+    els.forEach(function (el) {
+      if (el.matches('.links')) [].forEach.call(el.children, function (a) { rects.push(a.getBoundingClientRect()); });
+      else { range.selectNodeContents(el); [].push.apply(rects, range.getClientRects()); }
+    });
+    var m = mk.getContext('2d'), pad = 10, far = 10000;
+    m.setTransform(1, 0, 0, 1, 0, 0); m.clearRect(0, 0, mk.width, mk.height);
+    m.setTransform(dpr, 0, 0, dpr, 0, 0);
+    m.fillStyle = '#000'; m.shadowColor = C.band; m.shadowBlur = 16 * dpr; m.shadowOffsetX = far * dpr;
+    for (var pass = 0; pass < 2; pass++)   // only the shadow lands on the canvas: a patch with soft edges
+      rects.forEach(function (r) {
+        if (r.width && r.height)
+          m.fillRect(r.left - box.left - pad - far, r.top - box.top - pad, r.width + 2 * pad, r.height + 2 * pad);
+      });
   }
   function frame() {
     var t = reduce.matches ? 6 : (performance.now() - t0) / 1000;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.fillStyle = C.band; ctx.fillRect(0, 0, W, H);   // the strip has its own tint, with a sharp edge
-    ctx.fillStyle = C.line; ctx.fillRect(0, H - 1, W, 1);
     DRAW[motif].draw(ctx, scene, t, W, H, C);
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(mk, 0, 0);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = C.line; ctx.fillRect(0, H - 1, W, 1);
   }
   function loop() { raf = 0; frame(); schedule(); }
   function schedule() { if (!raf && visible && !document.hidden && !reduce.matches) raf = requestAnimationFrame(loop); }
 
   colors();
   size();
-  new MutationObserver(function () { colors(); frame(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  new MutationObserver(function () { colors(); mask(); frame(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   var dark = window.matchMedia('(prefers-color-scheme: dark)');
-  (dark.addEventListener ? dark.addEventListener('change', function () { colors(); frame(); }) : null);
+  (dark.addEventListener ? dark.addEventListener('change', function () { colors(); mask(); frame(); }) : null);
   window.addEventListener('resize', size);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
+  // the text can reflow after load (web fonts): measure again whenever the title or intro changes size
+  if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', size);
+  if ('ResizeObserver' in window) {
+    var ro = new ResizeObserver(function () { size(); });
+    [].forEach.call(h1.parentElement.children, function (el) { ro.observe(el); });
+  }
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (e) { visible = e[0].isIntersecting; schedule(); }).observe(cv);
   }
@@ -206,45 +236,42 @@ var DRAW = {
     }
   },
 
-  // Twinkling gold stars; every few seconds a constellation of nearby stars draws in, holds, and fades.
+  // Trees grow up from the bottom edge, branch by branch, and blossom in gold at the tips (building programs).
   leadership: {
     init: function (W, H, R) {
-      var stars = [];
-      for (var i = 0; i < W * H / 2600; i++) stars.push({ x: R() * W, y: R() * H, r: 1.8 + R() * 4.6, p: R() * 6.28, f: 0.6 + R() * 1.4 });
-      return { stars: stars, cons: [], next: 0, R: R };
+      var trees = [], n = Math.max(2, Math.round(W / 380));
+      for (var i = 0; i < n; i++) {
+        var br = [], leaves = [];
+        (function g(x, y, ang, len, d, t0) {
+          var x2 = x + Math.cos(ang) * len, y2 = y + Math.sin(ang) * len, dur = 0.65;
+          br.push({ x1: x, y1: y, x2: x2, y2: y2, d: d, t0: t0, dur: dur });
+          if (d >= 6 || len < 9) { leaves.push({ x: x2, y: y2, t0: t0 + dur, r: 2.5 + R() * 2.5 }); return; }
+          var kids = R() < 0.3 ? 3 : 2;
+          for (var k = 0; k < kids; k++)
+            g(x2, y2, ang + (k - (kids - 1) / 2) * (0.45 + R() * 0.3) + (R() - 0.5) * 0.2, len * (0.7 + R() * 0.1), d + 1, t0 + dur);
+        })((i + 0.5 + (R() - 0.5) * 0.5) * W / n, H, -Math.PI / 2 + (R() - 0.5) * 0.3, H * 0.24, 0, 0);
+        trees.push({ br: br, leaves: leaves, o: i * 3.3 });
+      }
+      return { trees: trees };
     },
     draw: function (ctx, s, t, W, H, C) {
-      if (t > s.next) {
-        var a = s.stars[Math.floor(s.R() * s.stars.length)];
-        var near = [a];   // a chain: each next star is the nearest one not yet used (within 150 px)
-        while (near.length < 6) {
-          var last = near[near.length - 1], best = null, bd = 150;
-          s.stars.forEach(function (b) { var d = Math.hypot(last.x - b.x, last.y - b.y); if (d > 25 && d < bd && near.indexOf(b) < 0) { bd = d; best = b; } });
-          if (!best) break;
-          near.push(best);
-        }
-        if (near.length < 3) s.next = t + 0.3;
-        else { s.cons.push({ pts: near, t0: t }); s.next = t + 2.2; }
-        s.cons = s.cons.filter(function (c) { return t - c.t0 < 7; });
-      }
-      ctx.strokeStyle = C.maroon; ctx.lineWidth = 1;
-      s.cons.forEach(function (c) {
-        var age = t - c.t0, prog = Math.min(age / 0.5, c.pts.length - 1), fade = age > 4 ? 1 - (age - 4) / 3 : 1;
-        alpha(ctx, 0.42 * fade); ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(c.pts[0].x, c.pts[0].y);
-        for (var k = 1; k <= Math.ceil(prog) && k < c.pts.length; k++) {
-          var a = c.pts[k - 1], b = c.pts[k], f = Math.min(1, prog - (k - 1));
-          ctx.lineTo(a.x + (b.x - a.x) * f, a.y + (b.y - a.y) * f);
-        }
-        ctx.stroke(); ctx.setLineDash([]);
-      });
-      DRAW.leadership.stars(ctx, s, t, C);
-    },
-    stars: function (ctx, s, t, C) {
-      s.stars.forEach(function (st) {
-        var tw = 0.5 + 0.5 * Math.sin(t * st.f + st.p);
-        ctx.fillStyle = st.r > 3.8 ? C.gold : C.muted;
-        alpha(ctx, st.r > 3.8 ? 0.45 + 0.5 * tw : 0.2 + 0.3 * tw);
-        star(ctx, st.x, st.y, st.r * (0.75 + 0.35 * tw));
+      var P = 14;
+      ctx.lineCap = 'round';
+      s.trees.forEach(function (tr) {
+        var g = ((t - tr.o) % P + P) % P, fade = g > 11 ? 1 - (g - 11) / 3 : 1;
+        ctx.strokeStyle = C.maroon;
+        tr.br.forEach(function (b) {
+          var f = Math.max(0, Math.min(1, (g - b.t0) / b.dur));
+          if (!f) return;
+          alpha(ctx, 0.34 * fade); ctx.lineWidth = Math.max(0.7, 3.2 - b.d * 0.45);
+          ctx.beginPath(); ctx.moveTo(b.x1, b.y1); ctx.lineTo(b.x1 + (b.x2 - b.x1) * f, b.y1 + (b.y2 - b.y1) * f); ctx.stroke();
+        });
+        ctx.fillStyle = C.gold;
+        tr.leaves.forEach(function (l) {
+          var f = Math.max(0, Math.min(1, (g - l.t0) / 0.6));
+          if (!f) return;
+          alpha(ctx, 0.8 * fade); star(ctx, l.x, l.y, l.r * (0.4 + 0.6 * f) * (0.85 + 0.15 * Math.sin(t * 2 + l.x)));
+        });
       });
       alpha(ctx, 1);
     }
