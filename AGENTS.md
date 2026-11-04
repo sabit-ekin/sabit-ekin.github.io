@@ -94,6 +94,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   only where the site already shows that kind of item. The CV header links to this site; keep it that way.
 - Research page order: areas, the `#sky` banner, sponsors, selected current and completed projects, then the full
   list of funded projects (`details.allprojects`, open by default).
+  Project cards sit two per row; each ends with a `.cites` line linking related papers by CV number
+  (`publications.html#J24`: every entry has its number as id, and the page opens its section and year and marks it).
+  Only cite papers whose titles clearly match the project; leave the line out when none do.
 - Sponsors: tiles in `.sponsors` (`research.html`), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
@@ -138,7 +141,8 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   `python3 tools/render_figures.py assets/outreach outreach-diy outreach-pete outreach-research outreach-museum`).
   Older notes: illustrations in `assets/outreach/` (same script; it writes them to
   `assets/projects/`, then move `outreach-*.svg` to `assets/outreach/`). Real photos in
-  `assets/outreach/photos/`, 800×600 JPEG, < 100 KB each. Avoid close-up photos of young children.
+  `assets/outreach/photos/`, 800×600 JPEG, < 100 KB each. Avoid close-up photos of young children. Exception: the two "young visitors" photos in the Outreach gallery
+  were added with consent (Nov 2026). Wide photos in the gallery use `<figure class="wide">` (8:3, two columns).
 - Students (`team.html`): each current student gets a wireless "spirit animal" avatar (`.av`: an emoji, a hue
   `--h`, and a `title` explaining the wireless link); alumni are text only. Do not
   copy photos from LinkedIn or other sites; only use photos a student has provided.

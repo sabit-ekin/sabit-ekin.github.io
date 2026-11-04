@@ -176,7 +176,7 @@ def entry(it):
         v = ', '.join(x for x in (f'<i>{it["venue"]}</i>' if it['venue'] else '', it['details']) if x)
         v = v[:1].upper() + v[1:]
     h = ''.join(f'<span class="pub-{"hl" if k == "award" else "note"}">{p}</span>' for k, p in it['pills'])
-    return (f'<li data-n="{it["n"]}"><span class="pub-t">{t}</span><span class="pub-a">{it["authors"]}</span>'
+    return (f'<li id="{it["n"]}" data-n="{it["n"]}"><span class="pub-t">{t}</span><span class="pub-a">{it["authors"]}</span>'
             f'<span class="pub-v">{v}</span>{h}</li>')
 
 
@@ -406,6 +406,7 @@ PAGE = '''<!doctype html>
   ol.pubs {{ list-style: none; margin: 0; padding: 0; }}
   ol.pubs li {{ position: relative; display: grid; gap: 3px; padding: 13px 0 13px 58px; border-bottom: 1px dashed var(--line); }}
   ol.pubs li:last-child {{ border-bottom: 0; }}
+  ol.pubs li.hit {{ background: var(--chip); border-radius: 10px; box-shadow: 0 0 0 8px var(--chip); }}
   ol.pubs li::before {{ content: attr(data-n); position: absolute; left: 0; top: 13px; box-sizing: border-box; width: 46px; height: 26px; border-radius: 999px; display: grid; place-items: center; background: var(--chip); color: var(--maroon); font-weight: 600; font-size: .78rem; }}
   .pub-t {{ font-weight: 600; line-height: 1.35; }}
   .pub-t a {{ color: var(--text); text-decoration-color: var(--maroon); }}
@@ -533,7 +534,16 @@ PAGE = '''<!doctype html>
     }});
     document.querySelector('.tools').appendChild(bar);
     // a section reached from the chips or a link (publications.html#j) opens
-    function reveal() {{ var s = location.hash && document.getElementById(location.hash.slice(1)); if (s && s.fold) s.fold.set(true); }}
+    // an entry linked from another page (publications.html#J24) opens its section and year, and is marked
+    function reveal() {{
+      var s = location.hash && document.getElementById(location.hash.slice(1));
+      if (!s) return;
+      for (var e = s; e; e = e.parentElement) if (e.fold) e.fold.set(true);
+      if (s.tagName === 'LI') {{
+        document.querySelectorAll('ol.pubs li.hit').forEach(function (x) {{ x.classList.remove('hit'); }});
+        s.classList.add('hit'); s.scrollIntoView({{ block: 'center' }});
+      }}
+    }}
     document.querySelectorAll('.tools nav a').forEach(function (a) {{
       a.addEventListener('click', function () {{ var s = document.getElementById(a.hash.slice(1)); if (s && s.fold) s.fold.set(true); }});
     }});

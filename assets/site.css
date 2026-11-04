@@ -212,7 +212,7 @@ address { font-style: normal; }
 
 h3.sub { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--maroon); margin: 36px 0 14px; }
 h3.sub2 { margin-top: 20px; }
-.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .projects.four { grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .project { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .pfig { margin: 0; aspect-ratio: 4 / 3; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -223,10 +223,15 @@ h3.sub2 { margin-top: 20px; }
 .project em { font-style: normal; font-size: .78rem; font-weight: 600; color: var(--maroon); letter-spacing: .02em; overflow-wrap: anywhere; }
 .project:not(:has(.pfig)) .pbody { padding-top: 18px; }
 .project b a { color: inherit; text-decoration-color: var(--maroon); }
+.project .cites { font-size: .8rem; color: var(--muted); }
+.project .cites a { color: var(--maroon); font-weight: 600; text-decoration: none; }
+.project .cites a:hover { text-decoration: underline; }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .gallery figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .gallery figcaption { padding: 10px 14px; font-size: .85rem; color: var(--muted); }
+.gallery figure.wide { grid-column: span 2; }   /* a wide photo takes two columns */
+.gallery figure.wide img { aspect-ratio: 8 / 3; }
 .diykit { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: center; }
 .diykit .video { aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
 .diykit iframe { display: block; width: 100%; height: 100%; border: 0; }
@@ -235,6 +240,7 @@ h3.sub2 { margin-top: 20px; }
 details.allprojects { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 4px 20px; }
 details.allprojects summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 0; font-weight: 600; color: var(--maroon); }
 details.allprojects summary small { color: var(--muted); font-weight: 500; }
+details.allprojects summary > span { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; }   /* reads like a section heading */
 details.allprojects summary { list-style: none; align-items: center; }
 details.allprojects summary::-webkit-details-marker { display: none; }
 details.allprojects summary::after { content: "Show list"; margin-left: auto; font: 600 .82rem var(--sans); color: var(--maroon); padding: 5px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--chip); }
@@ -347,6 +353,7 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
   .card.area { grid-template-columns: 64px 1fr; gap: 14px; }
   .card.area .afig { width: 64px; height: 64px; border-radius: 14px; }
   .projects, .projects.four, .gallery { grid-template-columns: 1fr; }
+  .gallery figure.wide { grid-column: auto; }
   ul.people.alumni { columns: 1; }
   .courses.past, .path, ul.people.current { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
