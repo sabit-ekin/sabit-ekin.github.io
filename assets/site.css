@@ -259,6 +259,7 @@ ul.awards li:last-child { border-bottom: 0; }
 .sponsors .logo img.sm { max-width: 70%; max-height: 44px; }
 .sponsors .logo img { max-height: 74px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
 img.logo { display: block; height: 60px; width: auto; margin-bottom: 12px; background: #fff; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); }
+img.logo.tall { height: 92px; padding: 6px; }   /* square logos with small lettering */
 .stack { display: grid; gap: 16px; }
 .stack > h3.team-sub { margin: 20px 0 -2px; }
 .stack > h3.team-sub:first-child { margin-top: 4px; }
@@ -371,13 +372,14 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
 
 /* Home: Explore, one card per section page */
 .explore { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.explore a { display: flex; flex-direction: column; gap: 6px; color: var(--text); text-decoration: none; }
+.explore a { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr auto; gap: 10px 14px; color: var(--text); text-decoration: none; }
+.explore a > p, .explore a > .go { grid-column: 1 / -1; }   /* icon and title share the first row */
 .explore a:hover { border-color: var(--maroon); }
-.explore h3 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; color: var(--maroon); margin: 0; }
-.explore .ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--chip); color: var(--maroon); margin-bottom: 6px; transition: transform .2s; }
+.explore h3 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; color: var(--maroon); margin: 0; align-self: center; }
+.explore .ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--chip); color: var(--maroon); transition: transform .2s; }
 .explore .ic svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .explore a:hover .ic { transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) { .explore .ic { transition: none; } }
-.explore .go { margin-top: auto; padding-top: 8px; font-size: .9rem; font-weight: 500; color: var(--accent); }
+.explore .go { align-self: end; padding-top: 8px; font-size: .9rem; font-weight: 500; color: var(--accent); }
 @media (max-width: 820px) { .explore { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .explore { grid-template-columns: 1fr; } }
