@@ -3,10 +3,28 @@
 Instructions for AI agents (Codex, Claude Code) editing this repository.
 
 ## What this is
-- A single static page, `index.html`, published by GitHub Pages at https://sabit-ekin.github.io.
-- No build step. Plain HTML + inline CSS. `.nojekyll` disables Jekyll processing.
+- A static site published by GitHub Pages at https://sabit-ekin.github.io: a short home page (`index.html`: hero,
+  At a glance, Highlights, Explore cards, Contact) and one page per area: `research.html`,
+  `publications.html` (generated, see below), `leadership.html` (leadership, honors, media news), `team.html`,
+  `teaching.html`, `outreach.html`. The top bar (Home first, Contact last) links to these pages and marks the current one.
+- No build step for the pages. Shared styles in `assets/site.css`, shared scripts in `assets/site.js` (top bar,
+  scroll-in effects, research banner); bump their `?v=` in every page when you change them. Each page keeps the
+  small inline `<head>` script (theme before paint). The header, top bar, and footer are repeated in every page:
+  change them in all of them (and in `build_pubs.py` for publications.html, which has its own CSS).
+- Section pages use `<body class="subpage">`: the section title is the page's h1 and the headings below it are one
+  level up (h2, h3) from what they were on the old single page; `site.css` gives them the same look.
+- Page banners: every section page and publications.html load `assets/banner.js`, which draws a faint animated
+  line drawing on a `--band` strip behind the title and intro, one per page (research: sweeping antenna beams;
+  publications: a network of papers with citations; leadership: gold stars and constellations; team: mentor hubs
+  with orbiting students; teaching: signals on graph paper; outreach: ripples reaching houses and schools). It picks
+  the drawing from the file name, reads colors from the tokens (light/dark), pauses off screen, and shows one still
+  frame under prefers-reduced-motion. Bump its `?v=` in every page (and in `build_pubs.py`) when you change it.
+- Explore cards on the home page each have a line icon (inline SVG in a `.ic` chip).
+- Old links to sections of the single page (e.g. `/#team`, `/#honors`) forward to the new pages (inline script
+  in the `<head>` of index.html).
+- `.nojekyll` disables Jekyll processing.
 - Course sites live in their own repositories and appear at `sabit-ekin.github.io/<course>`
-  (e.g. `entc689/`). They are linked from the "Courses" section; do not create course folders here.
+  (e.g. `entc689/`). They are linked from the Teaching page (`teaching.html`); do not create course folders here.
 
 ## Source of truth
 - Facts (titles, numbers, awards, courses) come from Sabit Ekin's CV, whose LaTeX sources are in `cv/`
@@ -32,7 +50,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Keep the existing design tokens in `:root` (maroon accent, EB Garamond headings, Inter body)
   and the dark-mode block. Add new colors as tokens, not hard-coded values.
 - Home page sections alternate between `--bg` and a full-width `--band` (every odd `section` in `main > .wrap`),
-  so a new or moved section keeps the alternation without extra markup.
+  so a new or moved section keeps the alternation without extra markup. Section pages have no bands apart from the page banner strip.
 - Light/dark switch (header, top right; window corner from 1200 px): the page follows the system until the
   visitor picks the other mode (its tooltip marks the system's mode "(system)"; picking it goes back to following
   the system). `assets/theme.js` sets `data-theme` on `<html>` (saved in localStorage; an inline script in
@@ -53,17 +71,16 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   it is listed in `.gitignore`. Never commit it or any API key.
 
 ## Common edits
-- Add a course: copy an `<article class="course">` block in `#courses`; link to `<course>/`.
-- Publications: `#publications` lists ~10 selected journal papers, copied from the CV's
-  `publications.tex` (authors, title, venue, details, DOI; never invent a DOI). Keep the lede counts in
-  sync with the CV, and link to the full list (`publications.html`), the CV PDF, and Google Scholar.
+- Add a course: copy an `<article class="course">` block in `teaching.html`; link to `<course>/`.
+- Publications: the home page shows no papers (its Explore card links the full list); old `/#publications` links
+  forward to `publications.html`.
 - Full publication list: `publications.html` is generated from `cv/publications.tex` (+ `patents.tex`) by
   `python3 .github/scripts/build_pubs.py` (also run by `build_cv.py`); numbering matches the CV (J52 … J1).
   Never edit it by hand: change the CV and rerun. Impact factors and acceptance rates (`\metric`) are left out.
   It stops on LaTeX it cannot convert; add the macro to `tex()` in the script.
   Sections and years collapse (a button in each heading; Expand all / Collapse all; search and the section chips
   open what they point to). Collapsed parts use `hidden="until-found"`, so the browser's find still reaches them.
-- Add news: add an `<li>` at the top of `.timeline`; keep at most ~8 items.
+- Add news: add an `<li>` at the top of the Highlights `.timeline` in `index.html`; keep at most ~8 items.
 - CV: the LaTeX sources are in `cv/` (main document `cv/main.tex`; layout in `cvstyle.sty`; papers in
   `publications.tex`; grants in `funding.tex`; how-to in `cv/README.txt`). `cv/` is its own private repo
   (`sabit-ekin/cv`), ignored by this site's repo: commit and push CV edits there, never here. It is no longer
@@ -71,9 +88,11 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   When the CV changes, update the site in the same session (`/cv` skill, `.claude/skills/cv/`, local):
   `python3 .github/scripts/build_cv.py` builds the PDF into `assets/Sabit_Ekin_CV.pdf` (linked from the hero's
   "CV (PDF)" button) and updates the CV-computed numbers on the page (articles, funding, students, patents,
-  talks, editorial roles, team counts); carry new papers, honors, students, grants, and titles over by hand,
+  talks, editorial roles on index.html; team counts on team.html); carry new papers, honors, students, grants, and titles over by hand,
   only where the site already shows that kind of item. The CV header links to this site; keep it that way.
-- Sponsors: tiles in `.sponsors` (Research section), from the CV funding list. Logos in
+- Research page order: areas, the `#sky` banner, sponsors, selected current and completed projects, then the full
+  list of funded projects (`details.allprojects`, open by default).
+- Sponsors: tiles in `.sponsors` (`research.html`), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).
 - Header and footer logos are animated: `assets/brand/signature-{c3,c1}-{light,dark}-anim.svg` (header and footer; wave draws in, arcs pulse,
@@ -85,10 +104,10 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Photo: `assets/headshot.jpg` (600×600, square crop). To replace it, overwrite that file
   with a square JPEG of similar size; keep the alt text.
 
-- Research banner: `#sky` canvas at the top of `#research` ("AI at the center": research areas orbit an AI core).
-  Script at the end of `index.html`; colors are the `--sky-*` tokens (always a night sky, both themes); it pauses
+- Research banner: `#sky` canvas at the top of `research.html` ("AI at the center": research areas orbit an AI core).
+  Script in `assets/site.js`; colors are the `--sky-*` tokens (always a night sky, both themes); it pauses
   off screen and shows one still frame under prefers-reduced-motion. Other concepts: `tools/animations/` (local only).
-- Scroll-in effects (script near the end of `index.html`; off under prefers-reduced-motion): the Career path cards
+- Scroll-in effects on the home page (`assets/site.js`; off under prefers-reduced-motion): the Career path cards
   come in one by one, and the "By the numbers" figures count up from zero. The counters read each final value from
   the HTML at run time, so the CV and Scholar scripts keep editing `<div class="stat"><b>…</b>` as before;
   a figure that is not a single number (the award's year range) stays still.
@@ -118,7 +137,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   Older notes: illustrations in `assets/outreach/` (same script; it writes them to
   `assets/projects/`, then move `outreach-*.svg` to `assets/outreach/`). Real photos in
   `assets/outreach/photos/`, 800×600 JPEG, < 100 KB each. Avoid close-up photos of young children.
-- Students: each current student gets a wireless "spirit animal" avatar (`.av`: an emoji, a hue
+- Students (`team.html`): each current student gets a wireless "spirit animal" avatar (`.av`: an emoji, a hue
   `--h`, and a `title` explaining the wireless link); alumni are text only. Do not
   copy photos from LinkedIn or other sites; only use photos a student has provided.
 - Names: Mostafa Ibrahim (Ph.D. alum and postdoc) also appears as Mostafa Abdelhadi; always use

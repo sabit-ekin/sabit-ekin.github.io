@@ -2,9 +2,10 @@
 
 The CV sources live in cv/ (their own private repo, sabit-ekin/cv; not part of this site's repo).
 This script builds cv/main.tex with latexmk (TinyTeX), copies the PDF to assets/Sabit_Ekin_CV.pdf, and
-updates the numbers on index.html that the CV computes (articles, funding, students, patents, talks,
-editorial roles, team counts), and regenerates publications.html (the full list) with build_pubs.py.
-Other text on the site (selected papers, honors, students, news) is updated by hand.
+updates the numbers on the site that the CV computes (articles, funding, students, patents, talks,
+editorial roles on index.html; team counts on team.html), and regenerates publications.html (the full list)
+with build_pubs.py.
+Other text on the site (honors, students, news) is updated by hand.
 
   python3 .github/scripts/build_cv.py
 
@@ -16,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_pubs
 
 SRC = 'cv'
-PAGE = 'index.html'
+PAGES = ['index.html', 'team.html']   # pages holding CV-computed numbers; each edit goes to the page that has it
 PDF = 'assets/Sabit_Ekin_CV.pdf'
 TEX_PATH = os.path.expanduser('~/Library/TinyTeX/bin/universal-darwin')
 
@@ -48,7 +49,8 @@ def typed(tex):
     return out
 
 
-def update_numbers(page, c, t):
+def update_numbers(pages, c, t):
+    """pages: {file: html}. Each edit is made on the first page that has its pattern."""
     msgrads = c['msgrads'] + t.get('msunlisted', 0)
     arts = c['pubJ'] + c['pubC']
     edits = [
@@ -60,8 +62,6 @@ def update_numbers(page, c, t):
          f'<div class="stat"><b>{c["phdgrads"] + c["phdcurrent"]}</b><span>Ph.D. students mentored ({c["phdgrads"]} graduates)</span></div>'),
         (r'<div class="stat"><b>\d+</b><span>patent applications \(\d+ issued U\.S\. patents\)</span></div>',
          f'<div class="stat"><b>{c["pubissued"] + c["pubapps"]}</b><span>patent applications ({c["pubissued"]} issued U.S. patents)</span></div>'),
-        (r'<p class="lede">\d+ peer-reviewed articles, including \d+ journal papers\.',
-         f'<p class="lede">{arts} peer-reviewed articles, including {c["pubJ"]} journal papers.'),
         (r'Current: \d+ Ph\.D\. · \d+ M\.Sc\./MSET &nbsp;\|&nbsp; Alumni: \d+ Ph\.D\. · \d+ M\.Sc\./MSET',
          f'Current: {c["phdcurrent"]} Ph.D. · {c["mscurrent"]} M.Sc./MSET &nbsp;|&nbsp; Alumni: {c["phdgrads"]} Ph.D. · {msgrads} M.Sc./MSET'),
     ]
@@ -71,12 +71,15 @@ def update_numbers(page, c, t):
     if 'editorial' in t:
         edits.append((r'<div class="stat"><b>\d+</b><span>editorial roles \(\d+ current IEEE associate editor\)</span></div>',
                       f'<div class="stat"><b>{t["editorial"]}</b><span>editorial roles ({t["editorial_current"]} current IEEE associate editor)</span></div>'))
-    missing = []
+    pages, missing = dict(pages), []
     for pat, new in edits:
-        page, n = re.subn(pat, lambda m: new, page, count=1)
-        if not n:
+        for f, page in pages.items():
+            pages[f], n = re.subn(pat, lambda m: new, page, count=1)
+            if n:
+                break
+        else:
             missing.append(new)
-    return page, missing
+    return pages, missing
 
 
 def main():
@@ -88,12 +91,15 @@ def main():
     print(f'CV built: {PDF}')
     t = typed(open(os.path.join(SRC, 'main.tex'), errors='replace').read())
 
-    page = open(PAGE, encoding='utf-8').read()
-    new, missing = update_numbers(page, counts, t)
-    print('Numbers on index.html updated from the CV.' if new != page else 'Numbers on index.html already match the CV.')
-    new = re.sub(r'Last updated [A-Z][a-z]+ \d{4}', 'Last updated ' + datetime.date.today().strftime('%B %Y'), new)
-    if new != page:
-        open(PAGE, 'w', encoding='utf-8').write(new)
+    pages = {f: open(f, encoding='utf-8').read() for f in PAGES}
+    new, missing = update_numbers(pages, counts, t)
+    for f in PAGES:
+        changed = new[f] != pages[f]
+        print(f'Numbers on {f} updated from the CV.' if changed else f'Numbers on {f} already match the CV.')
+        if changed or f == 'index.html':   # the home page links the rebuilt CV PDF
+            new[f] = re.sub(r'Last updated [A-Z][a-z]+ \d{4}', 'Last updated ' + datetime.date.today().strftime('%B %Y'), new[f])
+        if new[f] != pages[f]:
+            open(f, 'w', encoding='utf-8').write(new[f])
     build_pubs.main({k[3:]: v for k, v in counts.items() if k.startswith('pub')})
     for k, what in (('talks', 'invited talks'), ('editorial', 'editorial roles')):
         if k not in t:
