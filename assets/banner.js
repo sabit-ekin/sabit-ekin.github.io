@@ -2,9 +2,9 @@
 //   research     side by side: beams from a cell tower and a Wi-Fi access point, a QAM constellation, a neural network
 //   publications pages being typeset: two columns and a figure fill in; a finished page gets a gold star
 //   leadership   trees grow up from the bottom edge and blossom in gold
-//   team         a row of candles; the flame passes from candle to candle, from the mentor's outward
+//   team         a mesh network grows outward from the mentor's node; gold packets hop along the links
 //   teaching     an open book, its pages turning; a wave, a neuron, a chat bubble and an antenna rise from it
-//   outreach     ripples spread from a few sources; houses and schools light up as a ripple reaches them
+//   outreach     the light-wave kit: a phone plays music into an LED, the light carries it to a solar cell and a speaker
 // The canvas is decorative (aria-hidden): a strip in the band color across the top of <main>, down to just
 // below the intro, with a thin line at its edge. The title, intro and buttons stay clear (see mask()). Colors come from the page's tokens, so it follows light/dark mode. It pauses off screen and in hidden
 // tabs, and shows one still frame under prefers-reduced-motion.
@@ -85,6 +85,7 @@ function start() {
       });
   }
   function frame() {
+    if (!W || !H) return;   // not laid out yet (e.g. a hidden tab)
     var t = reduce.matches ? 6 : (performance.now() - t0) / 1000;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.fillStyle = C.band; ctx.fillRect(0, 0, W, H);   // the strip has its own tint, with a sharp edge
@@ -371,32 +372,51 @@ var DRAW = {
     }
   },
 
-  // A row of candles; a flame is passed from candle to candle, outward from the mentor's, then they go out and start again.
+  // A mesh network grows: devices join one by one, outward from the mentor's (gold), each linking to its two
+  // nearest neighbours; gold packets hop along the links. Nodes keep clear of the title and intro.
   team: {
     init: function (W, H, R) {
-      var cs = [], x = 24;
-      while (x < W - 10) { cs.push({ x: x, h: 14 + R() * 18, p: R() * 6.28 }); x += 40 + R() * 14; }
-      return { cs: cs, src: Math.max(0, Math.round(cs.length * 0.08)) };
+      var n = Math.max(12, Math.min(40, Math.round(W * H / 8000))), pts = [], tries = 0;
+      var bx = BOX && BOX.intro;
+      while (pts.length < n && tries++ < 2000) {
+        var x = 16 + R() * (W - 32), y = 14 + R() * (H - 28);
+        if (bx && x > bx.left - 16 && x < bx.right + 16 && y > bx.top - 12 && y < bx.bottom + 12) continue;
+        if (pts.some(function (p) { return Math.hypot(p.x - x, p.y - y) < 34; })) continue;
+        pts.push({ x: x, y: y });
+      }
+      var m = pts.reduce(function (a, p) { return p.x > a.x ? p : a; }, pts[0]);   // the mentor: the right-most node
+      pts.sort(function (a, b) { return Math.hypot(a.x - m.x, a.y - m.y) - Math.hypot(b.x - m.x, b.y - m.y); });
+      var links = [];
+      pts.forEach(function (p, i) {
+        pts.slice(0, i).map(function (q, j) { return { j: j, d: Math.hypot(q.x - p.x, q.y - p.y) }; })
+          .sort(function (a, b) { return a.d - b.d; }).slice(0, 2)
+          .forEach(function (e) { links.push({ a: e.j, b: i, p: R() * 3 }); });
+      });
+      return { pts: pts, links: links };
     },
     draw: function (ctx, s, t, W, H, C) {
-      var step = 0.38, L = s.cs.length * step + 4, u = t % L, base = H - 6, out = u > L - 1.2 ? (L - u) / 1.2 : 1;
-      s.cs.forEach(function (c, i) {
-        var lit = u - Math.abs(i - s.src) * step, top = base - c.h;
-        alpha(ctx, 0.5); ctx.fillStyle = C.maroon; ctx.fillRect(c.x - 4, top, 8, c.h);   // candle
-        ctx.strokeStyle = C.muted; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(c.x, top); ctx.lineTo(c.x, top - 4); ctx.stroke();
-        if (lit > -0.35 && lit < 0) {   // a spark jumping over from the neighbour
-          var from = s.cs[i + (i > s.src ? -1 : 1)];
-          if (from) { var f = 1 + lit / 0.35, fx = from.x + (c.x - from.x) * f, fy = (base - from.h - 10) * (1 - f) + (top - 10) * f - Math.sin(f * Math.PI) * 14;
-            alpha(ctx, 0.9 * out); ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(fx, fy, 2, 0, 6.29); ctx.fill(); }
+      var step = 0.32, L = s.pts.length * step + 7, u = t % L, out = u > L - 1 ? L - u : 1;
+      ctx.lineWidth = 1.2;
+      s.links.forEach(function (l) {
+        var A = s.pts[l.a], B = s.pts[l.b], f = Math.max(0, Math.min(1, (u - l.b * step) / 0.4));
+        if (!f) return;
+        alpha(ctx, 0.32 * out); ctx.strokeStyle = C.maroon;
+        ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(A.x + (B.x - A.x) * f, A.y + (B.y - A.y) * f); ctx.stroke();
+        if (f < 1) return;
+        var ph = (t * 0.7 + l.p) % 2.2;   // a packet now and then, either way along the link
+        if (ph < 1) {
+          var q = l.p > 1.5 ? 1 - ph : ph;
+          alpha(ctx, 0.85 * out); ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(A.x + (B.x - A.x) * q, A.y + (B.y - A.y) * q, 2.2, 0, 6.29); ctx.fill();
         }
-        if (lit < 0) return;
-        var g = Math.min(1, lit / 0.3) * out, fl = 1 + 0.12 * Math.sin(t * 13 + c.p) + 0.08 * Math.sin(t * 7.3 + c.p * 2);
-        var halo = ctx.createRadialGradient(c.x, top - 9, 0, c.x, top - 9, 22);
-        halo.addColorStop(0, C.gold); halo.addColorStop(1, clear(C.gold));
-        alpha(ctx, 0.3 * g); ctx.fillStyle = halo; ctx.beginPath(); ctx.arc(c.x, top - 9, 22, 0, 6.29); ctx.fill();
-        alpha(ctx, 0.9 * g); ctx.fillStyle = C.gold;   // flame
-        ctx.beginPath(); ctx.moveTo(c.x, top - 4); ctx.quadraticCurveTo(c.x - 5, top - 8, c.x + Math.sin(t * 5 + c.p), top - 4 - 13 * fl);
-        ctx.quadraticCurveTo(c.x + 5, top - 8, c.x, top - 4); ctx.fill();
+      });
+      s.pts.forEach(function (p, i) {
+        var a = u - i * step; if (a < 0) return;
+        var g = Math.min(1, a / 0.3) * out, r = i ? 4.5 : 6.5;
+        alpha(ctx, g); ctx.fillStyle = C.band; ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, 6.29); ctx.fill();
+        alpha(ctx, (i ? 0.55 : 0.8) * g); ctx.strokeStyle = i ? C.maroon : C.gold; ctx.lineWidth = 1.4; ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(p.x, p.y - r); ctx.lineTo(p.x, p.y - r - 5); ctx.stroke();   // a little antenna
+        if (!i) { ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(p.x, p.y, 2.5, 0, 6.29); ctx.fill(); }
+        if (a < 1) { alpha(ctx, 0.6 * (1 - a)); ctx.strokeStyle = C.gold; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p.x, p.y, r + a * 14, 0, 6.29); ctx.stroke(); }
       });
       alpha(ctx, 1);
     }
@@ -447,38 +467,65 @@ var DRAW = {
     }
   },
 
-  // Ripples spread from a few sources; houses and schools light up when a ripple reaches them.
+  // The light-wave kit from the outreach program: a phone plays music into an LED, the music crosses as flickering light to a
+  // solar cell, and a speaker plays it back, with notes floating up.
   outreach: {
     init: function (W, H, R) {
-      var src = [], n = Math.max(2, Math.round(W / 500));
-      for (var i = 0; i < n; i++) src.push({ x: (i + 0.5) * W / n + (R() - 0.5) * 120, y: H * (0.3 + R() * 0.4), p: R() * 4 });
-      var homes = [];
-      for (i = 0; i < W * H / 9000; i++) homes.push({ x: R() * W, y: R() * H, school: R() < 0.2, lit: 0 });
-      return { src: src, homes: homes, last: 0 };
+      var left = BOX ? BOX.intro.right + 30 : W * 0.55, room = W - 16 - left, z;
+      if (room >= 240) { z = Math.min(1.35, room / 380, (H - 30) / 110); return { z: z, x: left + (room - 380 * z) / 2, y: H / 2 - 55 * z }; }
+      z = Math.min(0.5, (W - 32) / 380);   // phones: small, in the bottom-right corner
+      return { z: z, x: W - 380 * z - 14, y: H - 100 * z - 6 };
     },
     draw: function (ctx, s, t, W, H, C) {
-      var period = 4, maxR = Math.max(W / s.src.length, H) * 0.9, dt = Math.min(0.1, Math.max(0, t - s.last)); s.last = t;
-      ctx.strokeStyle = C.maroon; ctx.lineWidth = 1.3;
-      s.src.forEach(function (sc) {
-        for (var k = 0; k < 3; k++) {
-          var r = (((t + sc.p) / period + k / 3) % 1) * maxR;
-          alpha(ctx, 0.38 * (1 - r / maxR)); ctx.beginPath(); ctx.arc(sc.x, sc.y, r, 0, 6.28); ctx.stroke();
-          s.homes.forEach(function (h) { if (Math.abs(Math.hypot(h.x - sc.x, h.y - sc.y) - r) < 3) h.lit = 1; });
-        }
-        alpha(ctx, 0.6); ctx.fillStyle = C.maroon; ctx.beginPath(); ctx.arc(sc.x, sc.y, 4, 0, 6.28); ctx.fill();
-      });
-      s.homes.forEach(function (h) {
-        h.lit = Math.max(0, h.lit - dt * 0.6);
-        var w = h.school ? 14 : 9, hh = h.school ? 9 : 7;
-        ctx.lineWidth = 1.1; ctx.strokeStyle = h.lit > 0.05 ? C.maroon : C.muted; alpha(ctx, 0.35 + 0.5 * h.lit);
-        ctx.fillStyle = C.gold;
-        ctx.beginPath();
-        ctx.moveTo(h.x - w / 2, h.y); ctx.lineTo(h.x - w / 2, h.y - hh); ctx.lineTo(h.x, h.y - hh - 6); ctx.lineTo(h.x + w / 2, h.y - hh); ctx.lineTo(h.x + w / 2, h.y); ctx.closePath();
-        if (h.lit > 0.05) { alpha(ctx, 0.55 * h.lit); ctx.fill(); alpha(ctx, 0.35 + 0.5 * h.lit); }
-        ctx.stroke();
-        if (h.school) { ctx.beginPath(); ctx.moveTo(h.x, h.y - hh - 6); ctx.lineTo(h.x, h.y - hh - 12); ctx.lineTo(h.x + 4, h.y - hh - 10); ctx.lineTo(h.x, h.y - hh - 9); ctx.stroke(); }
-      });
-      alpha(ctx, 1);
+      ctx.save(); ctx.translate(s.x, s.y); ctx.scale(s.z, s.z);
+      ctx.lineWidth = 1.6; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      function rr(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+      function note(x, y, sz) { ctx.beginPath(); ctx.ellipse(x, y, sz * 0.55, sz * 0.4, -0.4, 0, 6.29); ctx.fill(); ctx.fillRect(x + sz * 0.42, y - sz * 1.6, sz * 0.16, sz * 1.6); ctx.fillRect(x + sz * 0.42, y - sz * 1.6, sz * 0.6, sz * 0.18); }
+      var on = rng(Math.floor(t * 14))() > 0.35;
+      // phone
+      alpha(ctx, 0.55); ctx.strokeStyle = C.maroon; rr(0, 24, 34, 62, 6); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(13, 30); ctx.lineTo(21, 30); ctx.stroke();
+      alpha(ctx, 0.8); ctx.fillStyle = C.gold; note(14, 60 + Math.sin(t * 4) * 2, 7);
+      // wires
+      alpha(ctx, 0.4); ctx.strokeStyle = C.muted; ctx.lineWidth = 1.3;
+      ctx.beginPath(); ctx.moveTo(34, 72); ctx.bezierCurveTo(52, 92, 66, 92, 80, 76); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(302, 76); ctx.bezierCurveTo(314, 92, 326, 92, 334, 72); ctx.stroke();
+      // LED on a little board
+      ctx.lineWidth = 1.6; alpha(ctx, 0.55); ctx.strokeStyle = C.maroon; rr(72, 66, 26, 12, 3); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(78, 66); ctx.lineTo(78, 58); ctx.moveTo(92, 66); ctx.lineTo(92, 58); ctx.stroke();
+      ctx.beginPath(); ctx.arc(85, 50, 8, Math.PI, 0); ctx.lineTo(93, 58); ctx.lineTo(77, 58); ctx.closePath();
+      alpha(ctx, on ? 0.85 : 0.3); ctx.fillStyle = C.gold; ctx.fill(); alpha(ctx, 0.6); ctx.stroke();
+      // the light beam, with pulses travelling along it
+      var x0 = 96, x1 = 266;
+      ctx.beginPath(); ctx.moveTo(x0, 46); ctx.lineTo(x1, 34); ctx.lineTo(x1, 66); ctx.lineTo(x0, 54); ctx.closePath();
+      alpha(ctx, 0.12); ctx.fillStyle = C.gold; ctx.fill();
+      for (var k = Math.floor(t * 14) - 20; k <= Math.floor(t * 14); k++) {
+        var px = x0 + (t - k / 14) * 150; if (px > x1 || px < x0) continue;
+        if (rng(k)() <= 0.35) continue;   // the same on/off pattern the LED blinked
+        var hw = 4 + (px - x0) / (x1 - x0) * 12;
+        alpha(ctx, 0.75); ctx.fillRect(px, 50 - hw, 4, hw * 2);
+      }
+      // solar cell
+      var hit = rng(Math.floor((t - (x1 - x0) / 150) * 14))() > 0.35;
+      alpha(ctx, hit ? 0.35 : 0.1); ctx.fillStyle = C.gold; ctx.fillRect(270, 26, 32, 50);
+      alpha(ctx, 0.55); ctx.strokeStyle = C.maroon; ctx.strokeRect(270, 26, 32, 50);
+      ctx.lineWidth = 1; ctx.beginPath();
+      for (var i = 1; i < 4; i++) { ctx.moveTo(270, 26 + i * 12.5); ctx.lineTo(302, 26 + i * 12.5); }
+      ctx.moveTo(286, 26); ctx.lineTo(286, 76); ctx.stroke();
+      // speaker, with sound arcs and notes floating up
+      ctx.lineWidth = 1.6; alpha(ctx, 0.6); ctx.fillStyle = C.maroon;
+      ctx.beginPath(); ctx.moveTo(332, 42); ctx.lineTo(340, 42); ctx.lineTo(352, 30); ctx.lineTo(352, 70); ctx.lineTo(340, 58); ctx.lineTo(332, 58); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = C.maroon;
+      for (var j = 0; j < 3; j++) {
+        var f = ((t * 0.9 + j / 3) % 1);
+        alpha(ctx, 0.5 * (1 - f)); ctx.beginPath(); ctx.arc(352, 50, 8 + f * 26, -0.7, 0.7); ctx.stroke();
+      }
+      for (var n = Math.floor(t / 0.7) - 5; n <= Math.floor(t / 0.7); n++) {
+        var a = t - n * 0.7, Rn = rng(n * 13 + 1); if (a < 0 || a > 3) continue;
+        alpha(ctx, 0.8 * Math.min(1, a * 3) * (1 - a / 3)); ctx.fillStyle = Rn() < 0.5 ? C.gold : C.maroon;
+        note(360 + a * 8 + Math.sin(a * 3 + n) * 5, 34 - a * 22, 5 + Rn() * 2);
+      }
+      ctx.restore(); alpha(ctx, 1);
     }
   }
   ,
@@ -528,20 +575,20 @@ var DRAW = {
   qam: {
     init: function (W, H, R) {
       // one constellation, high in the banner so all 16 points sit above the intro text
-      var n = 1, cs = [], sp = Math.min(H * 0.095, 22);
-      for (var i = 0; i < n; i++) cs.push({ x: (i + 0.5) * W / n, y: Math.min(H * 0.285, 70), sp: sp, p: R() * 6.28 });
+      var n = 1, cs = [], sp = Math.min(H * 0.12, 28);
+      for (var i = 0; i < n; i++) cs.push({ x: (i + 0.5) * W / n, y: Math.min(H * 0.3, sp * 2.1 + 8), sp: sp, p: R() * 6.28 });
       return { cs: cs };
     },
     draw: function (ctx, s, t, W, H, C) {
       var gap = 0.025, life = 2.4;
       s.cs.forEach(function (c, ci) {
-        var sp = c.sp, ext = sp * 2.4;
+        var sp = c.sp, ext = sp * 2.1, z = sp / 22;
         ctx.strokeStyle = C.muted; ctx.lineWidth = 1; alpha(ctx, 0.28);
         ctx.beginPath(); ctx.moveTo(c.x - ext, c.y); ctx.lineTo(c.x + ext, c.y); ctx.moveTo(c.x, c.y - ext); ctx.lineTo(c.x, c.y + ext); ctx.stroke();
         alpha(ctx, 0.45); ctx.strokeStyle = C.maroon;
         for (var i = 0; i < 4; i++) for (var j = 0; j < 4; j++) {
           var px = c.x + (i - 1.5) * sp, py = c.y + (j - 1.5) * sp;
-          ctx.beginPath(); ctx.arc(px, py, 4, 0, 6.29); ctx.stroke();
+          ctx.beginPath(); ctx.arc(px, py, 4 * z, 0, 6.29); ctx.stroke();
         }
         for (var k = Math.floor((t - life) / gap); k <= Math.floor(t / gap); k++) {
           if (k < 0) continue;
@@ -551,7 +598,7 @@ var DRAW = {
           var x = c.x + ((sym & 3) - 1.5) * sp + (R() + R() + R() - 1.5) * noise, y = c.y + ((sym >> 2) - 1.5) * sp + (R() + R() + R() - 1.5) * noise;
           var fresh = age < 0.25;
           alpha(ctx, fresh ? 0.95 : 0.55 * (1 - age / life)); ctx.fillStyle = fresh ? C.gold : C.maroon;
-          ctx.beginPath(); ctx.arc(x, y, fresh ? 2.4 : 1.5, 0, 6.29); ctx.fill();
+          ctx.beginPath(); ctx.arc(x, y, (fresh ? 2.4 : 1.5) * z, 0, 6.29); ctx.fill();
         }
       });
       alpha(ctx, 1);
