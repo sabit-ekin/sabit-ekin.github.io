@@ -101,10 +101,10 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   only where the site already shows that kind of item. The CV header links to this site; keep it that way.
 - Research page order: areas, the `#sky` banner, sponsors, selected current and completed projects, then the full
   list of funded projects (`details.allprojects`, open by default).
-  Project cards sit two per row; each ends with a `.cites` line linking related papers by CV number
+  Project cards sit two per row; each ends with a "Related papers:" line (`.cites`) linking papers by CV number
   (`publications.html#J24`: every entry has its number as id, and the page opens its section and year and marks it).
   Only cite papers whose titles clearly match the project; leave the line out when none do.
-  A project with its own site gets a "Project website →" link (`a.site`) at the end of the card; the title stays plain text.
+  A project with its own site gets a "Project website →" pill (`a.site`) on the title line, right-aligned (`.ptitle`); the title stays plain text.
 - Sponsors: tiles in `.sponsors` (`research.html`), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
   (large seals as small WebP). QNRF is shown with the QRDI Council logo (QNRF merged into it).

@@ -226,8 +226,9 @@ h3.sub2 { margin-top: 20px; }
 .project .cites { font-size: .8rem; color: var(--muted); }
 .project .cites a { color: var(--maroon); font-weight: 600; text-decoration: none; }
 .project .cites a:hover { text-decoration: underline; }
-.project a.site { justify-self: start; margin-top: 4px; font-size: .85rem; font-weight: 600; color: var(--maroon); text-decoration: none; }
-.project a.site:hover { text-decoration: underline; }
+.project .ptitle { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap; }   /* title, and a pill on the right */
+.project a.site { flex: none; padding: 3px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--chip); font-size: .78rem; font-weight: 600; color: var(--maroon); text-decoration: none; }
+.project a.site:hover { border-color: var(--maroon); }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .gallery figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
