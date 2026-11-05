@@ -101,7 +101,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   only where the site already shows that kind of item. The CV header links to this site; keep it that way.
 - Research page order: areas, the `#sky` banner, sponsors, selected current and completed projects, then the full
   list of funded projects (`details.allprojects`, open by default).
-  Project cards sit two per row; each ends with a "Related papers:" line (`.cites`) linking papers by CV number
+  Project cards sit two per row. The funding line (`<em>`) sits in a `.fund` row after the funders' logos
+  (`.flogos` > `span.fl` > `img alt=""`, the same files as the sponsor tiles in `assets/sponsors/`); funders without a
+  logo there (OSU internal grants, industry) get none. Each card ends with a "Related papers:" line (`.cites`) linking papers by CV number
   (`publications.html#J24`: every entry has its number as id, and the page opens its section and year and marks it).
   Only cite papers whose titles clearly match the project; leave the line out when none do.
   A project with its own site gets a "Project website →" pill (`a.site`) on the title line, right-aligned (`.ptitle`); the title stays plain text.

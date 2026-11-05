@@ -223,6 +223,11 @@ h3.sub2 { margin-top: 20px; }
 .project em { font-style: normal; font-size: .78rem; font-weight: 600; color: var(--maroon); letter-spacing: .02em; overflow-wrap: anywhere; }
 .project:not(:has(.pfig)) .pbody { padding-top: 18px; }
 .project b a { color: inherit; text-decoration-color: var(--maroon); }
+.project .fund { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin: 4px 0 2px; }   /* funders' logos, then the funding line */
+.project .flogos { display: flex; gap: 6px; }
+.project .fl img[src$="nsf.svg"] { transform: scale(1.2); }
+.project .fl { display: flex; align-items: center; justify-content: center; height: 42px; min-width: 46px; padding: 4px 8px; background: var(--logo-plate); border: 1px solid var(--line); border-radius: 8px; }
+.project .fl img { display: block; max-height: 34px; max-width: 120px; width: auto; height: auto; }
 .project .cites { font-size: .8rem; color: var(--muted); }
 .project .cites a { color: var(--maroon); font-weight: 600; text-decoration: none; }
 .project .cites a:hover { text-decoration: underline; }
