@@ -114,7 +114,7 @@ h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 6vw, 
 .roles { list-style: none; padding: 0; margin: 0 0 20px; color: var(--text); }
 .roles li { margin: 2px 0; }
 .roles .inst { color: var(--muted); }
-.links { display: flex; flex-wrap: wrap; gap: 6px; }  /* sized so all five fit one line at full width */
+.links { display: flex; flex-wrap: wrap; gap: 6px; }  /* six links: they wrap to a second line below the widest layout */
 .links a {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
@@ -240,7 +240,7 @@ h3.sub2 { margin-top: 20px; }
 details.allprojects { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 4px 20px; }
 details.allprojects summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 14px 0; font-weight: 600; color: var(--maroon); }
 details.allprojects summary small { color: var(--muted); font-weight: 500; }
-details.allprojects summary > span { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; }   /* reads like a section heading */
+.lede.funded { margin: -6px 0 0; }
 details.allprojects summary { list-style: none; align-items: center; }
 details.allprojects summary::-webkit-details-marker { display: none; }
 details.allprojects summary::after { content: "Show list"; margin-left: auto; font: 600 .82rem var(--sans); color: var(--maroon); padding: 5px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--chip); }
@@ -361,7 +361,7 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
 
 /* Section pages (body.subpage): each page is one section with its headings one level up (h2 -> h1, h3 -> h2,
    h4 -> h3), so its heading order starts at h1. These rules give the shifted headings their home-page look.
-   Their background stays plain (no band). */
+   Below the banner strip their parts alternate between --bg and a full-width --band, as on the home page. */
 .subpage h1 { font-size: clamp(2.3rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 10px; }
 /* The title and intro sit on the animated page banner (assets/banner.js), so they get more room. */
 .subpage main > .wrap > section:first-of-type { padding-top: 76px; }
@@ -376,6 +376,10 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
 .subpage .stack > h2.team-sub { margin: 20px 0 -2px; }
 .subpage .stack > h2.team-sub:first-child { margin-top: 4px; }
 .subpage main > .wrap > section { border-image: none; }
+/* Below the banner, the parts of a section page alternate like the home page: every second part on a band. */
+.subpage main > .wrap > section:nth-of-type(even) { border-image: conic-gradient(var(--band) 0 0) fill 0 // 0 100vmax; }
+.subpage main > .wrap > section.part > h2.sub:first-child { margin-top: 0; }
+.subpage h1 + .lede + h2.sub { margin-top: 0; }   /* first heading right under the banner */
 
 /* Home: Explore, one card per section page */
 .explore { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -390,3 +394,9 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
 .explore .go { align-self: end; padding-top: 8px; font-size: .9rem; font-weight: 500; color: var(--accent); }
 @media (max-width: 820px) { .explore { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .explore { grid-template-columns: 1fr; } }
+
+/* 404 page: links to every page as pills */
+.nf-links { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-wrap: wrap; gap: 8px; }
+.nf-links a { display: inline-block; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); text-decoration: none; font-weight: 500; }
+.nf-links a:hover { border-color: var(--maroon); }
+.notfound h1 + .lede { margin-bottom: 20px; }

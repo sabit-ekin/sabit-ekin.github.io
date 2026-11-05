@@ -46,12 +46,18 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   Log: `~/Library/Logs/scholar-update.log`. Scholar blocks GitHub Actions, so it can't run there.
   The script also bumps the card's month and the footer. Pull both (site and `cv/`) before editing.
 - Update the "Last updated" line in the footer whenever content changes.
+- Every page has a canonical link, Open Graph/Twitter tags and the shared preview image `assets/og-card.jpg`
+  (1200×630; rendered from `tools/scenes/og-card.html`, local only). The home page also has schema.org Person data
+  (JSON-LD in `<head>`): keep its title, affiliation and profile links in step with the hero. ORCID:
+  0000-0002-9957-7752. `sitemap.xml` lists the seven pages (update `lastmod` when content changes); `robots.txt`
+  points to it. `404.html` uses root-relative links (/assets/…) because GitHub Pages serves it at any missing path.
 
 ## Style
 - Keep the existing design tokens in `:root` (maroon accent, EB Garamond headings, Inter body)
   and the dark-mode block. Add new colors as tokens, not hard-coded values.
 - Home page sections alternate between `--bg` and a full-width `--band` (every odd `section` in `main > .wrap`),
-  so a new or moved section keeps the alternation without extra markup. Section pages have no bands apart from the page banner strip.
+  so a new or moved section keeps the alternation without extra markup. Section pages do the same below the banner strip: each `h2.sub` part is its own `<section class="part">`, and every
+  second section (the 2nd, 4th, …) sits on the band. publications.html keeps a plain background (its sections fold and filter).
 - Light/dark switch (header, top right; window corner from 1200 px): the page follows the system until the
   visitor picks the other mode (its tooltip marks the system's mode "(system)"; picking it goes back to following
   the system). `assets/theme.js` sets `data-theme` on `<html>` (saved in localStorage; an inline script in
@@ -59,7 +65,8 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   forms: `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) ... }` and
   `:root[data-theme="dark"] ...`. Logo `<picture>` sources are switched by the script; SVG figures in `<img>`
   follow the page's `color-scheme`. publications.html gets the same switch from `build_pubs.py`.
-- Do not use Texas A&M logos or official branding; this is a personal page.
+- Do not use Texas A&M logos or official branding; this is a personal page. Exception: your own materials that carry the logo
+  (the DIY kit slides PDF and the kit-box photo on the Outreach page) may stay as they are.
 - Keep text concise; this is a landing page, not the CV.
 
 ## Accessibility (required, WCAG 2.1 AA)
