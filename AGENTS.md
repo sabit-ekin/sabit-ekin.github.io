@@ -26,6 +26,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - `.nojekyll` disables Jekyll processing.
 - Course sites live in their own repositories and appear at `sabit-ekin.github.io/<course>`
   (e.g. `entc689/`). They are linked from the Teaching page (`teaching.html`); do not create course folders here.
+  ESET 489 (Fall 2027) is the first: repo `sabit-ekin/eset489`, local clone `../eset489`, a public one-page site
+  (same tokens and fonts, its own hero animation; facts from the F27 syllabus and the Special Topics form), linked
+  from its Teaching card with a "Course site →" pill (`a.tag.go`).
 
 ## Source of truth
 - Facts (titles, numbers, awards, courses) come from Sabit Ekin's CV, whose LaTeX sources are in `cv/`
