@@ -105,7 +105,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   (`.flogos` > `span.fl` > `img alt=""`, the same files as the sponsor tiles in `assets/sponsors/`); funders without a
   logo there (OSU internal grants, industry) get none. Each card ends with a "Related papers:" line (`.cites`) linking papers by CV number
   (`publications.html#J24`: every entry has its number as id, and the page opens its section and year and marks it).
-  Only cite papers whose titles clearly match the project; leave the line out when none do.
+  Only cite papers whose titles clearly match the project; when none do yet, the line reads "Related papers: to be added soon".
   A project with its own site gets a "Project website →" pill (`a.site`) on the title line, right-aligned (`.ptitle`); the title stays plain text.
 - Sponsors: tiles in `.sponsors` (`research.html`), from the CV funding list. Logos in
   `assets/sponsors/` come from official sites or Wikimedia Commons; keep each under ~25 KB
