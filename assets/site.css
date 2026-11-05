@@ -371,7 +371,7 @@ footer .sig img { display: block; width: 320px; max-width: 100%; height: auto; }
 .subpage h1 + .lede { margin-bottom: 76px; }
 .subpage h2 { font-family: inherit; font-weight: bold; font-size: 1.05rem; color: inherit; margin: 0 0 6px; }
 .subpage h3 { font-size: 1em; margin: 1.33em 0; }
-.subpage h2.sub { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--maroon); margin: 36px 0 14px; }
+.subpage h2.sub { font-family: var(--serif); font-weight: 500; font-size: 1.9rem; line-height: 1.2; color: var(--maroon); margin: 36px 0 14px; }
 .subpage h2.sub2 { margin-top: 20px; }
 .subpage .course h2 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; line-height: 1.25; }
 .subpage .course h3 { font-family: var(--serif); font-weight: 500; font-size: 1.12rem; line-height: 1.25; margin: 0; }

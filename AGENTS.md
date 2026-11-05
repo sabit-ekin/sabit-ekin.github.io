@@ -12,7 +12,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   small inline `<head>` script (theme before paint). The header, top bar, and footer are repeated in every page:
   change them in all of them (and in `build_pubs.py` for publications.html, which has its own CSS).
 - Section pages use `<body class="subpage">`: the section title is the page's h1 and the headings below it are one
-  level up (h2, h3) from what they were on the old single page; `site.css` gives them the same look.
+  level up (h2, h3) from what they were on the old single page; `site.css` gives them the same look. Section titles (`h2.sub`) are 1.9rem, the size of the section headings (Journals, ...) on publications.html.
 - Page banners: every section page and publications.html load `assets/banner.js`, which draws a faint animated
   line drawing on a `--band` strip behind the title and intro, one per page (research: beams from a cell tower and a Wi-Fi access point, a QAM constellation, and a neural network side by side, taking turns on narrow screens;
   publications: pages being typeset, each finished page getting a gold star; leadership: trees that grow and blossom in gold; team: a mesh
