@@ -35,7 +35,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   (see "CV" below). Read them rather than guessing. Never invent awards, numbers, dates, or links.
 - The old Google Site is retired: sabitekin.com and www.sabitekin.com now permanently redirect
   (301, paths dropped) to https://sabit-ekin.github.io via Squarespace Domains forwarding
-  (domain registered through Aug 2027). Do not link to sabitekin.com. Its content may be
+  (domain registered through Aug 2027). Do not link to sabitekin.com from the site's own pages; documents
+  sent to others (the CV header, short CVs, emails) give the home page as www.sabitekin.com, and deep links
+  (e.g. /eset489/) stay on sabit-ekin.github.io because the redirect drops paths. Its content may be
   reused here, but it is outdated: use it only for content the CV lacks
   (project descriptions, outreach details); whenever the two disagree, the CV wins.
 - Citation numbers must carry an "as of" month (the citations card ends with "Google Scholar, <month year>").
@@ -101,7 +103,7 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   `python3 .github/scripts/build_cv.py` builds the PDF into `assets/Sabit_Ekin_CV.pdf` (linked from the hero's
   "CV (PDF)" button) and updates the CV-computed numbers on the page (articles, funding, students, patents,
   talks, editorial roles on index.html; team counts on team.html); carry new papers, honors, students, grants, and titles over by hand,
-  only where the site already shows that kind of item. The CV header links to this site; keep it that way.
+  only where the site already shows that kind of item. The CV header links to this site as www.sabitekin.com (it forwards here); keep it that way.
 - Research page order: areas, the `#sky` banner, sponsors, selected current and completed projects, then the full
   list of funded projects (`details.allprojects`, open by default).
   Project cards sit two per row. The funding line (`<em>`) sits in a `.fund` row after the funders' logos
