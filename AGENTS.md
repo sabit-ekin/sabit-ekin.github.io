@@ -94,6 +94,16 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   It stops on LaTeX it cannot convert; add the macro to `tex()` in the script.
   Sections and years collapse (a button in each heading; Expand all / Collapse all; search and the section chips
   open what they point to). Collapsed parts use `hidden="until-found"`, so the browser's find still reaches them.
+  Each published entry (journals, conferences, books, preprints, other papers, theses) has a Cite button: it shows
+  the entry's BibTeX, read from `assets/publications.bib` (also generated; the intro's "All citations (BibTeX)"
+  link downloads it). Where a free copy is known, the entry is marked "Open access" (the title's DOI link is free
+  to read) or has a "Free version" link (arXiv, OSTI), and an Abstract button opens the paper's abstract (in the
+  page, folded). The CV has no full author names, free links or abstracts, so these
+  come from Crossref, OpenAlex and arXiv and are kept in `.github/scripts/pubs_meta.json`. A build never goes
+  online: after adding papers to the CV run `python3 .github/scripts/build_pubs.py --fetch` (looks up new entries
+  only; `--check` lists where Crossref and the CV disagree: the CV wins, so fix whichever is wrong). Commit the
+  page, the .bib and the JSON together. Never add a free-version link by guess: only the same paper (same DOI or
+  same title); a record edited by hand needs `"manual": true`. Manuscripts not yet published get no Cite button.
 - Add news: add an `<li>` at the top of the Highlights `.timeline` in `index.html`; keep at most ~8 items.
 - CV: the LaTeX sources are in `cv/` (main document `cv/main.tex`; layout in `cvstyle.sty`; papers in
   `publications.tex`; grants in `funding.tex`; how-to in `cv/README.txt`). `cv/` is its own private repo

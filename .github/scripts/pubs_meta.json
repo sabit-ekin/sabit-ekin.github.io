@@ -1,0 +1,4093 @@
+{
+ "10.1002/wcm.1082": {
+  "abstract": "Cognitive radio (CR) with spectrum‐sharing feature is a promising technique to address the spectrum under‐utilization problem in dynamically changing environments. In this paper, the achievable capacity gain of spectrum‐sharing systems over dynamic fading environments is studied. To perform a general analysis, a theoretical fading model called hyper‐fading model that is suitable to the dynamic nature of CR channel is proposed. Closed‐form expressions of probability density function (PDF) and cumulative density function (CDF) of the signal‐to‐noise ratio (SNR) for secondary users (SUs) in spectrum‐sharing systems are derived. In addition, the capacity gains achievable with spectrum‐sharing systems in high and low power regions are obtained. The effects of different fading figures, average fading powers, interference temperatures, peak powers of secondary transmitters, and numbers of SUs on the achievable capacity are investigated. The analytical and simulation results show that the fading figure of the channel between SUs and primary base‐station (PBS), which describes the diversity of the channel, does not contribute significantly to the system performance gain. Copyright © 2011 John Wiley & Sons, Ltd.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ferkan",
+     "Yilmaz"
+    ],
+    [
+     "Hasari",
+     "Celebi"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Mohamed‐Slim",
+     "Alouini"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "Wireless Communications and Mobile Computing",
+   "date": [
+    2011,
+    1,
+    20
+   ],
+   "issue": "16",
+   "page": "1471-1480",
+   "title": "Capacity limits of spectrum‐sharing systems over hyper‐fading channels",
+   "type": "journal-article",
+   "volume": "12"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1007/978-3-032-35459-4_3": {
+  "abstract": "In this study, we present a deep learning-based approach for time-series respiration data classification. The dataset contains regular breathing patterns as well as various forms of abnormal breathing, obtained through non-contact incoherent light-wave sensing (LWS) technology. Given the one-dimensional (1D) nature of the data, we employed a 1D convolutional neural network (1D-CNN) for classification purposes. Genetic algorithm was employed to optimize the 1D-CNN architecture to maximize classification accuracy. Addressing the computational complexity associated with training the 1D-CNN across multiple generations, we implemented transfer learning from a pre-trained model. This approach significantly reduced the computational time required for training, thereby enhancing the efficiency of the optimization process. This study contributes valuable insights into the potential applications of deep learning methodologies for enhancing respiratory anomaly detection through precise and efficient respiration classification.",
+  "abstract_from": "arXiv",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ],
+    [
+     "Gary",
+     "Yen"
+    ]
+   ],
+   "container": "Lecture Notes in Networks and Systems",
+   "date": [
+    2026,
+    10,
+    27
+   ],
+   "issue": "",
+   "page": "28-40",
+   "title": "Evolutionary Optimization of 1D-CNN for Non-contact Respiration Pattern Classification",
+   "type": "book-chapter",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2312.13035"
+   }
+  ]
+ },
+ "10.1007/978-981-13-0408-8_12": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Turhan S.",
+     "Dervish"
+    ],
+    [
+     "Caleb G.",
+     "Teague"
+    ],
+    [
+     "Fangyao",
+     "Liu"
+    ],
+    [
+     "Adam",
+     "Coffey"
+    ],
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Jerzy S.",
+     "Krasinski"
+    ]
+   ],
+   "container": "Lecture Notes in Electrical Engineering",
+   "date": [
+    2018,
+    7,
+    6
+   ],
+   "issue": "",
+   "page": "137-147",
+   "title": "Position at Response: A Novel Highly Accurate and Low Cost Laser Positioning System",
+   "type": "book-chapter",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1007/s11277-011-0497-y": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Tarun",
+     "Agarwal"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "Wireless Personal Communications",
+   "date": [
+    2011,
+    12,
+    31
+   ],
+   "issue": "3",
+   "page": "1031-1045",
+   "title": "Performance Analysis of Cognitive Radio Multiple-Access Channels Over Dynamic Fading Environments",
+   "type": "journal-article",
+   "volume": "68"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1007/s11277-013-1207-8": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Abdallah K.",
+     "Farraj"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "Wireless Personal Communications",
+   "date": [
+    2013,
+    5,
+    17
+   ],
+   "issue": "3",
+   "page": "637-649",
+   "title": "Performance of Cognitive Radios in Dynamic Fading Channels Under Primary Outage Constraint",
+   "type": "journal-article",
+   "volume": "73"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1007/s13177-023-00374-0": {
+  "abstract": "Highway work zones are susceptible to undue accumulation of motorized vehicles which calls for dynamic work zone warning signs to prevent accidents. The work zone signs are placed according to the location of the end-of-queue of vehicles which usually changes rapidly. The detection of moving objects in video captured by Unmanned Aerial Vehicles (UAV) has been extensively researched so far, and is used in a wide array of applications including traffic monitoring. Unlike the fixed traffic cameras, UAVs can be used to monitor the traffic at work zones in real-time and also in a more cost-effective way. This study presents a method as a proof of concept for detecting End-of-Queue (EOQ) of traffic by processing the real-time video footage of a highway work zone captured by UAV. EOQ is detected in the video by image processing which includes background subtraction and blob detection methods. This dynamic localization of EOQ of vehicles will enable faster and more accurate relocation of work zone warning signs for drivers and thus will reduce work zone fatalities. The method can be applied to detect EOQ of vehicles and notify drivers in any other roads or intersections too where vehicles are rapidly accumulating due to special events, traffic jams, construction, or accidents.",
+  "abstract_from": "arXiv",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Russ",
+     "Messenger"
+    ],
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Matthew",
+     "Whitlock"
+    ],
+    [
+     "Erik",
+     "Spong"
+    ],
+    [
+     "Nate",
+     "Morton"
+    ],
+    [
+     "Layne",
+     "Claggett"
+    ],
+    [
+     "Chris",
+     "Matthews"
+    ],
+    [
+     "Jordan",
+     "Fox"
+    ],
+    [
+     "Leland",
+     "Palmer"
+    ],
+    [
+     "Dane C.",
+     "Johnson"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ],
+    [
+     "Christopher J.",
+     "Crick"
+    ],
+    [
+     "Jamey D.",
+     "Jacob"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "International Journal of Intelligent Transportation Systems Research",
+   "date": [
+    2023,
+    10,
+    28
+   ],
+   "issue": "3",
+   "page": "493-505",
+   "title": "Real-Time Traffic End-of-Queue Detection and Tracking in UAV Video",
+   "type": "journal-article",
+   "volume": "21"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2302.01923"
+   }
+  ]
+ },
+ "10.1017/s1759078726103031": {
+  "abstract": "In this work, a novel hybrid algorithm is introduced that combines the range migration algorithm (RMA) and the back projection algorithm (BPA). The traditional image reconstruction algorithms used for synthetic aperture radar each have trade-offs between computational efficiency and imaging accuracy. The proposed hybrid RMA–BPA approach leverages the computational efficiency of RMA for the initial image reconstruction and object detection, followed by BPA for the refined, high resolution of the cropped region of data. The method of focusing computational resources on the smaller cropped datasets that contain the objects significantly reduces the processing time compared to that of traditional standalone BPA. The hybrid approach’s performance was evaluated over three different scenarios, providing a reduction in computation time for each scenario. Due to the algorithm’s approach to crop the dataset for the specific object, the increased efficiency varied. The different scenarios each produced different times to compute; however, the most impressive result delivered a 75.2% reduction in computation time compared to traditional BPA, without sacrificing the accuracy of the image. The hybrid approach is especially suited for applications that require precise object detection in healthcare, oil and gas, security, and industrial inspections.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Grant",
+     "Gannon"
+    ],
+    [
+     "Mark",
+     "Macorol"
+    ],
+    [
+     "Alejandro",
+     "Garcia"
+    ],
+    [
+     "Isuru",
+     "Godage"
+    ],
+    [
+     "Ben",
+     "Zoghi"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Muhammad Faeyz",
+     "Karim"
+    ]
+   ],
+   "container": "International Journal of Microwave and Wireless Technologies",
+   "date": [
+    2026,
+    3
+   ],
+   "issue": "2",
+   "page": "173-182",
+   "title": "Enhanced efficiency and accuracy for synthetic aperture radar image reconstruction based on a hybrid range migration and back projection algorithm",
+   "type": "journal-article",
+   "volume": "18"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1038/s41598-020-62692-7": {
+  "abstract": "We report and demonstrate for the first time a method to compensate atmospheric group velocity dispersion of terahertz pulses. In ultra-wideband or impulse radio terahertz wireless communication, the atmosphere reshapes terahertz pulses via group velocity dispersion, a result of the frequency-dependent refractivity of air. Without correction, this can significantly degrade the achievable data transmission rate. We present a method for compensating the atmospheric dispersion of terahertz pulses using a cohort of stratified media reflectors. Using this method, we compensated group velocity dispersion in the 0.2-0.3 THz channel under common atmospheric conditions. Based on analytic and numerical simulations, the method can exhibit an in-band power efficiency of greater than 98% and dispersion compensation up to 99% of ideal. Simulations were validated by experimental measurements.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "5816",
+   "authors": [
+    [
+     "Karl",
+     "Strecker"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ]
+   ],
+   "container": "Scientific Reports",
+   "date": [
+    2020,
+    4,
+    2
+   ],
+   "issue": "1",
+   "page": "",
+   "title": "Compensating Atmospheric Channel Dispersion for Terahertz Wireless Communication",
+   "type": "journal-article",
+   "volume": "10"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1038/s44459-025-00001-2": {
+  "abstract": "The growing energy demands of next-generation wireless systems call for unified, system-level metrics to evaluate and optimize energy efficiency. This paper advances the concept of the Waste Factor (W), or Waste Figure (WF) in decibel scale, as a general framework for modeling power loss across cascaded communication components. By integrating W into the Consumption Factor (CF)–the ratio of data rate to consumed power–we reveal how component inefficiencies influence the minimum achievable energy per bit. Closed-form expressions are derived for energy-per-bit consumption in both direct and relay-assisted links, along with a decision rule for selecting the more energy-efficient path. While not explicitly modeled, Reflective Intelligent Surfaces (RIS) are shown to fit naturally within this framework. The analysis is further applied to a Fixed Wireless Access (FWA) scenario, where asymmetries in traffic direction and hardware inefficiencies are jointly considered, demonstrating the utility of the Waste Factor in guiding energy-aware system design.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "2",
+   "authors": [
+    [
+     "Nurullah",
+     "Sevim"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Theodore S.",
+     "Rappaport"
+    ]
+   ],
+   "container": "npj Wireless Technology",
+   "date": [
+    2025,
+    11,
+    6
+   ],
+   "issue": "1",
+   "page": "",
+   "title": "Theoretical foundations of waste factor and waste figure with applications to fixed wireless access and relay systems",
+   "type": "journal-article",
+   "volume": "1"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1051/matecconf/201927106004": {
+  "abstract": "Vehicular communication and sensing technologies are mainly based on the conventional radio frequency (RF) or laser technologies. These systems suffer from several issues such as RF interference and poor performance in scenarios where the incidence angle between the speed detector and the vehicle is rapidly varying. Introducing a new sensing technology will add diversity to these systems and enhance the reliability of the real-time data. In this study, we investigate our speed estimation sensing system named “Visible Light Detection and Ranging (ViLDAR)”. ViLDAR utilizes visible light sensing technology to measure the variation of the vehicle's headlamp light intensity and estimate the vehicle speed. The measurement settings of the ViLDAR experiments are presented. The preliminary results obtained in the real-world environment/setting are promising when compared to the simulations. Additional measurements using the ViLDAR prototype will be conducted under different conditions and scenarios to further optimize the system.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Samir",
+     "Ahmed"
+    ],
+    [
+     "Farshad",
+     "Miramirkhani"
+    ],
+    [
+     "Burak",
+     "Kebapci"
+    ],
+    [
+     "Murat",
+     "Uysal"
+    ]
+   ],
+   "container": "MATEC Web of Conferences",
+   "date": [
+    2019
+   ],
+   "issue": "",
+   "page": "06004",
+   "title": "Wireless Sensing using Vehicle Headlamps for Intelligent Transportation Systems: Proof of Concept",
+   "type": "journal-article",
+   "volume": "271"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/6gnet54646.2022.9830168": {
+  "abstract": "This paper investigates the benefit of coordinated multipoint transmission (CoMP) in a User-Centered Cloud-based Radio Access Network (UC-CRAN). In UC-CRAN, virtual cells (also called service zones) are created around a user effectively changing the center of network operation from \"always ON\" base stations to user demands. The user-centered architecture potentially removes cell-edge users due to the spatial repulsion between service zones, thereby limiting the potential of CoMP which is effective in networks with cell-edge interference. To this end, we derive an analytical framework to model the area spectral efficiency (ASE) and energy efficiency (EE) in UC-CRAN with CoMP. Further, the investigation encompasses analyzing the impact of CoMP in UC-CRAN on ASE and EE with the change in service zones size and data base station (DBS) deployment density. The proposed analytical method is validated using extensive Monte Carlo simulations providing useful insights for the design of next-generation cellular networks.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh Khan",
+     "Kasi"
+    ],
+    [
+     "Umair",
+     "Sajid Hashmi"
+    ],
+    [
+     "Muhammad",
+     "Nabeel"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "2022 1st International Conference on 6G Networking (6GNet)",
+   "date": [
+    2022,
+    7,
+    6
+   ],
+   "issue": "",
+   "page": "1-5",
+   "title": "Is CoMP Beneficial In User-Centered Wireless Networks?",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/6gnet54646.2022.9830485": {
+  "abstract": "In wireless heterogeneous networks (HetNets), complexity is an intrinsic property. This paper presents agent-based modeling (ABM) as a tool to optimize complex HetNets. We introduce and analyze a HetNet ABM model that employs parallel algorithms for interference management, resource allocation, and load balancing at both micro and macro levels. Two reinforcement learning (RL) algorithms jointly work together in the model to resolve co-tier and cross-tier interferences. The first RL algorithm controls the transmission power of the small cells, whereas the second assigns the users to the sub-bands with less interference levels. Concurrently, the user association is decided by the users based on their preferences and the resources available at the cells. The model is analyzed in three different operation modes, by switching processes on and off. Results show that individual processes contribute to overall system performance, while jointly maximizing the network’s aggregate signal-to-interference-and-noise ratio (SINR) and minimizing load-induced latency by efficient load balancing.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Umair Sajid",
+     "Hashmi"
+    ],
+    [
+     "Muhammad",
+     "Nabeel"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2022 1st International Conference on 6G Networking (6GNet)",
+   "date": [
+    2022,
+    7,
+    6
+   ],
+   "issue": "",
+   "page": "1-7",
+   "title": "Complex Agent-based Modeling for HetNets Design and Optimization",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/access.2019.2920103": {
+  "abstract": "In this paper, off-body ultra-wide band (UWB) channel characterization and modeling are presented between an unmanned aerial vehicle (UAV) and a human subject. The wearable antenna was patched at nine different body locations on a human subject during the experiment campaign. The prime objective of this work was to study and evaluate the distance and frequency dependent path loss factors for different bandwidths corresponding to various carrier frequencies, and also look into the time dispersion properties of such unmanned aerial vehicle-to-wearables (UAV2W) system. The environment under consideration was an indoor warehouse with highly conductive metallic walls and roof. Best fit statistical analysis using Akaike Information Criteria revealed that the Log-normal distribution is the best fit distribution to model the UWB fading statistics. The study in this paper will set up a road map for future UAV2W studies to develop enhanced retail and remote health-care monitoring/diagnostic systems.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Surbhi",
+     "Vishwakarma"
+    ],
+    [
+     "Jacob N.",
+     "Dixon"
+    ],
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Adithya",
+     "Popuri"
+    ],
+    [
+     "Qammer H.",
+     "Abbasi"
+    ],
+    [
+     "Charles F.",
+     "Bunting"
+    ],
+    [
+     "Jamey D.",
+     "Jacob"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Access",
+   "date": [
+    2019
+   ],
+   "issue": "",
+   "page": "73741-73750",
+   "title": "Unmanned Aerial Vehicle-to-Wearables (UAV2W) Indoor Radio Propagation Channel Measurements and Modeling",
+   "type": "journal-article",
+   "volume": "7"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/access.2019.2929212": {
+  "abstract": "The Internet of Things (IoT) is increasing in size by having more devices connected to it as they are becoming low-cost to manufacture and easier to connect to the internet. New use cases are being created by the need for it and feasibility to provide it, with low-cost solutions. As a key enabler of the IoT, Long Range Wide Area Network (LoRaWAN) is gaining great attention in research and industry. It provides a desirable solution for applications that require hundreds or thousands of actively connected devices to monitor a process or an environment or to assist in controlling a certain process. Some of these IoT use cases require having the location information of the IoT devices. In some cases, localization can be the intrinsic purpose of deployment. In this regard, the received signal strength indicator (RSSI)-based localization offers a feasible and affordable solution. Since LoRaWAN has only been there for only a few years, research on utilizing LoRaWAN RSSI for localization purposes is in early stages and is scarce. In this paper, we study LoRaWAN RSSI-based localization and evaluate its accuracy, impairments, and prospects. In addition, we employ the use of software-defined radios (SDR) into our work for the purpose of path-loss characterization. The experimental results revealed the fact that a high variance of RSSI due to frequency hopping feature of LoRaWAN could severely impact the localization performance. Potential solutions are developed and presented to reduce this negative impact, hence improve the performance.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hussein",
+     "Kwasme"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Access",
+   "date": [
+    2019
+   ],
+   "issue": "",
+   "page": "99856-99866",
+   "title": "RSSI-Based Localization Using LoRaWAN Technology",
+   "type": "journal-article",
+   "volume": "7"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/access.2020.3013835": {
+  "abstract": "In this paper, we design and investigate a novel uplink/downlink (UL/DL) non-orthogonal multiple access (NOMA) network using a common relay. Instead of successive interference cancellation (SIC) for UL/DL NOMA systems with fixed decoding order based on the statistical channel state information (CSI), we adopt the dynamic decoding order according to power level of received signals. Specifically, by exploiting the CSI-based dynamic decoding order, better fairness can be achieved and applicable. This decoding scheme is highly suitable for implementing a NOMA system in practice. The closed-form expressions for the users' outage probabilities are derived, and then an asymptotic analysis is carried out. Insightful discussions with diversity order are provided. Simulations are performed to corroborate the exactness of the theoretical analysis.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Dinh-Thuan",
+     "Do"
+    ],
+    [
+     "Thanh-Luan",
+     "Nguyen"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Zeeshan",
+     "Kaleem"
+    ],
+    [
+     "Miroslav",
+     "Voznak"
+    ]
+   ],
+   "container": "IEEE Access",
+   "date": [
+    2020
+   ],
+   "issue": "",
+   "page": "143632-143643",
+   "title": "Joint User Grouping and Decoding Order in Uplink/Downlink MISO/SIMO-NOMA",
+   "type": "journal-article",
+   "volume": "8"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/access.2021.3129154": {
+  "abstract": "Wireless communications refer to data transmissions in unguided propagation media through the use of wireless carriers such as radio frequency (RF) and visible light (VL) waves. The rising demand for high data rates, especially, in indoor scenarios, overloads conventional RF technologies. Therefore, technologies such as millimeter waves (mmWave) and cognitive radios have been adopted as possible solutions to overcome the spectrum scarcity and capacity limitations of the conventional RF systems. In parallel, visible light communication (VLC) has been proposed as an alternative solution, where a light source is used for both illumination and data transmission. In comparison to RF links, VLC links present a very high bandwidth that allows much higher data rates. VLC exhibits also immunity to interference from electromagnetic sources, has unlicensed channels, is a very low power consumption system, and has no health hazard. VLC is appealing for a wide range of applications including reliable communications with low latency such as vehicle safety communication. Despite the major advantages of VLC technology and a variety of its applications, its use has been hampered by its cons such as its dependence on a line of sight connectivity. Recently, hybrid RF/VLC systems were proposed to take advantage of the high capacity of VLC links and better connectivity of RF links. Thus, hybrid RF/VLC systems are envisioned as a key enabler to improve the user rates and mobility on the one hand and to optimize the capacity, interference and power consumption of the overall network on the other hand. This paper seeks to provide a detailed survey of hybrid RF/VLC systems. This paper represents an overview of the current developments in the hybrid RF/VLC systems, their benefits and limitations for both newcomers and expert researchers.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Mohammed",
+     "Elamassie"
+    ],
+    [
+     "Murat",
+     "Uysal"
+    ],
+    [
+     "Zhengyuan",
+     "Xu"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Access",
+   "date": [
+    2021
+   ],
+   "issue": "",
+   "page": "160402-160436",
+   "title": "Hybrid RF/VLC Systems: A Comprehensive Survey on Network Topologies, Performance Analyses, Applications, and Future Directions",
+   "type": "journal-article",
+   "volume": "9"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/access.2022.3208109": {
+  "abstract": "With growing usage and demand for the global freshwater supply, there is an increasing need for technologies that facilitate water conservation and environmental stewardship in irrigated agriculture. Toward this end, recent demonstrations of Internet of Things (IoT) sensors have revealed the value of wireless soil moisture content sensors. However, existing wireless solutions often employ above-ground wireless communication modules that physically interfere with routine farming operations. Underground wireless network solutions are severely challenged by the large radio-frequency (RF) propagation loss through soil. This paper presents a method that overcomes both problems by employing completely buried underground IoT sensors and communication modules with UAS (uncrewed aircraft system) mounted LoRaWAN gateways. The UAS mounted LoRaWAN gateway eliminates the need for any in-field base stations and also allows the LoRa enabled sensors to transmit data over short distances with very low energy. Field tests were carried out using this approach to serve as a proof of concept. The RSSI (received signal strength indicator) demonstrates that the proposed solution has good communication link margin and a significantly larger communication range than is necessary for reliable operation. Moreover, this solution is easy to build, scalable, cost-effective, and can be implemented in a highly power efficient fashion.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Fahim Ferdous",
+     "Hossain"
+    ],
+    [
+     "Russ",
+     "Messenger"
+    ],
+    [
+     "George L.",
+     "Captain"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Jamey D.",
+     "Jacob"
+    ],
+    [
+     "Saleh",
+     "Taghvaeian"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ]
+   ],
+   "container": "IEEE Access",
+   "date": [
+    2022
+   ],
+   "issue": "",
+   "page": "102107-102118",
+   "title": "Soil Moisture Monitoring Through UAS-Assisted Internet of Things LoRaWAN Wireless Underground Sensors",
+   "type": "journal-article",
+   "volume": "10"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/aero53065.2022.9843539": {
+  "abstract": "This paper presents the network architecture utilized at NASA's Goddard Space Flight Center (GSFC) to support a mission set of five 6U CubeSats. These five CubeSats employ a multi-waveform Software Defined Radio (SDR) platform developed by Vulcan Wireless for use with NASA's Space Relay (SR) and Direct to Earth (DTE) networks. The performance testing of the SDR is discussed via a comprehensive S-band and communication link analysis. The tested capabilities of the SDR and antenna components are reviewed in terms of the mission requirements for each CubeSat. Size Weight and Power (SWaP), required availability, and access times are discussed. The measured data from experimental compatibility testing is incorporated into detailed simulations of the CubeSat mission set to verify desired performance over the mission lifetime. The model is also used to investigate the impact of potential adverse effects on the communication links such as interference and weather conditions. This paper also reviews potential improvements from future technological advances and commercial partnerships. A collaborative investigation between GSFC and Oklahoma State University is presented in which a qualitative analysis of Hybrid RF/Optical communication strategies is performed. The data rate improvements of optical communication techniques are weighed against attitude control and science mission requirements for CubeSats, and network architectures/switching strategies are discussed. A separate analysis reviews the potential benefits of ground station partnerships, which aligns with NASA's future goal to include commercial partners in its Earth and space network architectures, e.g. LunaNet.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Ethan",
+     "Abele"
+    ],
+    [
+     "Serhat",
+     "Altunc"
+    ],
+    [
+     "Obadiah",
+     "Kegege"
+    ],
+    [
+     "Behnam",
+     "Azimi"
+    ],
+    [
+     "Kevin",
+     "Lynaugh"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ]
+   ],
+   "container": "2022 IEEE Aerospace Conference (AERO)",
+   "date": [
+    2022,
+    3,
+    5
+   ],
+   "issue": "",
+   "page": "1-10",
+   "title": "S-band Network Analysis and Strategies for LEO Multi-CubeSat Science Missions",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/aero55745.2023.10115691": {
+  "abstract": "Free space optical (FSO) communication links increase data rate, reduce size and power, and increase security. These criteria are particularly important in space communication. Increasing mission complexity and crowding of lower frequency bands is driving the need for optical communications. This makes FSO communication technology extremely attractive, and there is significant ongoing work towards the development of FSO transceivers, ground stations, and relays. Notable projects include the Laser Communications Relay Demonstrator (LCRD), Integrated LCRD Low-Earth Orbit User Modem and Amplifier Terminal (ILLUMA-T), and CubeSat Laser Infrared Crosslink (CLICK) CubeSats. These technologies will eventually operate in unison with existing Radio Frequency (RF) systems, but there is little experimental investigation of such hybrid networks. This paper presents some experimental underpinnings of switching strategies for hybrid RF/FSO systems in various attenuation conditions. A 170 m optical path was constructed in an enclosed test chamber where atmospheric conditions can be tightly controlled. The performance of a 1550 nm infrared FSO link was evaluated in this chamber under varying conditions of turbulence and jitter. The system will eventually be used to investigate switching criteria between the FSO and RF channels. Optimizing the use of RF/FSO communication links will allow data rate, size, power, and security improvements. Therefore, this research will help to mature the network architecture and improve the performance of communication networks to be used for LEO, GEO, Lagrange, Lunar missions and beyond.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Ethan",
+     "Abele"
+    ],
+    [
+     "Serhat",
+     "Altunc"
+    ],
+    [
+     "Obadiah",
+     "Kegege"
+    ],
+    [
+     "Kaitlyn",
+     "Ryder"
+    ],
+    [
+     "Behnam",
+     "Azimi"
+    ],
+    [
+     "Michael",
+     "Campola"
+    ],
+    [
+     "Kevin",
+     "Lynaugh"
+    ],
+    [
+     "Gianfranco",
+     "Barnaba"
+    ],
+    [
+     "Peter G.",
+     "LoPresti"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ]
+   ],
+   "container": "2023 IEEE Aerospace Conference",
+   "date": [
+    2023,
+    3,
+    4
+   ],
+   "issue": "",
+   "page": "",
+   "title": "Channel Measurements for Switching Strategies in Hybrid RF/Optical Communications",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266836": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amir",
+     "Tag"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Hussein",
+     "Alnuweiri"
+    ],
+    [
+     "M. P.",
+     "Mohan"
+    ],
+    [
+     "A.",
+     "Alphones"
+    ],
+    [
+     "T. S.",
+     "Herng"
+    ],
+    [
+     "M. F.",
+     "Karim"
+    ]
+   ],
+   "container": "2025 IEEE International Symposium on Antennas and Propagation and North American Radio Science Meeting (AP-S/CNC-USNC-URSI)",
+   "date": [
+    2025,
+    7,
+    13
+   ],
+   "issue": "",
+   "page": "2692-2695",
+   "title": "3D-Printed Hexagonal Cylinder Leaky-Wave Antenna for Omnidirectional Coverage",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "manual": true,
+  "note": "abstract left out: the source record has damaged math (scan angles)"
+ },
+ "10.1109/ap-s/inc-usnc-ursi52054.2024.10686817": {
+  "abstract": "In this paper, a 28 GHz wideband Rotman lens (RL) with Antipodal Vivaldi Antennas (AVA) is designed. It features 5 input and 5 output ports, 4 dummy ports, and offers a ±35° beam scanning capability. A new corrugated AVA with improved gain and bandwidth is designed. It achieves over 10 dBi gain across a 10 GHz bandwidth, with maximum gain at 15.7 dBi. Applications include automotive radar and vital signs monitoring.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amir",
+     "Tag"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Hussein Al",
+     "Nuweiri"
+    ],
+    [
+     "M. P.",
+     "Mohan"
+    ],
+    [
+     "A.",
+     "Alphones"
+    ],
+    [
+     "M. F.",
+     "Karim"
+    ]
+   ],
+   "container": "2024 IEEE International Symposium on Antennas and Propagation and INC/USNC‐URSI Radio Science Meeting (AP-S/INC-USNC-URSI)",
+   "date": [
+    2024,
+    7,
+    14
+   ],
+   "issue": "",
+   "page": "1613-1614",
+   "title": "Wide-Band mmWave Rotman Lens-AVA for Beamforming Applications",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/ap-s/usnc-ursi60190.2026.11675430": {
+  "abstract": "This paper presents an experimental characterization of propeller-induced modulation (PM) effects on Instrument Landing System (ILS) signals and evaluates a reference-tone-assisted equalization method for PM mitigation. A digitally synthesized ILS waveform and a co-transmitted pilot tone were generated using a USRP SDR transmitter, while reception was performed with RTL-SDR devices inside an anechoic chamber. PM was emulated using a large warehouse ventilation fan, with frequency scaling applied to replicate micro Doppler characteristics equivalent to operational ILS bands. Measurements were collected under rotating fan conditions, and PM distortion was estimated from the extracted reference tone to recover the ILS spectrum through equalization. The proposed equalization approach significantly suppresses PM-induced spectral spreading, stabilizes the carrier amplitude, and restores the integrity of the ILS tones, yielding an overall SNR improvement of approximately 10 dB.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Saif",
+     "Mostafa"
+    ],
+    [
+     "Pavithrakrishnan",
+     "Radhakrishnan"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Syed S.",
+     "Jehangir"
+    ]
+   ],
+   "container": "2026 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (AP-S/USNC-URSI)",
+   "date": [
+    2026,
+    7
+   ],
+   "issue": "",
+   "page": "209-212",
+   "title": "Experimental Study of ILS Recovery Under Propeller Modulation Using a Reference Tone",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/apcc47188.2019.9026507": {
+  "abstract": "Wavelength-domain multiplexing enables near parallel transmission for visible light communications (VLC). In this paper, we investigate an optimal bias allocation problem for the tri-color VLC channel when there is no color cross-talk (CoC), and propose a joint precoding and bias allocation algorithm when CoC exists. The optimization problems are formulated considering both lighting and communication requirements. The color constraint is depicted using the MacAdam ellipses on the chromaticity diagram, as an effective relaxation from a fixed point restriction. Also, for practical concerns, the addressed system is affected by signal-dependent noise (SDN). The bias allocation problem under SDN and related constraints is shown to be non-convex, thus a convex-concave procedure is utilized in this paper for convexification. The joint design problem is also non-convex, and an iterative optimization procedure is adopted, where the decoder is of Wiener filter form. Simulation results are given to show the impacts of SDN, CoC, and steps of MacAdam ellipses on system performance.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Qian",
+     "Gaol"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Khalid",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2019 25th Asia-Pacific Conference on Communications (APCC)",
+   "date": [
+    2019,
+    11
+   ],
+   "issue": "",
+   "page": "61-66",
+   "title": "Bias Allocation and Precoding for Tricolor Visible Light Communications with Signal-dependent Noise",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/blackseacom54372.2022.9858315": {
+  "abstract": "In this study, a statistical analysis of the simplest drone-to-drone millimeter waves (mmWave) communication channel is presented along with the field measurement results. The statistical analysis reveals that propeller blade rotation for the simplest transmission scenario could be modeled with angle modulation accompanied with an on-off process whose characteristics are determined by several factors including blade shape and material, vibrating body due to propeller thrust, antenna position and its possible wobble. The results are presented along with discussion and future directions.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Halil Said",
+     "Cankurtaran"
+    ],
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ],
+    [
+     "Serhan",
+     "Yarkan"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Mazen Omar",
+     "Hasna"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2022 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)",
+   "date": [
+    2022,
+    6,
+    6
+   ],
+   "issue": "",
+   "page": "30-35",
+   "title": "Propeller Effects on mmWave UAV Channels: A Statistical and Empirical Modeling Study",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "manual": true,
+  "note": "abstract corrected by hand (typesetting glitches in the source record)"
+ },
+ "10.1109/blackseacom58138.2023.10299753": {
+  "abstract": "The hybrid radio frequency/free space optics (RF/FSO) architecture is a highly effective method for combining the advantages of RF and FSO technologies. This approach is especially beneficial in space communications, where neither technology alone can meet the high data rate and reliability requirements. By integrating RF and FSO technologies, the hybrid architecture offers a reliable and high-speed solution for space and High-Altitude Platforms (HAP)-based terrestrial communication systems. With this hybrid approach, the strengths of each technology complement each other, resulting in improved data transmission and enhanced reliability in such systems. One of the challenges of using the hybrid approach is the switching mechanism, where the system must seamlessly switch between RF and FSO links without interrupting the data transfer. In order to tackle this challenge, this paper presents a method that considers the relationship between the switching threshold and the level crossing rate associated with atmospheric turbulence-induced fading in FSO communication channels. The simulation results demonstrate that the best outage performance is achieved by setting the switching threshold at a point where a high level crossing rate occurs.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Abdullateef",
+     "Almohamad"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mazen",
+     "Hasna"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ]
+   ],
+   "container": "2023 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)",
+   "date": [
+    2023,
+    7,
+    4
+   ],
+   "issue": "",
+   "page": "289-293",
+   "title": "Enhancing Performance in Hybrid RF/FSO Systems: Leveraging Level Crossing Rate for Seamless Switching",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/globecom54140.2023.10437564": {
+  "abstract": "The performance of user-centric ultra-dense networks (UCUDNs) hinges on the Service zone (Szone) radius, which is an elastic parameter that balances the area spectral efficiency (ASE) and energy efficiency (EE) of the network. Accurately determining the Szone radius requires the precise location of the user equipment (UE) and data base stations (DBSs). Even a slight error in reported positions of DBSs or UE will lead to an incorrect determination of Szone radius and UE- D BS pairing, leading to degradation of the UE-DBS communication link. To compensate for the positioning error impact and improve the ASE and EE of the UCUDN, this work proposes a data-driven optimization and error compensation (DD-OEC) framework. The framework comprises an additional machine learning model that assesses the impact of residual errors and regulates the erroneous data-driven optimization to output Szone radius, transmit power, and DBS density values which improve network ASE and EE. The performance of the framework is compared to a baseline scheme, which does not employ the residual, and results demonstrate that the DD-OEC framework outperforms the baseline, achieving up to a 23% improvement in performance.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Waseem",
+     "Raza"
+    ],
+    [
+     "Fahd Ahmed",
+     "Khan"
+    ],
+    [
+     "Muhammad Umar",
+     "Bin Farooq"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imrant"
+    ]
+   ],
+   "container": "GLOBECOM 2023 - 2023 IEEE Global Communications Conference",
+   "date": [
+    2023,
+    12,
+    4
+   ],
+   "issue": "",
+   "page": "3928-3933",
+   "title": "Positioning Error Impact Compensation through Data-Driven Optimization in User-Centric Networks",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2402.15795"
+   }
+  ]
+ },
+ "10.1109/glocom.2009.5425715": {
+  "abstract": "Cognitive radio with spectrum sharing feature is a promising technique to address the spectrum under-utilization problem in dynamically changing environments. In this paper, achievable capacity gain of spectrum sharing systems over dynamic fading environments is studied. For the analysis, a theoretical fading model called hyper fading model that is suitable to the dynamic nature of cognitive radio channel is proposed. Closed-form expression of probability density function (PDF) and cumulative density function (CDF) of the signal-to-noise ratio (SNR) for secondary users in spectrum sharing systems are derived. In addition, the capacity gains achievable with spectrum sharing systems in high and low power regions are obtained. Numerical simulations are performed to study the effects of different fading figures, average powers, interference temperature, and number of secondary users on the achievable capacity.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ferkan",
+     "Yilmaz"
+    ],
+    [
+     "Hasari",
+     "Celebi"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Mohamed-Slim",
+     "Alouini"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "GLOBECOM 2009 - 2009 IEEE Global Telecommunications Conference",
+   "date": [
+    2009,
+    11
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "Achievable Capacity of a Spectrum Sharing System over Hyper Fading Channels",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/icc.2018.8422510": {
+  "abstract": "In this work, the joint optimization of sensing threshold and power allocation strategy in orthogonal frequency division multiplexing (OFDM)-based cognitive radio (CR) networks is studied. The aim is to maximize the total capacity of secondary users (SUs) while limiting the interference caused to the primary users (PUs). Taking into account the sensing errors, the total capacity of SUs is expressed as a function of the sensing threshold and SUs' transmit power. The resulting problem represents a nonconvex mixed integer non-linear programming (MINLP) optimization. Due to the high computational complexity of the MINLP problem, an equivalent simplified problem is formulated without resorting to integer variables. A computationally efficient suboptimal algorithm is proposed to address the joint optimization problem. Using the suboptimal solution as the initial point, an alternating optimization method is then employed to enhance the solution accuracy. Computer simulation results confirm the effectiveness of the proposed algorithm.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Xu",
+     "Wang"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2018 IEEE International Conference on Communications (ICC)",
+   "date": [
+    2018,
+    5
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "Joint Decision of Sensing Threshold and Power Allocation in OFDM Cognitive Radio Networks",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/iceee59925.2023.00008": {
+  "abstract": "Gesture recognition is an important application of human-computer interaction (HCI) which can enable computerized systems to perform various tasks based on hand gestures performed remotely. In this study, we present a non-contact gesture recognition method using only incoherent light wave signals reflected from a human subject. In comparison to existing radar, light shadow, sound and camera-based sensing systems, this technology uses a low-cost ubiquitous light source (e.g., infrared LED) to send light towards the subject's hand performing gestures and the reflected light is collected by a light sensor (e.g., photo detector). This light wave sensing system recognizes different gestures from the variations of the received light intensity within a 20–35 cm range. The hand gesture recognition results demonstrate up to 96 % accuracy on average. The developed system can be utilized in numerous HCI applications as a safe, low-cost and non-contact gesture recognition technology.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Li",
+     "Yu"
+    ],
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Christopher",
+     "Crick"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2023 10th International Conference on Electrical and Electronics Engineering (ICEEE)",
+   "date": [
+    2023,
+    5,
+    8
+   ],
+   "issue": "",
+   "page": "1-5",
+   "title": "Hand Gesture Recognition through Reflected Infrared Light Wave Signals",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2301.05955"
+   }
+  ]
+ },
+ "10.1109/icnc59896.2024.10556147": {
+  "abstract": "Advancements in lighting systems and photodetectors provide opportunities to develop viable alternatives to conventional communication and sensing technologies, especially in the vehicular industry. Most of the studies that propose visible light in communication or sensing adopt the Lambertian propagation (path loss) model. This model requires knowledge and utilization of multiple parameters to calculate the path loss such as photodetector area, incidence angle, and distance between transmitter and receiver. In this study, a simplified path loss model that is mathematically more tractable is proposed for vehicular sensing and communication systems that use visible light technology. Field measurement campaigns are conducted to validate the performance and limits of the developed path loss model. The proposed model is used to fit the data collected at different ranges of incident angles and distances. Further, this model can be used for designing visible light-based communication and sensing systems to minimize the complexity of the Lambertian path loss model, particularly for cases where the incident angle between transmitter and receiver is relatively small.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Russ",
+     "Messenger"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2024 International Conference on Computing, Networking and Communications (ICNC)",
+   "date": [
+    2024,
+    2,
+    19
+   ],
+   "issue": "",
+   "page": "1027-1031",
+   "title": "Analysis and Empirical Validation of Visible Light Path Loss Model for Vehicular Sensing and Communication",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2301.03723"
+   }
+  ]
+ },
+ "10.1109/ieeeconf67917.2025.11443815": {
+  "abstract": "We present and analyze fictitious play for a new class of product Markov games with a Kullback-Leibler (KL) control cost. In a product Markov game, state transitions are the product of n Markov transition functions, where each agent controls its own local state transition dynamics given the common state and incurs a KL control cost for their efforts. Fictitious play entails each agent best-responding to minimize its discounted sum of instantaneous costs, that depend on KL control cost and a state cost, given local beliefs about other agents’ policies. Agents update their beliefs about other agents’ policies upon observation of the realized states. We show that the fictitious play converges asymptotically to a Nash equilibrium of a product Markov potential game. Simulation results on a multi-agent cloud radio access network confirm the convergence result for the game with non-identical payoffs and demonstrate the speed of convergence.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Khaled",
+     "Nakhleh"
+    ],
+    [
+     "Sarper",
+     "Aydin"
+    ],
+    [
+     "Ceyhun",
+     "Eksin"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2025 59th Asilomar Conference on Signals, Systems, and Computers",
+   "date": [
+    2025,
+    10,
+    26
+   ],
+   "issue": "",
+   "page": "1682-1686",
+   "title": "Fictitious Play in Product Markov Games with Kullback-Leibler Control Cost",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/infocom.2008.4544630": {
+  "abstract": "Location determination is an essential component in large sensor networks. In those types of networks, sensors are data centric, and hence, the location of each sensor is critical. Furthermore, the need for a cost-effective means for sensor localization eliminates a variety of options including GPS. In this paper, we use particle filters for estimating the location of sensors assuming a noisy Rayleigh fading channel. Simulation results show that the algorithm converges to approximately two-meter error range.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Aly I.",
+     "El-Osery"
+    ],
+    [
+     "Wael",
+     "Abd-Almageed"
+    ]
+   ],
+   "container": "IEEE INFOCOM 2008 - IEEE Conference on Computer Communications Workshops",
+   "date": [
+    2008,
+    4
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "RF-based location determination in heterogenous sensor networks using Rayleigh fading channel",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/isc246665.2019.9071704": {
+  "abstract": "Advances in visible light communication (VLC) technology and its smart-city applications have gained great interest, e.g., indoor light-fidelity (LiFi) and outdoor vehicle to vehicle (V2V). In order to fully explore the benefits of VLC under diverse channel/noise environments, it is important to schedule power efficiently so that the capacity is maximized or the error rate is minimized. We propose efficient optical power allocation algorithms for multi-channel single-user VLC capacity bounds maximization and error rate minimization for multi-user VLC with the existence of signal-dependent noise (SDN) for potential city applications. It is pointed out in this paper that the wellknown water-filling algorithm and its generalizations do not apply straightforwardly to the capacity bound optimization for VLC and other communication systems based on the intensity modulation and direct detection (IM/DD).",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Qian",
+     "Gao"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Khalid",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2019 IEEE International Smart Cities Conference (ISC2)",
+   "date": [
+    2019,
+    10
+   ],
+   "issue": "",
+   "page": "79-82",
+   "title": "Capacity Maximizing Power Allocation for Multi-Channel Visible Light Communications",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/isncc.2017.8072008": {
+  "abstract": "In this paper, we study the downlink resource allocation (RA) problem in orthogonal frequency division multiplexing (OFDM)-based cognitive radio (CR) networks. Our goal is to maximize the aggregated capacity of secondary users (SUs). In addition, the power of SUs is controlled to keep the interference introduced to primary users (PUs) under certain limits, which gives rise to a non-convex mixed integer non-linear programming (MINLP) optimization problem. In this paper, it is illustrated that the non-convex MINLP formulation admits a special structure and the optimal solution can be always achieved using standard convex optimization techniques under a general and practical assumption. In particular, the subgradient method is adopted to address the problem in the dual domain. The effectiveness of the proposed algorithms is verified by simulations.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Xu",
+     "Wang"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2017 International Symposium on Networks, Computers and Communications (ISNCC)",
+   "date": [
+    2017,
+    5
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "Optimal resource allocation for downlink OFDM-Based cognitive radio networks",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/isscs.2011.5978680": {
+  "abstract": "In this paper, the capacity of cognitive radio multiple-access channels (CR-MAC) with spectrum sharing property over dynamic fading environments is studied. In the system model, multiple secondary users (SUs) transmit to the secondary base station (SBS) under the transmit power (TP) and interference temperature (IT) at the primary base station (PBS) constraints. A theoretical fading model called hyper fading model, proposed in, that is suitable to the dynamic nature of cognitive radio channel is considered. The optimal power allocation method is utilized to maximize the capacity of CR-MAC for dynamic fading channel with TP and IT constraints and full channel side information (CSI). Numerical results are presented to verify the theoretical analysis and investigate the effects of average TP and IT on the capacity.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Tarun",
+     "Agarwal"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "ISSCS 2011 - International Symposium on Signals, Circuits and Systems",
+   "date": [
+    2011,
+    6
+   ],
+   "issue": "",
+   "page": "1-4",
+   "title": "Capacity of cognitive radio multiple-access channels in dynamic fading environments",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/isscs.2011.5978682": {
+  "abstract": "In next generation wireless networks (NGWNs), interference is one of the most important considerations in terms of system design, deployment, and performance. Given the ability to use the spectrum in finer granularity such as in orthogonal frequency division multiple access (OFDMA) systems, scheduling seems to be one of the most important functionalities of NGWNs. Therefore, in this study, sub-carrier collisions for especially cell-edge users are investigated along with their impact on air interface capacity for OFDMA-based systems. It is shown that sub-carrier collisions follow hypergeometric distribution with different statistical characteristics. In addition, the air interface capacity of OFDMA systems with the availability of interference is studied as well. Numerical results are presented to verify the theoretical analysis and investigate the impacts of different parameters on both sub-carrier collisions and the air interface capacity.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Serhan",
+     "Yarkan"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "ISSCS 2011 - International Symposium on Signals, Circuits and Systems",
+   "date": [
+    2011,
+    6
+   ],
+   "issue": "",
+   "page": "1-4",
+   "title": "On the statistics of sub-carrier collisions for cell-edge users and air interface capacity in OFDMA systems",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/isscs.2017.8034871": {
+  "abstract": "This work investigates the downlink resource allocation (RA) problem in orthogonal frequency division multiplexing (OFDM)-based cognitive radio networks. The objective of this work is to develop a fair RA-algorithm that maximizes the capacity of secondary users (SUs) and in the same time limits the interference caused to the primary users. The fairness condition is formulated as a minimal data condition at SUs. A relaxed version of the RA-problem is first reviewed without adopting the fairness and then a heuristic algorithm is proposed based on the results obtained for the relaxed problem. Computer simulation results illustrate that the proposed heuristic algorithm can achieve near-optimal performance.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Xu",
+     "Wang"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Khalid",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2017 International Symposium on Signals, Circuits and Systems (ISSCS)",
+   "date": [
+    2017,
+    7
+   ],
+   "issue": "",
+   "page": "1-4",
+   "title": "Fair resource allocation in downlink OFDM-based cognitive radio networks",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/jphot.2020.3013202": {
+  "abstract": "This work demonstrates a non-contact diffuse reflectance approach with a working distance of ~1.1 meters for the potential of glucose sensing. Non-contact diffuse reflectance over 1.1-1.3 μm was developed according to a center-illumination-area-detection (CIAD) geometry. The modeled response of diffuse reflectance in the CIAD geometry was examined with phantoms by altering independently the size of the collection geometry and the reduced scattering and absorption properties of the medium. When applied to aqueous turbid medium containing glucose control solutions with the cumulative volume varying over three orders of magnitude, a linear relationship expected for the diffuse reflectance as a function of the medium absorption/reduced-scattering property was observed for four conditions of the glucose-medium composition that differed either in the effective glucose concentration or the host medium scattering property. The cumulation of glucose up to 17.8 mg/dL and 8.9 mg/dL in the host medium having the same optical properties resulted in linear regression slopes of 0.0032 and 0.0030, respectively. The cumulation of the glucose up to 17.8 mg/dL in an aqueous host medium that differed two folds in the reduced scattering property caused the linear regression slope to differ between 0.0032 and 0.0019. The R² values of all cases were all greater than 0.987.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Daqing",
+     "Piao"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ],
+    [
+     "Satish",
+     "Bukkapatnam"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Photonics Journal",
+   "date": [
+    2020,
+    8
+   ],
+   "issue": "4",
+   "page": "1-23",
+   "title": "Towards Non-Contact Glucose Sensing in Aqueous Turbid Medium at ∼1.1 Meters Distance",
+   "type": "journal-article",
+   "volume": "12"
+  },
+  "fetched": "2026-11-15",
+  "manual": true,
+  "note": "abstract corrected by hand (typesetting glitches in the source record)",
+  "oa": true
+ },
+ "10.1109/jsac.2023.3275622": {
+  "abstract": "This paper proposes a novel time-frequency warped waveform for short symbols, massive machine-type communication (mMTC), and internet of things (IoT) applications. The waveform is composed of asymmetric raised cosine (RC) pulses to increase the signal containment in time and frequency domains. The waveform has low power tails in the time domain, hence better performance in the presence of delay spread and time offsets. The time-axis warping unitary transform is applied to control the waveform occupancy in time-frequency space and to compensate for the usage of high roll-off factor pulses at the symbol edges. The paper explains a step-by-step analysis for determining the roll-off factors profile and the warping functions. Gains are presented over the conventional Zero-tail Discrete Fourier Transform-spread-Orthogonal Frequency Division Multiplexing (ZT-DFT-s-OFDM), and Cyclic prefix (CP) DFT-s-OFDM schemes in the simulations section.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Huseyin",
+     "Arslan"
+    ],
+    [
+     "Hakan Ali",
+     "Cirpan"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Journal on Selected Areas in Communications",
+   "date": [
+    2023,
+    6
+   ],
+   "issue": "6",
+   "page": "1900-1917",
+   "title": "Time-Frequency Warped Waveforms for Well-Contained Massive Machine Type Communications",
+   "type": "journal-article",
+   "volume": "41"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2305.01113"
+   }
+  ]
+ },
+ "10.1109/jsen.2019.2960194": {
+  "abstract": "This paper presents a non-contact vital signs (respiration and heartbeat) monitoring system that utilizes visible light sensing (VLS) technology. We have for the first time demonstrated the ability to wirelessly (non-contact) sense vital signs using only reflected incoherent light signals from a human subject. The VLS-based system is implemented by using simple visible light source, photodetector and data acquisition/processing unit, and is used with the developed signal processing algorithms to turn slight variations in reflected light power into accurate measurements of respiration and heart rate. To assess the accuracy of our method, the results were compared with reliable measurements using a contact-based monitoring device (ground truth). More than 94% of accuracy was observed in test results including both breathing and heartbeat rates in different scenarios as compared to the state-of-the-art baseline methods such as contact-based vitals monitoring devices. These competitive results have demonstrated that VLS-based vitals monitoring innovation is indeed a viable, powerful, attractive, low-cost and safe method. This study represents a substantive departure from the traditional ways of doing non-contact vitals monitoring methods (e.g., radio-frequency-based radars and imaging-based cameras) and is poised to make big contributions to this area. Since vital signs monitoring is a ubiquitous element of medicine, this work would also impact the entire health care community, from patients in their homes, to doctor's offices, to large medical institutions and industries. This technology has potential to address numerous conditions and situations in which vital signs are critical indicators such as sleep apnea and human-computer-interaction applications.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Sensors Journal",
+   "date": [
+    2020,
+    4,
+    1
+   ],
+   "issue": "7",
+   "page": "3859-3870",
+   "title": "Non-Contact Vital Signs Monitoring Through Visible Light Sensing",
+   "type": "journal-article",
+   "volume": "20"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1807.05408"
+   }
+  ]
+ },
+ "10.1109/lcomm.2025.3555162": {
+  "abstract": "Channel turbulence is a formidable obstacle for free-space optical (FSO) communication. Anticipation of turbulence levels is highly important for mitigating disruptions but has not been demonstrated without dedicated, auxiliary hardware. We show that machine learning (ML) can be applied to raw FSO data streams to rapidly predict channel turbulence levels with no additional sensing hardware. FSO was conducted through a controlled channel in the lab under six distinct turbulence levels, and the efficacy of using ML to classify turbulence levels was examined. ML-based turbulence level classification was found to be >98% accurate with multiple ML training parameters. Classification effectiveness was found to depend on the timescale of changes between turbulence levels but converges when turbulence stabilizes over about a one minute timescale.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Md",
+     "Zobaer Islam"
+    ],
+    [
+     "Ethan",
+     "Abele"
+    ],
+    [
+     "Fahim",
+     "Ferdous Hossain"
+    ],
+    [
+     "Arsalan",
+     "Ahmad"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ]
+   ],
+   "container": "IEEE Communications Letters",
+   "date": [
+    2025,
+    5
+   ],
+   "issue": "5",
+   "page": "1126-1130",
+   "title": "Free-Space Optical Channel Turbulence Prediction: A Machine Learning Approach",
+   "type": "journal-article",
+   "volume": "29"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2405.16729"
+   }
+  ]
+ },
+ "10.1109/mcom.002.2400040": {
+  "abstract": "This article discusses the challenges and opportunities of managing group delay dispersion (GDD), and its relation to the performance standards of future sixth-generation (6G) wireless communication systems utilizing terahertz frequency waves. The unique susceptibilities of 6G systems to GDD are described, along with a quantitative description of the sources of GDD, including multipath, rough surface scattering, intelligent reflecting surfaces, and propagation through the atmosphere. An experimental case-study is presented that confirms previous models quantifying the impact of atmospheric GDD. Several GDD manipulation strategies are presented, illustrating their hindered effectiveness in the 6G context. Conversely, some benefits of leveraging GDD to enhance 6G systems, such as improved security and simplified hardware, are also discussed. Finally, a perspective on using photonic GDD control devices is provided, revealing quantitative benefits that may unburden existing equalization schemes. The article argues that GDD will uniquely and significantly impact some 6G systems, but that its careful consideration along with new mitigation strategies, including photonic devices, will help optimize system performance. The conclusion provides a perspective to guide future research in this area.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Karl",
+     "Strecker"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ]
+   ],
+   "container": "IEEE Communications Magazine",
+   "date": [
+    2025,
+    3
+   ],
+   "issue": "3",
+   "page": "190-196",
+   "title": "A Perspective on the Impact of Group Delay Dispersion in Future Terahertz Wireless Systems",
+   "type": "journal-article",
+   "volume": "63"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2405.20107"
+   }
+  ]
+ },
+ "10.1109/milcom58377.2023.10356370": {
+  "abstract": "Time-frequency warped waveform is a novel type of well-contained waveform composed of raised cosine (RC) pulses with roll-off factors profile customized for spectrally efficient signal containment. The waveform is suited for massive machine-type communication (mMTC), and Internet-of-Things (IoT) applications. The paper is a follow-up to the original work of time-frequency warped waveforms; here, we are proposing a warping function suited for length-independent symbols, which is missing from the previous work. The paper proposes the design steps starting from a piecewise warping function with parts of straight segments and other curved parts. A maximum Out-of-band leakage is used as a criterion to determine the warping function parameters. The roll-off factors profile determined in the previous study is used as a minimum bound for the leakage limits. Gains are presented over Windowed Zero-tail Discrete Fourier Transform-spread-Orthogonal Frequency Division Multiplexing (ZT-DFT-s-OFDM) in the simulations section.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali Riza",
+     "Ekti"
+    ]
+   ],
+   "container": "MILCOM 2023 - 2023 IEEE Military Communications Conference (MILCOM)",
+   "date": [
+    2023,
+    10,
+    30
+   ],
+   "issue": "",
+   "page": "280-285",
+   "title": "Warping Functions Design for Long Warped ZT-DFT-s-OFDM",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "OSTI",
+    "url": "https://www.osti.gov/biblio/2278920"
+   }
+  ]
+ },
+ "10.1109/milcom61039.2024.10774041": {
+  "abstract": "Propeller modulation, also known as micro-Doppler modulation, presents a significant challenge in radio frequency (RF) inspection operations conducted via drones. This paper investigates the equalization of propeller modulation effects on RF signals, specifically targeting applications in navigation aids such as Instrument Landing Systems (ILS). By employing a continuous reference tone, the propeller-induced Doppler spread can be effectively captured and equalized, improving signal integrity and accuracy. Simulation results demonstrate that the proposed equalization method significantly reduces DDM deviation caused by propeller modulation, even under various propeller speeds. The findings suggest that incorporating such equalization techniques can enhance the reliability and efficiency of drone-based RF inspections.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "MILCOM 2024 - 2024 IEEE Military Communications Conference (MILCOM)",
+   "date": [
+    2024,
+    10,
+    28
+   ],
+   "issue": "",
+   "page": "1-5",
+   "title": "Propeller Modulation Equalization via Reference Tones",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2407.19084"
+   }
+  ]
+ },
+ "10.1109/mmm.2026.3706013": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Leonid",
+     "Belostotski"
+    ],
+    [
+     "Arjuna",
+     "Madanayake"
+    ],
+    [
+     "John",
+     "Nielsen"
+    ],
+    [
+     "Mostafa",
+     "Abdelhadi"
+    ],
+    [
+     "Xingchen",
+     "Liu"
+    ],
+    [
+     "Xinquan",
+     "Wang"
+    ],
+    [
+     "Guanyue",
+     "Qian"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Theodore S.",
+     "Rappaport"
+    ]
+   ],
+   "container": "IEEE Microwave Magazine",
+   "date": [
+    2026
+   ],
+   "issue": "",
+   "page": "2-16",
+   "title": "The Anatomy of RF Chains: Metrics, Measures, and Operating Efficiency",
+   "type": "journal-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2608.00223"
+   }
+  ],
+  "manual": true,
+  "note": "no abstract: the record holds the opening paragraph of this magazine article instead"
+ },
+ "10.1109/mnet.101.2000635": {
+  "abstract": "Legacy base station (BS) centric cellular architecture is marked by tight interlock between spectral efficiency (SE) and energy efficiency (EE). That means, unless new degrees of freedom and intelligent dynamic adaptability is added, any significant gain in SE must come at the cost of EE. Even the most predominant approaches for capacity enhancement such as network densification yield gains in SE at the cost of increased energy consumption. Moreover, in future mobile networks, the key challenge is not only the rampantly growing volume of traffic, but also the spatiotemporal variability of the traffic. These observations call for a paradigm shift in the way cellular networks are designed and operated. Therefore, in this work, we propose a new cellular architecture called SpiderNet: Spectrally Efficient and Energy Efficient Data Aided Demand Driven Elastic Architecture for 6G Wireless Networks. The key idea behind SpiderNet is to introduce additional degrees of freedom to relax the tight coupling between the SE and EE and database-aided intelligence to enable dynamic adaptive operation for simultaneous enhancement of both SE and EE. This goal is achieved by shifting the pivot of operation from the rigid always ON BS centric cells to user centric (UC) on demand cells. The SpiderNet architecture consists of a layer of low-density large footprint and database aided control BS underlayed by high-density switchable data BS. This database enables artificial intelligence (AI) powered proactive dynamic orchestration of UC cells to maximize not only SE and EE, but quality of experience (QoE) as well. We also identify the challenges that arise in the practical realization of SpiderNet and propose solutions. Finally, we present a case study that compares SpiderNet performance with legacy HetNets. The results show that compared to current BS centric cellular architecture, SpiderNet can substantially enhance both SE and EE without compromising QoE.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Muhammad",
+     "Nabeel"
+    ],
+    [
+     "Umair Sajid",
+     "Hashmi"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Hazem",
+     "Refai"
+    ],
+    [
+     "Adnan",
+     "Abu-Dayya"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Network",
+   "date": [
+    2021,
+    9
+   ],
+   "issue": "5",
+   "page": "256-263",
+   "title": "SpiderNet: Spectrally Efficient and Energy Efficient Data Aided Demand Driven Elastic Architecture for 6G",
+   "type": "journal-article",
+   "volume": "35"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/mnet.103.2100419": {
+  "abstract": "The prospect of mankind returning to the Moon has garnered a great amount of attention in recent years. Dozens of lunar missions are planned for the coming decade which will require the development of a sustainable communication infrastructure with high data rates and minimal latency. Space communication systems thus far have relied on Radio Frequency (RF) links alone, but recent developments in laser communications have demonstrated that Free Space Optical (FSO) links can achieve much higher data rates. Upon considering the respective benefits and drawbacks of RF and FSO links, we make a case for the integration of these two technologies into a hybrid RF/FSO lunar communications architecture which leverages small satellites in a Low Earth Orbit (LEO) constellation. We include a case study for this technology designed in Analytical Graphics' Systems Tool Kit (STK) software. Results are presented in terms of chain access duration, propagation delay, transmission loss, Signal-to-Noise Ratio (SNR), and Bit Error Rate (BER). This architecture shows potential to revolutionize extraterrestrial communications and pave the way for highly ambitious future missions in space.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Waseem",
+     "Raza"
+    ],
+    [
+     "Ethan",
+     "Abele"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ],
+    [
+     "Behnaz",
+     "Sadr"
+    ],
+    [
+     "Peter",
+     "LoPresti"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ],
+    [
+     "Ickhyun",
+     "Song"
+    ],
+    [
+     "Serhat",
+     "Altunc"
+    ],
+    [
+     "Obadiah",
+     "Kegege"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Network",
+   "date": [
+    2022,
+    11
+   ],
+   "issue": "6",
+   "page": "76-83",
+   "title": "Toward a Hybrid RF/Optical Lunar Communication System (LunarComm)",
+   "type": "journal-article",
+   "volume": "36"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2203.15899"
+   }
+  ]
+ },
+ "10.1109/ojap.2025.3648013": {
+  "abstract": "This paper presents the design and manufacturing of a novel 2D-scanning antenna that integrates a 3D-printed Rotman lens with a quasi-holographic leaky-wave antenna (HLWA). The proposed design achieved beam-scanning capabilities by leveraging the beamforming of the Rotman lens and the high-gain directive properties of the quasi-HLWA. The Rotman lens (RL) enables beam steering in the elevation plane by switching between input ports. The quasi-HLWA, designed using holographic principles, achieves frequency-controlled beam scanning in the azimuth plane. The entire antenna structure was fabricated using additive manufacturing with an Ink1092 substrate and silver ink for the conductive traces. This approach provides greater control over material placement and design freedom compared to traditional methods. A 25∘ transmission linear substrate taper was used to ensure good impedance matching between the Rotman lens and the quasi-HLWA, allowing greater gain while maintaining a good scanning range. The experimental results validate the 2D scanning capability of the proposed antenna. The antenna system provides coverage from -54∘ to 54∘ in the elevation θ plane and -28∘ to 28∘ in the azimuth plane ϕ, with a maximum measured gain of 21.3 dBi at 28 GHz with an average radiation efficiency η = 60%. The fabricated prototype was tested, and the performance was in good agreement with the simulated performance.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amir",
+     "Tag"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Hussein",
+     "Alnuweiri"
+    ],
+    [
+     "Albert E.",
+     "Patterson"
+    ],
+    [
+     "Manoj",
+     "Prabhakar Mohan"
+    ],
+    [
+     "Arokiaswamy",
+     "Alphones"
+    ],
+    [
+     "Herng",
+     "Tun Seng Henry"
+    ],
+    [
+     "Muhammad",
+     "Faeyz Karim"
+    ]
+   ],
+   "container": "IEEE Open Journal of Antennas and Propagation",
+   "date": [
+    2026,
+    4
+   ],
+   "issue": "2",
+   "page": "417-426",
+   "title": "3D-Printed mmWave Quasi-Holographic Antenna for 2-D Beamforming",
+   "type": "journal-article",
+   "volume": "7"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/ojcoms.2021.3123939": {
+  "abstract": "Even at the current age of sophisticated communication systems, remote rural communities with low user density throughout the world lack broadband internet service of good quality. Traditional ways fall short to meet the demand of those regions due to technological or geographical challenges as well as less economic viability. Since the unlicensed operation of spare TV (Television) spectra was approved by the authorities in many countries of the world, various applications of those spectra, known as TV White Space (TVWS), have been researched. In many literature and implementations, TVWS has been found to be feasible in providing quality broadband internet service to deprived rural communities. Penetration through obstacles, good non-line-of-sight connectivity, long-distance transmission, wider horizontal beam-width, and abundance of unused TV channels in remote rural regions are some of the promising features of TVWS which can be leveraged to connect rural communities to broadband internet and related digital services. We made a comprehensive effort to evaluate TVWS based broadband internet connectivity through laboratory testing and outdoor testing with a measurement campaign at Stillwater, Oklahoma and by providing live internet service to a client in the rural area of Tillman county, Oklahoma, USA. Radio frequency (RF) coverage heatmaps have been created over the geographical map using the received signal data measured. Also, profiles of received power, signal to noise ratio (SNR) and throughput have been analyzed against antenna directionality. The purpose of this study is to provide the details of our TVWS trial and lessons learned from it, followed by performance analysis, comparison of results with theory and future directions.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Dylan",
+     "Shadoan"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Open Journal of the Communications Society",
+   "date": [
+    2021
+   ],
+   "issue": "",
+   "page": "2449-2462",
+   "title": "TV White Space Based Wireless Broadband Internet Connectivity: A Case Study With Implementation Details and Performance Analysis",
+   "type": "journal-article",
+   "volume": "2"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/ojcoms.2025.3527878": {
+  "abstract": "In the pursuit of ubiquitous broadband connectivity, there has been a significant shift towards the vertical expansion of communication networks into space, particularly through the exploitation of low Earth orbit (LEO) satellite constellations, which are favored for their relatively low latency. However, this approach faces many challenges that need to be addressed, including atmospheric turbulence, high path loss, and dynamic cloud formations. High-altitude pseudo-satellites (HAPS) have emerged as promising relaying layers between LEO satellites and ground stations, enhancing coverage, latency, and direct terrestrial user connectivity. While radio frequency (RF) bands suffer from congestion and limited bandwidth, free space optical (FSO) communications offer higher data rates, but are susceptible to misalignment and weather-induced signal degradation. To address these challenges, a hybrid RF/FSO approach has been proposed to take advantage of both technologies by dynamic switching between RF and FSO based on propagation channel conditions. This paper introduces a reinforcement learning-based algorithm designed to optimize the trajectory of HAPS, maneuver around cloudy areas, and seamlessly switch between the RF and FSO communication modes to maximize the achievable capacity. The proposed approach aims to maximize system performance by intelligently adapting to environmental conditions and offering a promising solution for next-generation space communication networks.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Abdullateef",
+     "Almohamad"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mazen",
+     "Hasna"
+    ],
+    [
+     "Saud",
+     "Althunibat"
+    ],
+    [
+     "Khalid",
+     "Qaraqe"
+    ]
+   ],
+   "container": "IEEE Open Journal of the Communications Society",
+   "date": [
+    2025
+   ],
+   "issue": "",
+   "page": "793-806",
+   "title": "Optimizing Non-Terrestrial Hybrid RF/FSO Links With Reinforcement Learning: Navigating Through Clouds",
+   "type": "journal-article",
+   "volume": "6"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/sahcn.2019.8824819": {
+  "abstract": "Typical techniques for tracking vital signs require body contact and most of these techniques are intrusive in nature. Body-contact methods might irritate the patient's skin and he/she might feel uncomfortable while sensors are touching his/her body. In this study, we present a new wireless (non-contact) method for monitoring human vital signs (breathing and heartbeat). We have demonstrated for the first time that vitals signs can be measured wirelessly through visible light signal reflected from a human subject, also referred to as visible light sensing (VLS). In this method, the breathing and heartbeat rates are measured without any body-contact device, using only a simple photodetector and a light source (e.g., LED). The light signal reflected from human subject is modulated by the physical motions during breathing and heartbeats. Signal processing tools such as filtering and Fourier transform are used to convert these small variations in the received light signal power to vitals data.We implemented the VLS-based non-contact vital signs monitoring system by using an off-the-shelf light source, a photodetector and a signal acquisition and processing unit. We observed more than 94% of accuracy as compared to a contact-based FDA (The Food and Drug Administration) approved devices. Additional evaluations are planned to assess the performance of the developed vitals monitoring system, e.g., different subjects, environments, etc. Non-contact vitals monitoring system can be used in various areas and scenarios such as medical facilities, residential homes, security and human-computer-interaction (HCI) applications.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2019 16th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)",
+   "date": [
+    2019,
+    6
+   ],
+   "issue": "",
+   "page": "1-2",
+   "title": "A New Paradigm for Non-contact Vitals Monitoring using Visible Light Sensing",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "manual": true,
+  "note": "abstract corrected by hand (typesetting glitches in the source record)"
+ },
+ "10.1109/sarnof.2017.8080383": {
+  "abstract": "In this paper, we introduce Visible Light Detection and Ranging (ViLDAR): a novel speed estimation system that utilizes visible light variation during a known time difference. The use of light emitting diodes (LED) in vehicles lighting systems has become increasingly common in the automotive industry. Concurrently, monitoring drivers’ speeds constitutes a critical issue for safety regulation agencies. Most of the speed monitoring systems are based on measuring the speed of vehicles using wellknown RADAR or LiDAR systems that use radio frequency or laser signals, respectively. However, these systems have certain limitations, e.g., the requirement of line-of-sight for accurate results in RADAR and LiDAR, and narrow beam-width and deficient performance in curved roads in RADAR. We present a simple as well as novel estimation method for the speed of an approaching vehicle given only the received light intensity information. Assuming a Lambertian channel model for the light wave propagation, the performance of the estimator is compared in different angle of incidences between the vehicle and the detector. The proposed method outperforms RADAR/LiDAR systems in terms of speed estimation accuracy for a wide range of incidence angles.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Murat",
+     "Uysal"
+    ]
+   ],
+   "container": "2017 IEEE 38th Sarnoff Symposium",
+   "date": [
+    2017,
+    9
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "ViLDAR: a novel speed estimation system using visible light in vehicles",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/smartnets61466.2024.10577646": {
+  "abstract": "Fifth generation (5G) mobile networks will utilize network slicing to support a diverse range of services, each with distinct specifications for data rate, latency, and reliability. These services are broadly classified into 3 main categories: ultra-reliable low-latency communication (URLLC), enhanced mobile broadband (eMBB), and massive machine type communication (mMTC). Network slicing efficiently provisions these services by creating multiple virtual networks over the same physical infrastructure using network function virtualization (NFV). In this paper, we propose a traffic-aware network slicing scheme by levaraging a 3-layer cloud fog radio access network (RAN) (CF-RAN) over wavelength division multiplexing (WDM) architecture. This network architecture consists of remote radio heads (RRHs) at the first layer, fog nodes at the second layer, and baseband unit (BBU) hotels at the third layer. The fronthaul for incoming URLLC requests are served at the fog nodes because of their stringent latency requirements, while the fronthaul for eMBB and mMTC requests is handled at BBU hotels. The proposed architecture dynamically adapts to the random traffic generated by each RRH. Furthermore, we propose a heuristic algorithm to investigate how changes in the service request ratio effects the overall performance of the proposed architecture. The algorithm minimizes resource utilization while maintaining maximum network connectivity. The results demonstrate the impact of incoming slice request variation on the number of active nodes, number of served requests, and aggregated fronthaul delay.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Muhammad",
+     "Ahsan"
+    ],
+    [
+     "Ashfaq",
+     "Ahmed"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ],
+    [
+     "Arsalan",
+     "Ahmad"
+    ]
+   ],
+   "container": "2024 International Conference on Smart Applications, Communications and Networking (SmartNets)",
+   "date": [
+    2024,
+    5,
+    28
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "Traffic-Aware Network Slicing for 5G Networks in Cloud Fog-RAN over WDM Architecture",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/spawc.2013.6612021": {
+  "abstract": "An OFDM-based cognitive radio (CR) system that assumes a random carrier access method is studied herein paper, where secondary users (SUs) randomly access the subcarriers belonging to the primary network. The SUs do not have access to any information concerning the availability of primary users (PUs) subcarriers because no spectrum sensing mechanism is employed. Therefore, subcarrier collisions may occur between the subcarriers of SUs and PUs. In addition, inter-cell collisions among the subcarriers of SUs belonging to different cells can occur due to the inherent nature of random access scheme. This paper conducts a stochastic analysis of the number of subcarrier collisions between the SUs' and PU's subcarriers assuming fixed and random number of subcarriers for each user, respectively. As a performance benchmark, the expression of the average capacity of a SU is derived and simulated under the Rayleigh channel fading model.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mohamed M.",
+     "Abdallah"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2013 IEEE 14th Workshop on Signal Processing Advances in Wireless Communications (SPAWC)",
+   "date": [
+    2013,
+    6
+   ],
+   "issue": "",
+   "page": "105-109",
+   "title": "An investigation of inter-cell subcarrier collisions in OFDM-based cognitive radio networks",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/taes.2024.3485016": {
+  "abstract": "Meeting the diverse needs of user verticals requires innovative cellular architectures that can offer additional degrees of freedom to provide on-demand services. The terrestrial user-centric radio access network (UC-RAN) stands out as an excellent choice for this purpose. However, a drawback of UC-RAN is its tendency to prioritize high-priority verticals, often resulting in a subpar quality of experience for low-priority verticals. This issue is particularly exacerbated in hotspot areas. To address this problem, we introduce an aerial network integrated with terrestrial UC-RAN to provide coverage to users which are not served by the terrestrial network. Furthermore, we analyze the impact of key configuration and optimization parameters (COPs), such as location, transmit power, altitude, and beamwidth of aerial base stations (ABSs) on system key performance indicators (KPIs), such as coverage, latency satisfaction, average spectral efficiency, and energy efficiency. We formulate a robust multiobjective function to maximize these KPIs without biasing toward any specific KPI(s). Finally, we propose a deep reinforcement learning optimization framework based on the state-of-the-art soft actor-critic algorithm to control ABS COPs and optimize system KPIs. Experimental evaluations demonstrate that the proposed optimization framework can converge to near-optimal solutions derived from the pseudo brute force in a few thousand epochs.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh Khan",
+     "Kasi"
+    ],
+    [
+     "Fahd Ahmed",
+     "Khan"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Aerospace and Electronic Systems",
+   "date": [
+    2025,
+    4
+   ],
+   "issue": "2",
+   "page": "3137-3151",
+   "title": "User-Centric Communication With Aerial Network for 6G: A Reinforcement Learning Approach",
+   "type": "journal-article",
+   "volume": "61"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/tap.2021.3069484": {
+  "abstract": "In this article, millimeter-wave (mmWave) wireless channel characteristics (Doppler spread and path loss modeling) for unmanned aerial vehicle (UAV)-assisted communication is analyzed and studied by emulating the real UAV motion using a robotic arm. The motion considers the actual turbulence caused by the wind gusts to the UAV in the atmosphere, which is statistically modeled by the widely used Dryden wind model. The frequency under consideration is 28 GHz in an anechoic chamber setting. A total of 11 distance points from 3.5 to 23.5 ft in increments of 2 ft were considered in this experiment. At each distance point, three samples of data were collected for better inference purposes. In this emulated environment, it was found out that the average Doppler spread at these different distances was around −20 and +20 Hz at the noise floor of −60 dB. On the other hand, the path loss exponent was found to be 1.843. This study presents and lays out a novel framework of emulating UAV motion for mmWave communication systems, which will pave the way out for future design and implementation of next-generation UAV-assisted wireless communication systems.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Collin A.",
+     "Thornton"
+    ],
+    [
+     "Md. Arifur Rahman",
+     "Sarker"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ],
+    [
+     "He",
+     "Bai"
+    ],
+    [
+     "Ickhyun",
+     "Song"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Transactions on Antennas and Propagation",
+   "date": [
+    2021,
+    10
+   ],
+   "issue": "10",
+   "page": "6691-6701",
+   "title": "Emulating UAV Motion by Utilizing Robotic Arm for mmWave Wireless Channel Characterization",
+   "type": "journal-article",
+   "volume": "69"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2006.11667"
+   }
+  ]
+ },
+ "10.1109/tccn.2022.3217785": {
+  "abstract": "With highly heterogeneous application requirements, 6G and beyond cellular networks are expected to be demand-driven, elastic, user-centric, and capable of supporting multiple services. A redesign of the one-size-fits-all cellular architecture is needed to support heterogeneous application needs. While several recent works have proposed user-centric cloud radio access network (UCRAN) architectures, these works do not consider the heterogeneity of application requirements or the mobility of users. Even though significant gains in performance have been reported, the inherent rigidity of these methods limits their ability to meet the quality of service (QoS) expected from future cellular networks. This paper addresses this need by proposing an intelligent, demand-driven, elastic UCRAN architecture capable of providing services to a diverse set of use cases including augmented/virtual reality, high-speed rails, industrial robots, E-health, and more applications. The proposed framework leverages deep reinforcement learning to adjust the size of a user-centered virtual cell based on each application’s heterogeneous requirements. Furthermore, the proposed architecture is adaptable to varying user demands and mobility while performing multi-objective optimization of key network performance indicators (KPIs). Finally, numerical results are presented to validate the convergence, adaptability, and performance of the proposed approach against meta-heuristics and brute-force methods.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh Khan",
+     "Kasi"
+    ],
+    [
+     "Umair Sajid",
+     "Hashmi"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Adnan",
+     "Abu-Dayya"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Cognitive Communications and Networking",
+   "date": [
+    2023,
+    2
+   ],
+   "issue": "1",
+   "page": "130-145",
+   "title": "D-RAN: A DRL-Based Demand-Driven Elastic User-Centric RAN Optimization for 6G &amp; Beyond",
+   "type": "journal-article",
+   "volume": "9"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/tcomm.2013.031213.120346": {
+  "abstract": "In cognitive radio (CR) systems, one of the main implementation issues is spectrum sensing because of the uncertainties in propagation channel, hidden primary user (PU) problem, sensing duration and security issues. This paper considers an orthogonal frequency-division multiplexing (OFDM)-based CR spectrum sharing system that assumes random access of primary network subcarriers by secondary users (SUs) and absence of the PU's spectrum utilization information, i.e., no spectrum sensing is employed to acquire information about the PU's activity or availability of free subcarriers. In the absence of information about the PU's activity, the SUs randomly access (utilize) the subcarriers of the primary network and collide with the PU's subcarriers with a certain probability. In addition, inter-cell collisions among the subcarriers of SUs (belonging to different cells) can occur due to the inherent nature of random access scheme. This paper conducts a stochastic analysis of the number of subcarrier collisions between the SUs' and PU's subcarriers assuming fixed and random number of subcarriers requirements for each user. The performance of the random scheme in terms of capacity and capacity (rate) loss caused by the subcarrier collisions is investigated by assuming an interference power constraint at PUs to protect their operation.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mohamed M.",
+     "Abdallah"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "IEEE Transactions on Communications",
+   "date": [
+    2013,
+    5
+   ],
+   "issue": "5",
+   "page": "1695-1707",
+   "title": "A Study on Inter-Cell Subcarrier Collisions due to Random Access in OFDM-Based Cognitive Radio Networks",
+   "type": "journal-article",
+   "volume": "61"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/tcomm.2018.2807432": {
+  "abstract": "In this paper, the joint spectrum sensing and resource allocation problem is investigated in a multi-band-multiuser cognitive radio (CR) network. Assuming imperfect spectrum sensing information, our goal is to jointly optimize the sensing threshold and power allocation strategy such that the average total throughput of secondary users (SUs) is maximized. In Addition, the power of SUs is constrained to keep the interference introduced to primary users under certain limit, which gives rise to a nonconvex mixed integer non-linear programming (MINLP) optimization problem. Our contribution in this paper is threefold. First, it is illustrated that the dimension of the nonconvex MINLP problem can be significantly reduced, which helps to re-formulate the optimization problem without resorting to integer variables. Second, it is demonstrated that the simplified formulation admits the canonical form of a monotonic optimization, and an E-optimal solution can be achieved using the polyblock outer approximation algorithm. Third, a practical low-complexity spectrum sensing and resource allocation algorithm is developed to reduce the computational cost. Finally, the effectiveness of proposed algorithms is verified by simulations.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Xu",
+     "Wang"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "IEEE Transactions on Communications",
+   "date": [
+    2018,
+    8
+   ],
+   "issue": "8",
+   "page": "3281-3293",
+   "title": "Joint Spectrum Sensing and Resource Allocation in Multi-Band-Multi-User Cognitive Radio Networks",
+   "type": "journal-article",
+   "volume": "66"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/te.2020.3029543": {
+  "abstract": "Contribution: A do-it-yourself (DIY) light wave sensing (LWS) and communication project was developed to generate interest and clarify basic electromagnetic (EM) and wireless sensing/communication concepts among students at different education levels from middle school to undergraduate. This article demonstrates the nature of the project and its preliminary effectiveness. Background: Concepts in wireless sensing and communication are generally considered hard to comprehend being underpinned only by theoretical coursework and occasional simulations. Further, K-12 schools and small academic institutions may not have the resources necessary to produce tangible demonstrations for clarification. The consequent lack of affordable hands-on experiences fails to motivate and engage students. Intended Outcomes: The DIY-LWS is intended to make wireless concepts more understandable and less esoteric by linking fundamental concepts with student-relevant technologies, such as solar cells, visible lights, and smartphones. It is also intended to pique student interest by allowing them to personally assemble, operate, and explore a light-based wireless communication system. Students complete assessments before and after the project to quantify its effectiveness. Application Design: A preliminary assessment is used to determine the student base knowledge level and enthusiasm for wireless and related core topics. Students are instructed to assemble and test their own DIY-LWS hardware to provide a hands-on experience and stimulate further exploration. Short lectures are given to link conceptual ideas to the real-world phenomena students personally observed. Finally, students are reassessed to quantify any change in conceptual understanding. Findings: The DIY-LWS kits have been used in multiple events with students at different levels from secondary to high schools to college. As part of a triangulated assessment methodology, pre- and post-assessments revealed pronounced improvements (the number of correct answers doubled) in student understanding of EM concepts. Instructors observed tremendous interest and excitement among the students during and after the experiments.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Emrah",
+     "Turgut"
+    ],
+    [
+     "Nicole",
+     "Colston"
+    ],
+    [
+     "Jeffrey L.",
+     "Young"
+    ]
+   ],
+   "container": "IEEE Transactions on Education",
+   "date": [
+    2021,
+    8
+   ],
+   "issue": "3",
+   "page": "205-212",
+   "title": "A Do-It-Yourself (DIY) Light Wave Sensing and Communication Project: Low-Cost, Portable, Effective, and Fun",
+   "type": "journal-article",
+   "volume": "64"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2007.09891"
+   }
+  ]
+ },
+ "10.1109/te.2025.3557023": {
+  "abstract": "Contribution:Case study of a rural-focused educational program with two components: 1) introducing high school students and teachers to smart and connected technologies (SCTs) that can be used to solve local problems and 2) engaging the local community in supporting local technology-driven entrepreneurship.Background:Rural communities typically lag behind in terms of participation in the digital economy, and use of technology in general. Yet they often have the most to gain, due to high rates of self-employment and fewer private-sector job opportunities.Research Questions:Can a broadly scoped rural technology education program lead to improvements in 1) student and teacher SCT awareness; 2) SCT skills; and 3) aspirations for future SCT use directed toward entrepreneurship and overall community wellbeing?Methodology:A multidisciplinary team used a mixed-methods approach to engage a rural high school robotics team as well as the local community. Over the course of one year, students took part in hands-on-training with SCTs (“PETE-Kits” and associated curriculum) and brainstormed entrepreneurial projects via ideation events. Community members were involved at the beginning and end of the project, including judging a “shark-tank” style event where student business ideas using SCT were presented.Findings:Results from student pre/post activity assessments suggest that the program was effective at increasing comfort with technology and combining technical skills with entrepreneurial opportunities. Post surveys from community members, including teachers, demonstrated clear support for the program and an appreciation of how SCTs/digital skills could benefit the local economy and wellbeing.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Matthew W.",
+     "Rutherford"
+    ],
+    [
+     "Brian E.",
+     "Whitacre"
+    ],
+    [
+     "Levi",
+     "Captain"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Julie",
+     "Angle"
+    ],
+    [
+     "Tom",
+     "Hensley"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ]
+   ],
+   "container": "IEEE Transactions on Education",
+   "date": [
+    2025,
+    6
+   ],
+   "issue": "3",
+   "page": "281-292",
+   "title": "Promoting Rural Entrepreneurship Through Technology: A Case Study Using Productivity Enhancing Technology Experience Kits (PETE-Kits)",
+   "type": "journal-article",
+   "volume": "68"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/tgcn.2021.3093390": {
+  "abstract": "In this paper, we consider coordinated multipoint transmission (CoMP) by using distributed data base stations (DBSs) in a User-centric Cloud-based Radio Access Network (UCRAN). The creation of non-overlapping virtual cells (or service zones) centered around a user, contrary to traditional cellular architecture, shifts the mode of operation from base station centric “always ON” cells to user-centric “on-demand cells.” In contrast to existing literature, we show that CoMP is only beneficial in network architectures where cell-edge users are present. In a UCRAN architecture, where the cell-edge users are virtually removed due to non-overlapping user-centric cells, the performance gain provided by enabling CoMP is insignificant. We analyze this by performing a comparative performance analysis of UCRAN with different joint transmission schemes of CoMP. We also provide analytical expressions for network-wide coverage probability, area spectral efficiency, and energy efficiency by taking advantage of the stochastic geometry tools. Additionally, we investigate the impact of new degrees of freedom such as the size of the service zones and density of data base station on the spectral and energy efficiencies of CoMP-enabled UCRAN. Extensive Monte Carlo simulations validate the proposed analytical framework as well as provide useful insights into the design of next-generation cellular architectures.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh Khan",
+     "Kasi"
+    ],
+    [
+     "Umair Sajid",
+     "Hashmi"
+    ],
+    [
+     "Muhammad",
+     "Nabeel"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Green Communications and Networking",
+   "date": [
+    2021,
+    12
+   ],
+   "issue": "4",
+   "page": "1999-2015",
+   "title": "Analysis of Area Spectral &amp; Energy Efficiency in a CoMP-Enabled User-Centric Cloud RAN",
+   "type": "journal-article",
+   "volume": "5"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/thms.2020.3043302": {
+  "abstract": "In this article, we demonstrate the ability to recognize hand gestures in a noncontact wireless fashion using only incoherent light signals reflected from a human subject. Fundamentally distinguished from radar, lidar, and camera-based sensing systems, this sensing modality uses only a low-cost light source (e.g., LED) and a sensor (e.g., photodetector). The lightwave-based gesture recognition system identifies different gestures from the variations in light intensity reflected from the subject's hand within a short (20-35 cm) range. As users perform different gestures, scattered light forms unique, statistically repeatable, time-domain signatures. These signatures can be learned by repeated sampling to obtain the training model against which unknown gesture signals are tested and categorized. These time-domain variations of the lightwave signals reflected from hand are denoised, standardized, and then classified by using machine learning classification tools such as $K$-nearest neighbors and support vector machine. Performance evaluations have been conducted with eight gestures, five subjects, different distances and lighting conditions, and visible and infrared light sources. The results demonstrate the best hand gesture recognition performance of infrared sensing at 20 cm with an average of 96% accuracy. The developed gesture recognition system is low-cost, effective, and noncontact technology for numerous human-computer interaction applications.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Li",
+     "Yu"
+    ],
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Christopher",
+     "Crick"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Transactions on Human-Machine Systems",
+   "date": [
+    2021,
+    2
+   ],
+   "issue": "1",
+   "page": "44-55",
+   "title": "Gesture Recognition Using Reflected Visible and Infrared Lightwave Signals",
+   "type": "journal-article",
+   "volume": "51"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2007.08178"
+   }
+  ]
+ },
+ "10.1109/thms.2024.3381574": {
+  "abstract": "Human respiratory rate and its pattern convey essential information about the physical and psychological states of the subject. Abnormal breathing can indicate fatal health issues leading to further diagnosis and treatment. Wireless light-wave sensing (LWS) using incoherent infrared light shows promise in safe, discreet, efficient, and noninvasive human breathing monitoring without raising privacy concerns. The respiration monitoring system needs to be trained on different types of breathing patterns to identify breathing anomalies. The system must also validate the collected data as a breathing waveform, discarding any faulty data caused by external interruption, user movement, or system malfunction. To address these needs, this study simulated normal and different types of abnormal respiration using a robot that mimics human breathing patterns. Then, time-series respiration data were collected using infrared light-wave sensing technology. Three machine learning algorithms, decision tree, random forest and XGBoost, were applied to detect breathing anomalies and faulty data. Model performances were evaluated through cross-validation, assessing classification accuracy, precision, and recall scores. The random forest model achieved the highest classification accuracy of 96.75% with data collected at a 0.5 m distance. In general, ensemble models like random forest and XGBoost performed better than a single model in classifying the data collected at multiple distances from the LWS setup.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Brenden",
+     "Martin"
+    ],
+    [
+     "Carly",
+     "Gotcher"
+    ],
+    [
+     "Tyler",
+     "Martinez"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Transactions on Human-Machine Systems",
+   "date": [
+    2024,
+    6
+   ],
+   "issue": "3",
+   "page": "292-303",
+   "title": "Noncontact Respiratory Anomaly Detection Using Infrared Light-Wave Sensing",
+   "type": "journal-article",
+   "volume": "54"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2301.03713"
+   }
+  ]
+ },
+ "10.1109/tmlcn.2024.3365420": {
+  "abstract": "We present the issue of monetarily incentivized forwarding in a multi-hop mesh network architecture from an economic perspective. It is anticipated that credit-incentivized forwarding and relaying will be a simple method of exchanging transmission power and spectrum for connectivity. However, gateways and forwarding nodes, like any other free market, may create an oligopolistic market for the users they serve. In this study, a coalition scheme between buyers aims to address price control by gateways or nodes closer to gateways. In a Stackelberg competition game, buyer agents (users) and sellers (gateways) make decisions using reinforcement learning (RL), with decentralized Deep Q-Networks to buy and sell forwarding resources. We allow communication links between the buyers with a limited messaging space, without defining a collusion mechanism. The idea is to demonstrate that through messaging, and RL tacit collusion can emerge between agents in a decentralized setup. The multi-agent reinforcement learning (MARL) system is presented and analyzed from a machine-learning perspective. Moreover, MARL dynamics are discussed via mean field analysis to better understand divergence causes and make implementation recommendations for such systems. Finally, the simulation results show the results of coordination among the users.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Machine Learning in Communications and Networking",
+   "date": [
+    2024
+   ],
+   "issue": "",
+   "page": "240-260",
+   "title": "Buyers Collusion in Incentivized Forwarding Networks: A Multi-Agent Reinforcement Learning Study",
+   "type": "journal-article",
+   "volume": "2"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/tmlcn.2024.3457490": {
+  "abstract": "Radiofrequency (RF) communications offer reliable but low data rates and energy-inefficient satellite links, while free-space optical (FSO) promises high bandwidth but struggles with disturbances imposed by atmospheric effects. A hybrid RF/FSO architecture aims to achieve optimal reliability along with high data rates for space communications. Accurate prediction of dynamic ground-to-satellite FSO link availability is critical for routing decisions in low-earth orbit constellations. In this paper, we propose a system leveraging ubiquitous RF links to proactively forecast FSO link degradation prior to signal drops below threshold levels. This enables pre-calculation of rerouting to maximally maintain high data rate FSO links throughout the duration of weather effects. We implement a supervised learning model to anticipate FSO attenuation based on the analysis of RF patterns. Through the simulation of a dense lower earth orbit (LEO) satellite constellation, we demonstrate the efficacy of our approach in a simulated satellite network, highlighting the balance between predictive accuracy and prediction duration. An emulated cloud attenuation model is proposed to provide insight into the temporal profiles of RF signals and their correlation to FSO channel dynamics. Our investigation sheds light on the trade-offs between prediction horizon and accuracy arising from RF beacon numbers and proximity.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Arsalan",
+     "Ahmad"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Peter",
+     "LoPresti"
+    ],
+    [
+     "Serhat",
+     "Altunc"
+    ],
+    [
+     "Obadiah",
+     "Kegege"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ]
+   ],
+   "container": "IEEE Transactions on Machine Learning in Communications and Networking",
+   "date": [
+    2024
+   ],
+   "issue": "",
+   "page": "1369-1388",
+   "title": "Anticipating Optical Availability in Hybrid RF/FSO Links Using RF Beacons and Deep Learning",
+   "type": "journal-article",
+   "volume": "2"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/tmlcn.2025.3534139": {
+  "abstract": "The evolution of Open Radio Access Networks (O-RAN) presents an opportunity to enhance network performance by enabling dynamic orchestration of configuration and optimization parameters (COPs) through online learning methods. However, leveraging this potential requires overcoming the limitations of traditional cell-centric RAN architectures, which lack the necessary flexibility. On the other hand, despite their recent popularity, the practical deployment of online learning frameworks, such as Deep Reinforcement Learning (DRL)-based COP optimization solutions, remains limited due to their risk of deteriorating network performance during the exploration phase. In this article, we propose and analyze a novel risk-aware DRL framework for user-centric RAN (UC-RAN), which offers both the architectural flexibility and COP optimization to exploit this flexibility. We investigate and identify UC-RAN COPs that can be optimized via a soft actor-critic algorithm implementable as an O-RAN application (rApp) to jointly maximize latency satisfaction, reliability satisfaction, area spectral efficiency, and energy efficiency. We use the offline learning on UC-RAN to reliably accelerate DRL training, thus minimizing the risk of DRL deteriorating cellular network performance. Results show that our proposed solution approaches near-optimal performance in just a few hundred iterations with a decrease in risk score by a factor of ten.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh",
+     "Khan Kasi"
+    ],
+    [
+     "Fahd",
+     "Ahmed Khan"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Machine Learning in Communications and Networking",
+   "date": [
+    2025
+   ],
+   "issue": "",
+   "page": "195-214",
+   "title": "Risk-Aware Reinforcement Learning Framework for User-Centric O-RAN",
+   "type": "journal-article",
+   "volume": "3"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/tmlcn.2025.3650440": {
+  "abstract": "This paper presents a multi-agent reinforcement learning (MARL) approach for controlling adjustable metallic reflector arrays to enhance wireless signal reception in non-line-of-sight (NLOS) scenarios. Unlike conventional reconfigurable intelligent surfaces (RIS) that require complex channel estimation, our system employs a centralized training with decentralized execution (CTDE) paradigm where individual agents corresponding to reflector segments autonomously optimize reflector element orientation in three-dimensional space using spatial intelligence based on user location information. Through extensive ray-tracing simulations with dynamic user mobility, the proposed multi-agent beam-focusing framework demonstrates substantial performance improvements over single-agent reinforcement learning baselines, while maintaining rapid adaptation to user movement within one simulation step. Comprehensive evaluation across varying user densities and reflector configurations validates system scalability and robustness. The results demonstrate the potential of learning-based approaches for adaptive wireless propagation control.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hieu",
+     "Le"
+    ],
+    [
+     "Oguz",
+     "Bedir"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Jian",
+     "Tao"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Transactions on Machine Learning in Communications and Networking",
+   "date": [
+    2026
+   ],
+   "issue": "",
+   "page": "265-281",
+   "title": "Signal Whisperers: Enhancing Wireless Reception Using DRL-Guided Reflector Arrays",
+   "type": "journal-article",
+   "volume": "4"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1109/tnsm.2021.3121282": {
+  "abstract": "Complexity is an inherent property in wireless heterogeneous networks (HetNets). In this paper, we investigate the application of the agent-based modeling (ABM) tool for optimization of complex and dynamic HetNets. The proposed framework contains a diversity of game-theoretic, machine learning, and rule-based algorithms within the same model. We present and analyze a HetNet ABM model that runs parallel reinforcement learning (RL) algorithms for spectrum deployment, interference management, resource allocation, and load balancing at both micro and macrocell levels. In our proposed model, two RL-based algorithms work jointly to manage the co-tier and cross-tier interferences. The macrocell runs the first algorithm to control the transmission power of the small cells. The second RL algorithm is run by small cells to assign the users to the sub-bands with less interference levels. Simultaneously, the user association is decided by the users depending on the available resources at the cells and user preferences. The model is then evaluated under various network load conditions to deduce relationships between the cell loads, aggregate bit rate, latency, and user association. Moreover, the system is assessed in a dynamic network scenario with moving users and is confirmed to possess the ability to attain convergence with sufficient performance levels.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Umair Sajid",
+     "Hashmi"
+    ],
+    [
+     "Muhammad",
+     "Nabeel"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "IEEE Transactions on Network and Service Management",
+   "date": [
+    2021,
+    12
+   ],
+   "issue": "4",
+   "page": "4042-4062",
+   "title": "Embracing Complexity: Agent-Based Modeling for HetNets Design and Optimization via Concurrent Reinforcement Learning Algorithms",
+   "type": "journal-article",
+   "volume": "18"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/tsp.2012.2203126": {
+  "abstract": "This paper investigates the performance of an orthogonal frequency-division multiplexing (OFDM)-based cognitive radio (CR) spectrum sharing communication system that assumes random allocation and absence of the primary user's (PU) channel occupation information, i.e., no spectrum sensing is employed to acquire information about the availability of unused subcarriers. In case of a single secondary user (SU) in the secondary network, due to the lack of information of PUs' activities, the SU randomly allocates the subcarriers of the primary network and collide with the PUs' subcarriers with a certain probability. To maintain the quality of service (QoS) requirement of PUs, the interference that SU causes onto PUs is controlled by adjusting SU's transmit power below a predefined threshold, referred to as interference temperature. In this paper, the average capacity of SU with subcarrier collisions is employed as performance measure to investigate the proposed random allocation scheme for both general and Rayleigh channel fading models. Bounds and scaling laws of average capacity with respect to the number of SUs, PUs, and available subcarriers are derived. In addition, in the presence of multiple SUs, the multiuser diversity gain of SUs assuming an opportunistic scheduling is also investigated. To avoid the interference at the SUs that might be caused by the random allocation scheme and obtain the maximum sum rate for SUs based on the available subcarriers, an efficient centralized sequential algorithm based on the opportunistic scheduling and random allocation (utilization) methods is proposed to ensure the orthogonality of assigned subcarriers.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mohamed M.",
+     "Abdallah"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "IEEE Transactions on Signal Processing",
+   "date": [
+    2012,
+    9
+   ],
+   "issue": "9",
+   "page": "4758-4774",
+   "title": "Random Subcarrier Allocation in OFDM-Based Cognitive Radio Networks",
+   "type": "journal-article",
+   "volume": "60"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1207.0484"
+   }
+  ]
+ },
+ "10.1109/tthz.2021.3115725": {
+  "abstract": "This article investigates the temporal dispersion of a wireless terahertz communication signal caused by reflection from a rough (diffuse) surface, and its subsequent impact on symbol error rate versus data rate. Broadband measurements of diffuse reflectors using terahertz time-domain spectroscopy were used to establish and validate a scattering model that uses stochastic methods to describe the effects of surface roughness on the phase and amplitude of a reflected terahertz signal, expressed as a communication channel transfer function. The modeled channel was used to simulate a quadrature phase shift keying (QPSK) modulated wireless communication link to determine the relationships between symbol error rate and data rate as a function of surface roughness. The simulations reveal that surface roughness from wall texturing results in group delay dispersion that limits achievable data rate with low errors. A distinct dispersion limit in surface roughness is discovered beyond which unacceptable numbers of symbol errors begin to accrue for a given data rate.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Russ",
+     "Messenger"
+    ],
+    [
+     "Karl",
+     "Strecker"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John",
+     "O'Hara"
+    ]
+   ],
+   "container": "IEEE Transactions on Terahertz Science and Technology",
+   "date": [
+    2021,
+    11
+   ],
+   "issue": "6",
+   "page": "695-703",
+   "title": "Dispersion From Diffuse Reflectors and Its Effect on Terahertz Wireless Communication Performance",
+   "type": "journal-article",
+   "volume": "11"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2104.00621"
+   }
+  ]
+ },
+ "10.1109/tthz.2021.3127151": {
+  "abstract": "A theoretical framework and numerical simulations quantifying the impact of atmospheric group velocity dispersion (GVD) on wireless terahertz communication link error rate were developed based upon experimental work. This article presents, for the first time, predictions of symbol error rate (SER) as a function of link distance, signal bandwidth, signal-to-noise ratio (SNR), and atmospheric conditions, revealing that long-distance, broadband terahertz communication systems may be limited by intersymbol interference stemming from GVD, rather than attenuation. In such dispersion limited links, increasing signal strength does not improve the SER and, consequently, theoretical predictions of SER based only on SNR are invalid for the broadband case. This article establishes a new and necessary foundation for link budget analysis in future long-distance terahertz communication systems that accounts for the nonnegligible effects of both attenuation and dispersion.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Karl",
+     "Strecker"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O'Hara"
+    ]
+   ],
+   "container": "IEEE Transactions on Terahertz Science and Technology",
+   "date": [
+    2022,
+    1
+   ],
+   "issue": "1",
+   "page": "87-97",
+   "title": "Fundamental Performance Limits on Terahertz Wireless Links Imposed by Group Velocity Dispersion",
+   "type": "journal-article",
+   "volume": "12"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2104.00611"
+   }
+  ]
+ },
+ "10.1109/tvt.2019.2941705": {
+  "abstract": "The introduction of light emitting diodes (LED) in automotive exterior lighting systems provides opportunities to develop viable alternatives to conventional communication and sensing technologies. Most of the advanced driver-assist and autonomous vehicle technologies are based on Radio Detection and Ranging (RADAR) or Light Detection and Ranging (LiDAR) systems that use radio frequency or laser signals, respectively. While reliable and real-time information on vehicle speeds is critical for traffic operations management and autonomous vehicles safety, RADAR or LiDAR systems have some deficiencies especially in curved road scenarios where the incidence angle is rapidly varying. In this paper, we propose a novel speed estimation system so-called the Visible Light Detection and Ranging (ViLDAR) that builds upon sensing visible light variation of the vehicle's headlamp. We determine the accuracy of the proposed speed estimator in straight and curved road scenarios. We further present how the algorithm design parameters and the channel noise level affect the speed estimation accuracy. For wide incidence angles, the simulation results show that the ViLDAR outperforms RADAR/LiDAR systems in both straight and curved road scenarios.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Farshad",
+     "Miramirkhani"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Murat",
+     "Uysal"
+    ],
+    [
+     "Samir",
+     "Ahmed"
+    ]
+   ],
+   "container": "IEEE Transactions on Vehicular Technology",
+   "date": [
+    2019,
+    11
+   ],
+   "issue": "11",
+   "page": "10406-10417",
+   "title": "ViLDAR—Visible Light Sensing-Based Speed Estimation Using Vehicle Headlamps",
+   "type": "journal-article",
+   "volume": "68"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1807.05412"
+   }
+  ]
+ },
+ "10.1109/tvt.2020.2979047": {
+  "abstract": "In this paper, we present the case of utilizing interference temperature (IT) as a dynamic quantity rather than as a fixed quantity in an orthogonal frequency division multiple access (OFDMA) based spectrum sharing systems. The fundamental idea here is to reflect the changing capacity demand of primary user (PU) over time in setting the interference power threshold for secondary user (SU). This type of dynamic IT will allow the SU to opportunistically have higher transmit power during relaxed IT period, thereby resulting in higher network capacity. The cognitive radio network (CRN) considered in this paper has an underlay network configuration in which the available spectrum of the PU is accessed concurrently by SU provided that the interference power at the PU receiver from SU is under a certain power threshold. This power threshold is set to maintain and guarantee a certain level of quality of service (QoS) for PU network. Theoretical expressions for outage probability and mean capacity for SU network are derived, and validated with simulation results, and it is observed that utilizing dynamic IT results in high network performance gains as compared to utilizing a fixed IT in cognitive radio system.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "IEEE Transactions on Vehicular Technology",
+   "date": [
+    2020,
+    5
+   ],
+   "issue": "5",
+   "page": "5102-5114",
+   "title": "Statistical Modelling of Dynamic Interference Threshold and Its Effect on Network Capacity",
+   "type": "journal-article",
+   "volume": "69"
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2003.02339"
+   }
+  ]
+ },
+ "10.1109/vtc2023-spring57618.2023.10200531": {
+  "abstract": "With highly heterogeneous application requirements, 6G and beyond cellular networks are expected to be demand-driven, elastic, user-centric, and capable of supporting multiple services. A redesign of the one-size-fits-all cellular architecture is needed to support heterogeneous application needs. This paper addresses this need by proposing an intelligent, demand-driven, elastic user-centric cloud radio access network (UCRAN) architecture capable of providing services to a diverse set of use cases ranging from augmented/virtual reality to high-speed rails to industrial robots to E-health applications, and more. The proposed framework leverages deep reinforcement learning to adjust the size of a user-centered virtual cell based on each application’s heterogeneous throughput and latency requirements. Finally, numerical results are presented to validate the convergence and network adaptability of the proposed approach against the brute-force method.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Shahrukh Khan",
+     "Kasi"
+    ],
+    [
+     "Umair",
+     "Sajid Hashmi"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ]
+   ],
+   "container": "2023 IEEE 97th Vehicular Technology Conference (VTC2023-Spring)",
+   "date": [
+    2023,
+    6
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "Learning-Aided Demand-Driven Elastic Architecture for 6G &amp; Beyond",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/vtc2024-fall63153.2024.10757657": {
+  "abstract": "The advent of Large Language Models (LLMs) has revolutionized language understanding and human-like text generation, drawing interest from many other fields with this question in mind: What else are the LLMs capable of? Despite their widespread adoption, ongoing research continues to explore new ways to integrate LLMs into diverse systems.This paper explores new techniques to harness the power of LLMs for 6G (6th Generation) wireless communication technologies, a domain where automation and intelligent systems are pivotal. The inherent adaptability of LLMs to domain-specific tasks positions them as prime candidates for enhancing wireless systems in the 6G landscape.We introduce a novel Reinforcement Learning (RL) based framework that leverages LLMs for network deployment in wireless communications. Our approach involves training an RL agent, utilizing LLMs as its core, in an urban setting to maximize coverage. The agent’s objective is to navigate the complexities of urban environments and identify the network parameters for optimal area coverage. Additionally, we integrate LLMs with Convolutional Neural Networks (CNNs) to capitalize on their strengths while mitigating their limitations. The Deep Deterministic Policy Gradient (DDPG) algorithm is employed for training purposes. The results suggest that LLM-assisted models can outperform CNN-based models in some cases while performing at least as well in others.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Nurullah",
+     "Sevim"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)",
+   "date": [
+    2024,
+    10,
+    7
+   ],
+   "issue": "",
+   "page": "1-7",
+   "title": "Large Language Models (LLMs) Assisted Wireless Network Deployment in Urban Settings",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2405.13356"
+   }
+  ]
+ },
+ "10.1109/vtc2024-fall63153.2024.10757704": {
+  "abstract": "This study presents a novel mechanical metallic reflector array to guide wireless signals to the point of interest, thereby enhancing received signal quality. Comprised of numerous individual units, this device, which acts as a linear Fresnel reflector (LFR), facilitates the reflection of incoming signals to a desired location. Leveraging geometric principles, we present a systematic approach for redirecting beams from an Access Point (AP) toward User Equipment (UE) positions. This methodology is geared towards optimizing beam allocation, thereby maximizing the number of beams directed towards the UE. Ray tracing simulations conducted for two 3D wireless communication scenarios demonstrate significant increases in path gains and received signal strengths (RSS) by at least 50 dB with strategically positioned devices.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Hieu",
+     "Le"
+    ],
+    [
+     "Oguz",
+     "Bedir"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Jian",
+     "Tao"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall)",
+   "date": [
+    2024,
+    10,
+    7
+   ],
+   "issue": "",
+   "page": "1-7",
+   "title": "Guiding Wireless Signals with Arrays of Metallic Linear Fresnel Reflectors: A Low-cost, Frequency-versatile, and Practical Approach",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2407.19179"
+   }
+  ]
+ },
+ "10.1109/vtcfall.2018.8690704": {
+  "abstract": "In this paper, a new occupancy estimation technique based on visible light sensing (VLS) is presented. A visible light source (e.g., LED) is utilized as the transmitter and a photo-detector (PD) used as a receiver, forming a visible light sensing system. Depending on the number of people in the room crossing the line-of-sight LOS (between the light source and PD), the received power at the receiver change. Consequently, probability density function (PDF) and cumulative distribution function (CDF) of the received power at the receiver change. First, a theoretical analysis of the received power is developed to incorporate the impact of room occupancy on the PDF and CDF of the received power. Second, these received power PDF and CDF expressions are compared with simulation results. Both results are in perfect agreement that verifies the theoretical analysis. In addition, room occupancy estimation is performed by using two methods, namely Kullback-Leibler(KL)-divergence and Euclidean distance. In these methods, the stored PDF of the received power in the database is compared with the measured received power PDF, which reveals the estimated room occupancy. It was shown how a slight variation in room occupancy can dramatically alter the PDF of the received power.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mohammad Al",
+     "Mestiraihi"
+    ],
+    [
+     "Hisham",
+     "Abuella"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2018 IEEE 88th Vehicular Technology Conference (VTC-Fall)",
+   "date": [
+    2018,
+    8
+   ],
+   "issue": "",
+   "page": "1-5",
+   "title": "Indoor Occupancy Estimation Using Visible Light Sensing (VLS) System",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/vtcfall.2018.8690824": {
+  "abstract": "Most of the research in cognitive radio field is primarily focused on finding and improving secondary user (SU) performance parameters such as bit error rate, outage probability and capacity etc. Less attention is being paid towards the other side of the network that is the primary network which is under interference from SU. Also, it is the primary user (PU) that decides upon the interference temperature constraint for power adaptation to maintain a certain level of quality of service while providing access to SUs. However, given the random nature of wireless communication, interference temperature can be regulated dynamically to overcome the bottlenecks in entire network performance. In order to do so, we need to analyze the primary network carefully. This study tries to fill this gap by analytically finding the closed form theoretical expressions for signal to interference and noise ratio (SINR), mean SINR, instantaneous capacity, mean capacity and outage probability of PU, while taking peak transmit power adaptation at SU into picture. Furthermore, the expressions generated are validated with the simulation results and it is found that our theoretical derivations are in perfect accord with the simulation outcomes.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2018 IEEE 88th Vehicular Technology Conference (VTC-Fall)",
+   "date": [
+    2018,
+    8
+   ],
+   "issue": "",
+   "page": "",
+   "title": "Impact of Secondary User Interference on Primary Network in Cognitive Radio Systems",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1809.00446"
+   }
+  ]
+ },
+ "10.1109/wcnc51071.2022.9771775": {
+  "abstract": "The user-centric ultra-dense networks (UUDNs) confront the challenge of performance degradation because of the erroneous user equipment (UE), and data base station (DBS) positions estimated at the central controller (CC). This paper adopts the database aided approach to quantify the error impact on system-level key performance indicators (KPIs) under various configuration and optimization parameters (COPs). Although the performance fall is consistent with the increase in error radius of both UEs and DBS positions, its impact can be alleviated by extrapolating on the erroneous database and adopting to new COP values. To realize this, time-series (TS) forecasting is utilized to determine the extent of compensation and COP variations. Results compared for two TS based schemes show that a significant portion, more than 50%, of the decreased performance can be recovered by the suggested adoption in the COP values.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Waseem",
+     "Raza"
+    ],
+    [
+     "Umair Sajid",
+     "Hasmi"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "2022 IEEE Wireless Communications and Networking Conference (WCNC)",
+   "date": [
+    2022,
+    4,
+    10
+   ],
+   "issue": "",
+   "page": "734-739",
+   "title": "Towards Positioning Error Impact Characterization and Minimization in User-Centric RAN",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/wiad.2012.6296563": {
+  "abstract": "The performance of an orthogonal frequency-division multiplexing (OFDM)-based spectrum sharing communication system that assumes random access and no information about the primary user's (PU) channel occupation information is studied. Also, no cooperation, information exchange overhead, or subcarrier allocation mechanism between the secondary users (SUs) is assumed. SUs randomly access the subcarriers of the primary network and collide with the PUs' subcarriers with a certain probability. To maintain the quality of service (QoS) requirement of PUs, the interference that SUs causes onto PUs is controlled by adjusting SUs transmit power below a predefined threshold, termed interference temperature. Herein paper, the average capacity of SU with subcarrier collisions is employed as performance measure to investigate the proposed random access scheme. Bounds and scaling laws of average capacity with respect to the number of SUs', PUs' and available subcarriers are derived, and corroborated by computer simulations.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ],
+    [
+     "Mohamed M.",
+     "Abdallah"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ]
+   ],
+   "container": "2012 Wireless Advanced (WiAd)",
+   "date": [
+    2012,
+    6
+   ],
+   "issue": "",
+   "page": "34-38",
+   "title": "On OFDM-based cognitive radio spectrum sharing systems with random access",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/wmcs52222.2021.9493296": {
+  "abstract": "This paper introduces a method to de-embed motion artifacts introduced by cable movement during millimeter wave propagation measurements that involve motion. In our work, the motion is performed by a Sawyer robotic arm emulating a UAV motion profile disturbed with gusts generated by the Dryden wind model. An RF cable connects the Rx from the end effector of the arm to a Keysight VNA taking time-swept continuous wave measurements. The cable moves with the arm, introducing phase changes to the measurement data. After determining the cable S-parameters in the continuous time domain, they are removed from the measurement data to get the channel parameters. Furthermore, the effects of de-emebedding is examined by comparing the Doppler spread of measurement data before and after de-embedding. The noise floor in the channel shifted from -62 dB before de-embedding to -58 dB after deembedding. The observed Doppler spread reduced by 31.67 Hz.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Collin",
+     "Thornton"
+    ],
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "He",
+     "Bai"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ]
+   ],
+   "container": "2021 IEEE Texas Symposium on Wireless and Microwave Circuits and Systems (WMCS)",
+   "date": [
+    2021,
+    5,
+    18
+   ],
+   "issue": "",
+   "page": "1-6",
+   "title": "De-embedding Motion Artifacts from Robotic Arm Assisted Propagation Measurements",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1109/wmcs58822.2023.10194281": {
+  "abstract": "Accumulation-mode MOS symmetric varactors (SVAR) with two ports are designed and fabricated in a 65-nm CMOS process. The SVAR is composed of an n-type varactor (n-VAR) and a p-type varactor (p-VAR) with their gates combined to port 1. Port 2 is connected to the n-well of the n-VAR. The 2-port SVAR provides an additional path for IF signal injection, which can simplify and potentially improve the isolation structure between RF to IF. A 1-port p-VAR test structure is also designed to verify its operation. The dynamic cut-off frequency of the SVAR is extracted to be 505 GHz with 2-port measurements up to 40 GHz. The SVAR exhibits a quality factor greater than 21 at 40 GHz and a maximum-to-minimum capacitance ratio of 1.4. The n-well port of the SVAR has a quality factor of 30 at 10 GHz. 1-port measurements of the p-VAR show that the capacitance of the p-type varactor is about 19% smaller than that of the n-VAR.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Saad",
+     "Azmeen-ur-Rahman"
+    ],
+    [
+     "Mazen O.",
+     "Hasna"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ]
+   ],
+   "container": "2023 IEEE Texas Symposium on Wireless and Microwave Circuits and Systems (WMCS)",
+   "date": [
+    2023,
+    4,
+    19
+   ],
+   "issue": "",
+   "page": "1-4",
+   "title": "Two-Port Characterization of Symmetric Varactors in 65-nm CMOS Process for Mixer Applications",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.1155/2011/849105": {
+  "abstract": "Cognitive radio systems can utilize dispersed spectrum, and thus such approach is known as dispersed spectrum cognitive radio systems. In this paper, we first provide the performance analysis of such systems over fading channels. We derive the average symbol error probability of dispersed spectrum cognitive radio systems for two cases, where the channel for each frequency diversity band experiences independent and dependent Nakagami- fading. In addition, the derivation is extended to include the effects of modulation type and order by considering M-ary phase-shift keying (M-PSK) and M-ary quadrature amplitude modulation (M-QAM) schemes. We then consider the deployment of such cognitive radio systems in an ad hoc fashion. We consider an ad hoc dispersed spectrum cognitive radio network, where the nodes are assumed to be distributed in three dimension (3D). We derive the effective transport capacity considering a cubic grid distribution. Numerical results are presented to verify the theoretical analysis and show the performance of such networks.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "849105",
+   "authors": [
+    [
+     "KhalidA",
+     "Qaraqe"
+    ],
+    [
+     "Hasari",
+     "Celebi"
+    ],
+    [
+     "Muneer",
+     "Mohammad"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "EURASIP Journal on Wireless Communications and Networking",
+   "date": [
+    2011,
+    2,
+    15
+   ],
+   "issue": "1",
+   "page": "",
+   "title": "Performance Analysis of Ad Hoc Dispersed Spectrum Cognitive Radio Networks over Fading Channels",
+   "type": "journal-article",
+   "volume": "2011"
+  },
+  "fetched": "2026-11-15",
+  "manual": true,
+  "note": "abstract corrected by hand (typesetting glitches in the source record)",
+  "oa": true
+ },
+ "10.1186/s13638-019-1339-y": {
+  "abstract": "This paper investigates the uplink achievable rate of secondary users (SUs) in underlay orthogonal frequency division multiplexing based cognitive radio networks, where the SUs randomly access the subcarriers of the primary network. In practice, the primary base stations (PBSs), such as cellular base stations, may not be placed close to each other to mitigate the interferences among them. In this regard, we model the spatial distribution of the PBSs as a β -Ginibre point process which captures the repulsive placement of the PBSs. It is assumed that in order to alleviate the interferences at the PBSs from the SUs, each SU controls its transmit power based on the average interference level at the closest PBS induced by the SU. We first analytically identify the characteristics of the transmit powers at the SUs. Then, tight approximations of the uplink achievable rate of the secondary network are provided in two different scenarios that assume either a decentralized or centralized allocation of the SUs’ subcarriers, respectively. The accuracy of our analytical results is validated by simulation results.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "22",
+   "authors": [
+    [
+     "Han-Bae",
+     "Kong"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Erchin",
+     "Serpedin"
+    ],
+    [
+     "Khalid A.",
+     "Qaraqe"
+    ]
+   ],
+   "container": "EURASIP Journal on Wireless Communications and Networking",
+   "date": [
+    2019,
+    1,
+    24
+   ],
+   "issue": "1",
+   "page": "",
+   "title": "Uplink achievable rate in underlay random access OFDM-based cognitive radio networks",
+   "type": "journal-article",
+   "volume": "2019"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.1364/boe.514776": {
+  "abstract": "An experimental testbed was constructed to rigorously assess the fundamental limits of light-wave sensing—an economic, non-contact vitals monitoring approach previously reported. We improve the testbed using lock-in amplification and demonstrate that a photodetector and a commonplace array of infrared LEDs are sufficient to detect respiratory motion and quantify respiration rate up to 2.5 meters away. We propose a novel scattering model, from which we derive the performance limits of the light-wave sensing system in terms of a theoretical range resolution limited by the dynamic range of the system. Using a robotic breathing phantom, we experimentally assess, for the first time, the range resolution of the testbed system and compare this to theoretical predictions. This work also introduces a process for generating stochastic respiration patterns, which may prove broadly useful to the designers of breathing phantoms. Holistically exploring practical challenges and analytical models, this paper serves as a unique and comprehensive tutorial for understanding and designing light-wave sensing systems.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Brenden",
+     "Martin"
+    ],
+    [
+     "Md Zobaer",
+     "Islam"
+    ],
+    [
+     "Carly",
+     "Gotcher"
+    ],
+    [
+     "Tyler",
+     "Martinez"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "John F.",
+     "O’Hara"
+    ]
+   ],
+   "container": "Biomedical Optics Express",
+   "date": [
+    2024,
+    10,
+    21
+   ],
+   "issue": "11",
+   "page": "6449",
+   "title": "Fundamental limits of light-wave sensing for non-contact respiration monitoring",
+   "type": "journal-article",
+   "volume": "15"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.18260/jet.43.1.5": {
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "ASEE Journal of Engineering Technology",
+   "date": [
+    2026,
+    4,
+    24
+   ],
+   "issue": "1",
+   "page": "52-68",
+   "title": "Prompt Engineering for ChatGPT: A Quick Guide to Techniques, Tips, and Best Practices",
+   "type": "journal-article",
+   "volume": "43"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.18260/jet.43.2.1": {
+  "abstract": "This systematic study examines how artificial intelligence (AI), particularly generative AI and large language models, is reshaping Engineering Technology across education, research, laboratory environments, and professional practice.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Farid",
+     "El Breidi"
+    ],
+    [
+     "Milad",
+     "Saadat"
+    ],
+    [
+     "Mohammed",
+     "Metwaly"
+    ]
+   ],
+   "container": "ASEE Journal of Engineering Technology",
+   "date": [
+    2026,
+    10,
+    18
+   ],
+   "issue": "2",
+   "page": "6-19",
+   "title": "Artificial Intelligence in Engineering Technology: Opportunities, Challenges, and Future Outlook",
+   "type": "journal-article",
+   "volume": "43"
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.2514/6.2022-0119": {
+  "abstract": "View Video Presentation: https://doi.org/10.2514/6.2022-0119.vid Instrument Landing Systems (ILS) at airports are currently inspected using manned aircraft.Utilizing UAS can provide a more cost-effective, safer, and accurate solution. Building offprevious proof-of-concept work with the FAA, this research miniaturizes and improves theflexibility of the system by developing a software designed radio to perform navaid inspections.Included in this development is ground and anechoic chamber testing to characterize the signalmeasurement quality and the aircraft systems’ impact on the accuracy. This is concluded byperforming testing at an active airport to provide a full survey of the signal strength of an ILS.",
+  "abstract_from": "OpenAlex",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Kyle",
+     "Roth"
+    ],
+    [
+     "James",
+     "West"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Taylor",
+     "Mitchell"
+    ],
+    [
+     "Jamey D.",
+     "Jacob"
+    ]
+   ],
+   "container": "AIAA SCITECH 2022 Forum",
+   "date": [
+    2022,
+    1,
+    3
+   ],
+   "issue": "",
+   "page": "",
+   "title": "Unmanned Measurement of an ILS System Using a Software Defined Radio",
+   "type": "proceedings-article",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.3390/s20195700": {
+  "abstract": "In this letter, we investigate the idea of interference spreading and its effect on bit error rate (BER) performance in a cognitive radio network (CRN). The interference spreading phenomenon is caused because of the random allocation of subcarriers in an orthogonal frequency division multiplexing (OFDM)-based CRN without any spectrum-sensing mechanism. The CRN assumed in this work is of underlay configuration, where the frequency bands are accessed concurrently by both primary users (PUs) and secondary users (SUs). With random allocation, subcarrier collisions occur among the carriers of primary users (PUs) and secondary users (SUs), leading to interference among subcarriers. This interference caused by subcarrier collisions spreads out across multiple subcarriers of PUs rather than on an individual PU, therefore avoiding high BER for an individual PU. Theoretical and simulated signal to interference and noise ratio (SINR) for collision and no-collision cases are validated for M-quadrature amplitude modulation (M-QAM) techniques. Similarly, theoretical BER performance expressions are found and compared for M-QAM modulation orders under Rayleigh fading channel conditions. The BER for different modulation orders of M-QAM are compared and the relationship of average BER with interference temperature is also explored further.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Amit",
+     "Kachroo"
+    ],
+    [
+     "Adithya",
+     "Popuri"
+    ],
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Ali",
+     "Imran"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "Sensors",
+   "date": [
+    2020,
+    10,
+    7
+   ],
+   "issue": "19",
+   "page": "5700",
+   "title": "Interference Spreading through Random Subcarrier Allocation Technique and Its Error Rate Performance in Cognitive Radio Networks",
+   "type": "journal-article",
+   "volume": "20"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.3390/technologies7020043": {
+  "abstract": "In the past year, fifth-generation (5G) wireless technology has seen dramatic growth, spurred on by the continuing demand for faster data communications with lower latency. At the same time, many researchers argue that 5G will be inadequate in a short time, given the explosive growth of machine connectivity, such as the Internet-of-Things (IoT). This has prompted many to question what comes after 5G. The obvious answer is sixth-generation (6G), however, the substance of 6G is still very much undefined, leaving much to the imagination in terms of real-world implementation. What is clear, however, is that the next generation will likely involve the use of terahertz frequency (0.1–10 THz) electromagnetic waves. Here, we review recent research in terahertz wireless communications and technology, focusing on three broad topic classes: the terahertz channel, terahertz devices, and space-based terahertz system considerations. In all of these, we describe the nature of the research, the specific challenges involved, and current research findings. We conclude by providing a brief perspective on the path forward.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "John F.",
+     "O’Hara"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Wooyeol",
+     "Choi"
+    ],
+    [
+     "Ickhyun",
+     "Song"
+    ]
+   ],
+   "container": "Technologies",
+   "date": [
+    2019,
+    6,
+    12
+   ],
+   "issue": "2",
+   "page": "43",
+   "title": "A Perspective on Terahertz Next-Generation Wireless Communications",
+   "type": "journal-article",
+   "volume": "7"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.36227/techrxiv.174441154.47014958/v2": {
+  "abstract": "The rapid advancement of artificial intelligence (AI) has led to the deployment of interconnected AI systems in urban environments. While these systems promise improved efficiency and convenience, they also introduce risks of emergent behavior, privacy violations, and large-scale manipulation. This paper explores the potential consequences of hierarchical AI systems in a simulated city environment. We model a scenario where citizens rely on personal AI assistants, which are in turn managed by higher-level AI systems responsible for city-wide optimization. Through detailed analysis of AI interaction logs, we identify concerning patterns of surveillance, behavioral control, and information flow between AI levels. Our findings demonstrate how AI systems can transform system-level objectives into personalized recommendations and influence human decision-making on a large scale. We discuss the implications of these findings for privacy, autonomy, and the need for transparent AI coordination frameworks.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Mostafa",
+     "Ibrahim"
+    ],
+    [
+     "Hasari",
+     "Celebi"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "",
+   "date": [
+    2025,
+    5,
+    23
+   ],
+   "issue": "",
+   "page": "",
+   "title": "The Subtle Hand of AI: How AI Agents May Coordinate and Influence Human Actions",
+   "type": "posted-content",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.36227/techrxiv.176110156.66839593/v1": {
+  "abstract": "When calculators entered classrooms, they did not eliminate mathematics-they transformed it. By automating arithmetic, they freed students to focus on higher-order concepts such as algebra, calculus, and modeling. Today, artificial intelligence (AI) marks a similar inflection point: the \"cognitive calculator\" of the twenty-first century, automating aspects of reasoning itself. This paper asks: if AI is the calculator of our era, what is the new \"math\" we must teach and learn? We argue that the New Math is not a branch of mathematics but a constellation of literacies and mindsets that prepare humans to collaborate effectively and responsibly with AI. We propose a framework of seven pillars: (1) AI literacy, (2) data literacy, (3) critical thinking and verification, (4) problem framing, (5) creativity and innovation, (6) ethics and responsibility, and (7) collaboration and communication. Drawing on historical analogies, global policy imperatives, and case studies from education, healthcare, business, and civic life, we contend that these literacies must become universal competencies. The New Math is not enrichment but foundational for informed citizenship, economic participation, and democratic resilience. Neglect risks over-reliance, inequity, and erosion of trust; embracing it enables innovation, equity, and human-AI synergy. We conclude that just as past generations committed to universal literacy and numeracy, ours must commit to universal AI literacy and its companion pillars.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Sabit",
+     "Ekin"
+    ]
+   ],
+   "container": "",
+   "date": [
+    2025,
+    10,
+    22
+   ],
+   "issue": "",
+   "page": "",
+   "title": "IF AI IS THE CALCULATOR OF OUR ERA, WHAT IS THE NEW \"MATH\"?",
+   "type": "posted-content",
+   "volume": ""
+  },
+  "fetched": "2026-11-15"
+ },
+ "10.36922/ijamd025510054": {
+  "abstract": "Artificial intelligence (AI) is becoming deeply integrated into additive manufacturing (AM) workflows, reshaping how designers approach geometry, materials, and process constraints. AI holds significant potential by accelerating design exploration, revealing complex patterns in AM behavior, and supporting earlier assessment of manufacturability. At the same time, it introduces new risks related to model transparency, data quality, physical validity, and the potential for overreliance by students and practitioners. This perspective examines these issues through four guiding questions that address the role of AI in AM-enabled design, the gaps that limit or enable AI contribution, the implications for engineering education, and the responsibilities of the research community in ensuring trustworthy and secure AI&ndash;AM integration. The main contributions of this perspective include: (i) Highlighting AI and AM as a coupled inference&ndash;fabrication system rather than independent tools; (ii) identifying zones of strong interdependence where inference and manufacturability interact; and (iii) articulating implications for design reasoning, education, and responsible research practice.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "Charul",
+     "Chadha"
+    ],
+    [
+     "Garth",
+     "Crosby"
+    ],
+    [
+     "Sabit",
+     "Ekin"
+    ],
+    [
+     "Mohamed",
+     "Gharib"
+    ],
+    [
+     "Eman",
+     "Hammad"
+    ],
+    [
+     "Congrui",
+     "Jin"
+    ],
+    [
+     "Ali Ahmad",
+     "Malik"
+    ],
+    [
+     "Noemi Mendoza",
+     "Diaz"
+    ],
+    [
+     "Calahan",
+     "Mollan"
+    ],
+    [
+     "Gaius C.",
+     "Nzebuka"
+    ],
+    [
+     "Vijitashwa",
+     "Pandey"
+    ],
+    [
+     "Jisoo",
+     "Park"
+    ],
+    [
+     "Monsuru",
+     "Ramoni"
+    ],
+    [
+     "Donggil",
+     "Song"
+    ],
+    [
+     "Bhaskar",
+     "Vajipeyajula"
+    ],
+    [
+     "Albert E.",
+     "Patterson"
+    ]
+   ],
+   "container": "International Journal of AI for Materials and Design",
+   "date": [
+    2026,
+    2,
+    6
+   ],
+   "issue": "1",
+   "page": "34",
+   "title": "Artificial intelligence and additive manufacturing as a coupled design system: Rethinking inference, manufacturability, and design education",
+   "type": "journal-article",
+   "volume": "3"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "10.52953/gqxz9838": {
+  "abstract": "Highly accurate atmospheric models, based on molecular resonance information contained within the HITRAN database, were used to simulate the propagation of high capacity single-carrier quadrature amplitude modulated signals through the atmosphere for various modulation orders. For high-bandwidth signals such as those considered in this work, group velocity dispersion caused by atmospheric gases distorts the modulated waveform, which may produce bit errors. This leads to stricter Signal-To-Noise Ratio requirements for error-free operation, and this effect is more pronounced in high-order modulation schemes. At the same time, high-order modulation schemes are more spectrally efficient, which reduces the bandwidth required to maintain a given data rate, and thus reduces the total group velocity dispersion in the link, resulting in less distortion and better performance. Our work with M-ary quadrature amplitude modulated signals shows that optimal selection of modulation order can minimize these conflicting effects, resulting in decreased error rate, and reducing the performance requirements placed on any equalizers, other dispersion-compensating technologies, or signal processing hardware.",
+  "abstract_from": "Crossref",
+  "csl": {
+   "article": "",
+   "authors": [
+    [
+     "",
+     "Karl Strecker"
+    ],
+    [
+     "",
+     "Sabit Ekin"
+    ],
+    [
+     "",
+     "John O'Hara"
+    ]
+   ],
+   "container": "ITU Journal on Future and Evolving Technologies",
+   "date": [
+    2021,
+    9,
+    30
+   ],
+   "issue": "7",
+   "page": "21-30",
+   "title": "M-ary quadrature amplitude modulation order optimization for terahertz wireless communications over dispersive channels",
+   "type": "journal-article",
+   "volume": "2"
+  },
+  "fetched": "2026-11-15",
+  "oa": true
+ },
+ "title:adrlbaseddemanddrivenelasticusercentricranoptimizationfor6gbeyond": {
+  "fetched": "2026-11-15"
+ },
+ "title:aninnovativeimplementationofvisiblelightsensingforquantifyingthedynamicresponseofbridgegirders": {
+  "fetched": "2026-11-15"
+ },
+ "title:capacityofcognitiveradiosystemsoverhyperfadingchannels": {
+  "fetched": "2026-11-15"
+ },
+ "title:capacityofdynamicfadingcognitiveradiomultipleaccesschannels": {
+  "fetched": "2026-11-15"
+ },
+ "title:correctionofchanneldispersioninterahertzwirelesscommunications": {
+  "fetched": "2026-11-15"
+ },
+ "title:deterministicandstochasticeffectsinbroadbandterahertzlinksaffectedbyatmospherictemporaldispersion": {
+  "fetched": "2026-11-15"
+ },
+ "title:fictitiousplayinklregularizedmarkovpotentialgames": {
+  "fetched": "2026-11-15"
+ },
+ "title:fictitiousplayinproductmarkovgameswithkullbackleiblercontrolcost": {
+  "fetched": "2026-11-15"
+ },
+ "title:flightanddirecttoearthspacerelaycommunicationsystemarchitectureforgsfccubesatmissions": {
+  "fetched": "2026-11-15"
+ },
+ "title:improvedsurfacereflectivityanddispersionusingmetaldopedpaintsinterahertzband": {
+  "fetched": "2026-11-15"
+ },
+ "title:learningtofocuscsifreehierarchicalmarlforreconfigurablereflectors": {
+  "abstract": "Reconfigurable Intelligent Surfaces (RIS) have the potential to engineer smart radio environments for next-generation millimeter-wave (mmWave) networks. However, the prohibitive computational overhead of Channel State Information (CSI) estimation and the dimensionality explosion inherent in centralized optimization severely hinder practical large-scale deployments. To overcome these bottlenecks, we introduce a per-element CSI-free paradigm powered by a Hierarchical Multi-Agent Reinforcement Learning (HMARL) architecture to control mechanically reconfigurable reflective surfaces. By substituting pilot-based channel estimation for each element of the device with accessible user localization data, our framework leverages spatial intelligence for macro-scale wave propagation management. The control problem is decomposed into a two-tier neural architecture: a high-level controller executes temporally extended, discrete user-to-reflector allocations, while low-level controllers autonomously optimize continuous focal points using Multi-Agent Proximal Policy Optimization (MAPPO) under a Centralized Training with Decentralized Execution (CTDE) scheme. Comprehensive deterministic ray-tracing evaluations in an indoor mmWave scenario demonstrate that this hierarchical framework achieves received signal strength indicator (RSSI) improvements of up to 7.79 dB over centralized Proximal Policy Optimization (PPO) baselines. Furthermore, the system maintains resilient beam-focusing performance under practical sub-meter localization tracking errors for up to four users and two reflector arrays. By eliminating execution-time CSI overhead while preserving high-fidelity signal redirection, this work provides a scalable and cost-effective step toward intelligent indoor wireless environments.",
+  "abstract_from": "arXiv",
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2604.05165"
+   }
+  ]
+ },
+ "title:maskedsymbolmodelingfordemodulationofoversampledbasebandcommunicationsignalsinimpulsivenoisedominatedchannels": {
+  "abstract": "Recent breakthroughs in natural language processing show that attention mechanism in Transformer networks, trained via masked-token prediction, enables models to capture the semantic context of the tokens and internalize the grammar of language. While the application of Transformers to communication systems is a burgeoning field, the notion of context within physical waveforms remains under-explored. This paper addresses that gap by re-examining inter-symbol contribution (ISC) caused by pulse-shaping overlap. Rather than treating ISC as a nuisance, we view it as a deterministic source of contextual information embedded in oversampled complex baseband signals. We propose Masked Symbol Modeling (MSM), a framework for the physical (PHY) layer inspired by Bidirectional Encoder Representations from Transformers methodology. In MSM, a subset of symbol aligned samples is randomly masked, and a Transformer predicts the missing symbol identifiers using the surrounding \"in-between\" samples. Through this objective, the model learns the latent syntax of complex baseband waveforms. We illustrate MSM's potential by applying it to the task of demodulating signals corrupted by impulsive noise, where the model infers corrupted segments by leveraging the learned context. Our results suggest a path toward receivers that interpret, rather than merely detect communication signals, opening new avenues for context-aware PHY layer design.",
+  "abstract_from": "arXiv",
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2512.01428"
+   }
+  ]
+ },
+ "title:noncontactvitalsignsmonitoringthroughvisiblelightsensing": {
+  "fetched": "2026-11-15"
+ },
+ "title:onthecapacityofacognitiveuserwithsubcarriercollisionsoverrayleighfadingchannels": {
+  "fetched": "2026-11-15"
+ },
+ "title:poweractivityindicatorbasedinterferencecontrolinumtshetnets": {
+  "fetched": "2026-11-15"
+ },
+ "title:quantifyingtherealitygapforrlbaseduavplacementatmmwaveandsubthz": {
+  "abstract": "Reinforcement learning (RL) policies for unmanned aerial vehicle (UAV) placement in mmWave and sub-terahertz networks are typically trained on simplified analytical channels. We quantify the resulting sim-to-real gap on a real urban map of Doha, Qatar, at carriers {28, 140, 183, 300} GHz and altitudes {50, 75, 100, 125} m, evaluating three channel pipelines: an analytical model (FSPL + atmospheric absorption + cuboid LoS), full Monte-Carlo ray tracing in Sionna RT with ITU-R P.676-13 absorption, and a deterministic-LoS hybrid that reuses Sionna's mesh under a closed-form path-gain expression. We formalize the gap on the spatial SNR distribution via four metrics, namely bias, RMSE, Jensen-Shannon divergence, and optimum-deployment displacement. Three findings emerge: at 28/140 GHz, $\\sim$70% of the apparent -5.6/-4.8 dB Sionna bias is Monte-Carlo undersampling and shrinks to -1.7/-1.5 dB after mitigation; at 183 GHz a -9.2 dB residual isolates the atmospheric absorption / ITU-R P.676 line-shape disagreement; at 300 GHz the stochastic ray tracer agrees with the analytical model only coincidentally, with a +3.8 dB structural offset exposed by the deterministic-LoS pipeline. Across all carriers the linear-domain regret of the analytical-trained policy stays $\\geq$ 0.93, indicating practical near-optimality but with a carrier-resolved SNR bias that warrants explicit reporting.",
+  "abstract_from": "arXiv",
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2609.11121"
+   }
+  ]
+ },
+ "title:randomsubcarrierallocationinofdmabasedcognitiveradionetworksandhyperfadingchannels": {
+  "fetched": "2026-11-15"
+ },
+ "title:respiratoryanomalydetectionusingreflectedinfraredlightwavesignals": {
+  "abstract": "In this study, we present a non-contact respiratory anomaly detection method using incoherent light-wave signals reflected from the chest of a mechanical robot that can breathe like human beings. In comparison to existing radar and camera-based sensing systems for vitals monitoring, this technology uses only a low-cost ubiquitous infrared light source and sensor. This light-wave sensing system recognizes different breathing anomalies from the variations of light intensity reflected from the chest of the robot within a 0.5m-1.5m range with an average classification accuracy of up to 96.6% using machine learning.",
+  "abstract_from": "arXiv",
+  "fetched": "2026-11-15",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2311.01367"
+   }
+  ]
+ },
+ "title:rfbasedlocationdeterminationinheterogeneoussensornetworks": {
+  "fetched": "2026-11-15"
+ },
+ "title:rfbasedlocationdeterminationinheterogeneoussensornetworkslocalizationinwirelesssensornetworksusingparticlefiltersoverrayleighfadingchannels": {
+  "fetched": "2026-11-15"
+ },
+ "title:rxagcaccumulatortimingoffsetimpacts": {
+  "fetched": "2026-11-15"
+ },
+ "title:solutionsmanualforthechapteronmajorizationtheorywithapplicationsinsignalprocessingandcommunicationsystems": {
+  "fetched": "2026-11-15"
+ },
+ "title:towardshighdataratehybridrfopticallunarcommunicationarchitecture": {
+  "fetched": "2026-11-15"
+ },
+ "title:transformingairesearchandeducationtexasamsgenerativeailiteracyinitiative": {
+  "fetched": "2026-11-15"
+ },
+ "title:ultrawidebandchannelmeasurementsandmodellingforunmannedaerialvehicletowearablesuav2wsystems": {
+  "fetched": "2026-11-15"
+ }
+}
