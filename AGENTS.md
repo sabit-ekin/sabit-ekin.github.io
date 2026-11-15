@@ -23,6 +23,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
 - Texas Wireless is the name of the research group, so the Research and Team pages carry its logo
   (`img.logo`, `assets/texas-wireless-logo.svg`) right above the h1, and the Research intro names it. `banner.js`
   counts a logo there as part of the intro block (the drawings keep clear of it).
+  On the Research page the logo also sits where the four research-area cards meet (`img.logo.hub` in
+  `.grid2.areas`; between the 2nd and 3rd cards on one column). It may only cover the cards' padding: keep its
+  height within the gap plus twice the card padding if either changes.
 - Explore cards on the home page each have a line icon (inline SVG in a `.ic` chip).
 - Old links to sections of the single page (e.g. `/#team`, `/#honors`) forward to the new pages (inline script
   in the `<head>` of index.html).
