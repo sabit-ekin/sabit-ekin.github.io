@@ -20,6 +20,9 @@ Instructions for AI agents (Codex, Claude Code) editing this repository.
   the drawing from the file name, keeps a soft clear patch around every line of the title, intro and buttons (so the
   text stays readable), reads colors from the tokens (light/dark), pauses off screen, and shows one still
   frame under prefers-reduced-motion. Bump its `?v=` in every page (and in `build_pubs.py`) when you change it.
+- Texas Wireless is the name of the research group, so the Research and Team pages carry its logo
+  (`img.logo`, `assets/texas-wireless-logo.svg`) right above the h1, and the Research intro names it. `banner.js`
+  counts a logo there as part of the intro block (the drawings keep clear of it).
 - Explore cards on the home page each have a line icon (inline SVG in a `.ic` chip).
 - Old links to sections of the single page (e.g. `/#team`, `/#honors`) forward to the new pages (inline script
   in the `<head>` of index.html).

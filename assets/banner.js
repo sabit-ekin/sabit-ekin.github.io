@@ -53,6 +53,11 @@ function start() {
         tx.intro.bottom = Math.max(tx.intro.bottom, r.bottom - mb.top);
       });
     });
+    var lg = h1.previousElementSibling;   // a group logo above the title (Research, Team) belongs to the intro block
+    if (lg && lg.matches('img.logo')) {
+      var lr = lg.getBoundingClientRect();
+      tx.intro.top = Math.min(tx.intro.top, lr.top - mb.top); tx.intro.right = Math.max(tx.intro.right, lr.right - mb.left);
+    }
     var moved = !TEXT || Math.abs(tx.h1.left - TEXT.h1.left) + Math.abs(tx.h1.right - TEXT.h1.right) + Math.abs(tx.intro.right - TEXT.intro.right) > 4;
     if (w !== W || h !== H || moved) {   // lay the drawing out again when the banner or the title changes
       W = w; H = h; TEXT = BOX = tx;

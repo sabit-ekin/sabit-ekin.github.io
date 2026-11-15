@@ -1069,7 +1069,7 @@ PAGE = '''<!doctype html>
     }});
   }})();
 </script>
-<script src="assets/banner.js?v=7"></script>
+<script src="assets/banner.js?v=8"></script>
 </body>
 </html>
 '''
